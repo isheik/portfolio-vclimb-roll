@@ -17,6 +17,7 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  // plugins: ['~/plugins/vue-fullpage'],
   /*
   ** Build configuration
   */
@@ -24,7 +25,8 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
+    vendor: ['vue-fullpage.js'],
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -34,6 +36,7 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  plugins: [{ src: '~/plugins/vue-fullpage.js', ssr: false }],
 }
 

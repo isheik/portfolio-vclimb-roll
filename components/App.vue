@@ -1,6 +1,6 @@
 <template>
-  <section class="container">
-    <div>
+    <div id="app">
+    <!-- <div> -->
       <!-- <full-page ref="fullpage" :options="options" id="fullpage">
         <div class="section">
           First section ...
@@ -9,7 +9,17 @@
           Second section ...
         </div>
       </full-page> -->
-      <app/>
+              <full-page ref="fullpage" :options="options" id="fullpage">
+            <div class="section">
+                <h3>Section 1</h3>
+            </div>
+            <div class="section">
+                <h3>Section 2</h3>
+            </div>
+            <div class="section">
+                <h3>Section 3</h3>
+            </div>
+    </full-page>
     <!-- <full-page>
       <div class="section">
         <button @click="$refs.fullpage.api.moveSectionDown()">
@@ -42,50 +52,44 @@
           class="button--grey">GitHub</a>
       </div> -->
     </div>
-  </section>
 </template>
 
 <script>
-// import AppLogo from "~/components/AppLogo.vue";
-import App from "~/components/App";
 // import Vue from "vue";
 
+// const App = new Vue({
+//   el: "#app",
+//   name: "app",
+//   data() {
+//     return {
+//       options: {
+//         licenseKey: "OPEN-SOURCE-GPLV3-LICENSE"
+//       }
+//     };
+//   }
+// render: h => h(this)
+// });
+
 export default {
-  components: {
-    App
+  // el: "#app",
+  name: "app",
+  data() {
+    return {
+      options: {
+        licenseKey: "OPEN-SOURCE-GPLV3-LICENSE"
+      }
+    };
   }
 };
+// export default App;
+
+// import Vue from "vue";
+// import VueFullPage from "vue-fullpage.js";
+
+// Vue.use(VueFullPage);
+
+// new Vue({
+//   el: "#app",
+//   render: h => h(App)
+// });
 </script>
-
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
-
