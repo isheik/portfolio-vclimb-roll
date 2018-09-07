@@ -1,6 +1,5 @@
 <template>
-  <section class="container">
-    <!-- <div> -->
+  <div class="container">
       <!-- <full-page ref="fullpage" :options="options" id="fullpage">
         <div class="section">
           First section ...
@@ -9,7 +8,24 @@
           Second section ...
         </div>
       </full-page> -->
-      <app/>
+      <!-- <app/> -->
+        <full-page ref="fullpage" :options="options" id="fullpage">
+            <div class="section">
+                <h3>Section 1</h3>
+            </div>
+            <div class="section">
+                <h3>Section 2</h3>
+            </div>
+            <div class="section">
+                <h3>Section 3</h3>
+            </div>
+            <div class="section">
+                <h3>Section 4</h3>
+            </div>
+            <div class="section">
+                <h3>Section 5</h3>
+            </div>
+    </full-page>
     <!-- <full-page>
       <div class="section">
         <button @click="$refs.fullpage.api.moveSectionDown()">
@@ -41,18 +57,25 @@
           target="_blank"
           class="button--grey">GitHub</a>
       </div> -->
-    <!-- </div> -->
-  </section>
+  </div>
 </template>
 
 <script>
 // import AppLogo from "~/components/AppLogo.vue";
-import App from "~/components/App";
+// import App from "~/components/App";
 // import Vue from "vue";
 
 export default {
-  components: {
-    App
+  // components: {
+  // App
+  // },
+  // name: "app",
+  data() {
+    return {
+      options: {
+        licenseKey: "OPEN-SOURCE-GPLV3-LICENSE"
+      }
+    };
   }
 };
 </script>
