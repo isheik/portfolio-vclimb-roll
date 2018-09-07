@@ -63,7 +63,6 @@
 <script>
 // import AppLogo from "~/components/AppLogo.vue";
 // import App from "~/components/App";
-// import Vue from "vue";
 
 export default {
   // components: {
