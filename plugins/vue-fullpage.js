@@ -9,12 +9,10 @@ import Vue from 'vue'
 import VueFullPage from 'vue-fullpage.js'
 import App from "~/components/App";
 
-Vue.use(VueFullPage, {
-  options: { licenseKey: "OPEN-SOURCE-GPLV3-LICENSE" },
-});
+Vue.use(VueFullPage);
 
-new Vue({
-  el: "#app",
-  name: "app",
-  render: h => h(App)
-});
+// new Vue({
+//   el: "#app",
+//   name: "app",
+//   render: h => h(App)
+// });

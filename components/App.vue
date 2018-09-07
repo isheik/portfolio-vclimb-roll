@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <!-- <div id="app"> -->
     <!-- <div> -->
       <!-- <full-page ref="fullpage" :options="options" id="fullpage">
         <div class="section">
@@ -9,7 +9,7 @@
           Second section ...
         </div>
       </full-page> -->
-              <full-page ref="fullpage" :options="options" id="fullpage">
+        <full-page ref="fullpage" :options="options" id="fullpage">
             <div class="section">
                 <h3>Section 1</h3>
             </div>
@@ -18,6 +18,12 @@
             </div>
             <div class="section">
                 <h3>Section 3</h3>
+            </div>
+            <div class="section">
+                <h3>Section 4</h3>
+            </div>
+            <div class="section">
+                <h3>Section 5</h3>
             </div>
     </full-page>
     <!-- <full-page>
@@ -51,7 +57,7 @@
           target="_blank"
           class="button--grey">GitHub</a>
       </div> -->
-    </div>
+    <!-- </div> -->
 </template>
 
 <script>

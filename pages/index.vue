@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <div>
+    <!-- <div> -->
       <!-- <full-page ref="fullpage" :options="options" id="fullpage">
         <div class="section">
           First section ...
@@ -41,7 +41,7 @@
           target="_blank"
           class="button--grey">GitHub</a>
       </div> -->
-    </div>
+    <!-- </div> -->
   </section>
 </template>
 
