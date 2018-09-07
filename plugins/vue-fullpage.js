@@ -4,9 +4,8 @@
 //   render: h => h(App)
 // });
 
-
-import Vue from 'vue'
-import VueFullPage from 'vue-fullpage.js'
+import Vue from "vue";
+import VueFullPage from "vue-fullpage.js";
 import App from "~/components/App";
 
 Vue.use(VueFullPage);

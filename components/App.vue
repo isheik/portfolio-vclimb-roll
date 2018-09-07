@@ -1,7 +1,7 @@
 <template>
-    <!-- <div id="app"> -->
-    <!-- <div> -->
-      <!-- <full-page ref="fullpage" :options="options" id="fullpage">
+  <!-- <div id="app"> -->
+  <!-- <div> -->
+  <!-- <full-page ref="fullpage" :options="options" id="fullpage">
         <div class="section">
           First section ...
         </div>
@@ -9,24 +9,24 @@
           Second section ...
         </div>
       </full-page> -->
-        <full-page ref="fullpage" :options="options" id="fullpage">
-            <div class="section">
-                <h3>Section 1</h3>
-            </div>
-            <div class="section">
-                <h3>Section 2</h3>
-            </div>
-            <div class="section">
-                <h3>Section 3</h3>
-            </div>
-            <div class="section">
-                <h3>Section 4</h3>
-            </div>
-            <div class="section">
-                <h3>Section 5</h3>
-            </div>
-    </full-page>
-    <!-- <full-page>
+  <full-page id="fullpage" ref="fullpage" :options="options">
+    <div class="section">
+      <h3>Section 1</h3>
+    </div>
+    <div class="section">
+      <h3>Section 2</h3>
+    </div>
+    <div class="section">
+      <h3>Section 3</h3>
+    </div>
+    <div class="section">
+      <h3>Section 4</h3>
+    </div>
+       <div class="section">
+      <h3>Section 5</h3>
+    </div>
+  </full-page>
+  <!-- <full-page>
       <div class="section">
         <button @click="$refs.fullpage.api.moveSectionDown()">
             Next
@@ -40,7 +40,7 @@
         Section 2
       </div>
     </full-page> -->
-      <!-- <app-logo/>
+  <!-- <app-logo/>
       <h1 class="title">
         portfolio-vclimb-roll
       </h1>
@@ -57,7 +57,7 @@
           target="_blank"
           class="button--grey">GitHub</a>
       </div> -->
-    <!-- </div> -->
+  <!-- </div> -->
 </template>
 
 <script>
@@ -78,15 +78,15 @@
 
 export default {
   // el: "#app",
-  name: "app",
+  name: "App",
   data() {
     return {
       options: {
         licenseKey: "OPEN-SOURCE-GPLV3-LICENSE"
       }
-    };
+    }
   }
-};
+}
 // export default App;
 
 // import Vue from "vue";
