@@ -64,11 +64,15 @@
 // import AppLogo from "~/components/AppLogo.vue";
 // import App from "~/components/App";
 
+
 export default {
   // components: {
   // App
   // },
   // name: "app",
+  mounted() {
+    fullpage_api.silentMoveTo(4);
+  },
   data() {
     return {
       options: {
