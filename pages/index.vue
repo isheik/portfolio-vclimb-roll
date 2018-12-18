@@ -89,7 +89,8 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: blue;
+  background-image: url("~assets/images/background1.jpg");
+  background-size: cover;
 }
 
 .title {
