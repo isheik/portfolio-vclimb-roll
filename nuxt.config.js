@@ -1,4 +1,5 @@
 module.exports = {
+  modules: ["@nuxtjs/vuetify"],
   /*
   ** Headers of the page
   */
@@ -11,9 +12,7 @@ module.exports = {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
-  css: [
-    '~/assets/css/default.css'
-  ],
+  css: ["~/assets/css/default.css"],
   /*
   ** Customize the progress bar color
   */
@@ -26,17 +25,17 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    vendor: ["vue-fullpage.js"],
-    extend(config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: "pre",
-          test: /\.(js|vue)$/,
-          loader: "eslint-loader",
-          exclude: /(node_modules)/
-        });
-      }
-    }
+    vendor: ["vue-fullpage.js"]
+    // extend(config, { isDev, isClient }) {
+    //   if (isDev && isClient) {
+    //     config.module.rules.push({
+    //       enforce: "pre",
+    //       test: /\.(js|vue)$/,
+    //       loader: "eslint-loader",
+    //       exclude: /(node_modules)/
+    //     });
+    //   }
+    // }
   },
   plugins: [{ src: "~/plugins/vue-fullpage.js", ssr: false }]
-};
+}

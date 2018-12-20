@@ -8,7 +8,7 @@
         <div class="section">
           Second section ...
         </div>
-      </full-page> -->
+  </full-page>-->
   <full-page id="fullpage" ref="fullpage" :options="options">
     <div class="section">
       <h3>Section 1</h3>
@@ -22,7 +22,7 @@
     <div class="section">
       <h3>Section 4</h3>
     </div>
-       <div class="section">
+    <div class="section">
       <h3>Section 5</h3>
     </div>
   </full-page>
@@ -39,7 +39,7 @@
         </button>
         Section 2
       </div>
-    </full-page> -->
+  </full-page>-->
   <!-- <app-logo/>
       <h1 class="title">
         portfolio-vclimb-roll
@@ -56,7 +56,7 @@
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           class="button--grey">GitHub</a>
-      </div> -->
+  </div>-->
   <!-- </div> -->
 </template>
 
@@ -84,9 +84,9 @@ export default {
       options: {
         licenseKey: "OPEN-SOURCE-GPLV3-LICENSE"
       }
-    }
+    };
   }
-}
+};
 // export default App;
 
 // import Vue from "vue";
