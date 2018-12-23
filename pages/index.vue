@@ -109,7 +109,7 @@
       </section>
 
       <section>
-        <v-parallax src="~assets/background4.jpg" height="380">
+        <v-parallax src="~assets/images/background4.jpg" height="380">
           <v-layout column align-center justify-center>
             <div
               class="headline white--text mb-3 text-xs-center"
