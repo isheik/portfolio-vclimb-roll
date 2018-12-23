@@ -27,7 +27,12 @@
         <!-- <v-layout column align-center justify-center class="white--text"> -->
         <!-- <img :src="require('assets/images/background4.jpg')" alt="very cool bg"> -->
         <!-- <img src="assets/vuetify.png" alt="Vuetify.js" height="200"> -->
-        <h1 class="white--text mb-2 display-1 text-xs-center">Welcome to KEI's portfolio</h1>
+        <div class="p-container">
+          <!-- <h1 class="white--text mb-2 display-1 text-xs-center">Welcome to KEI's portfolio</h1> -->
+          <div class="p-bg"></div>
+          <h1 class="p-content white--text display-1 text-xs-center">Welcome to KEI's portfolio</h1>
+          <!-- <h1 class="p-content white--text display-1 text-xs-center">Welcome to KEI's portfolio</h1> -->
+        </div>
         <!-- <div class="subheading mb-3 text-xs-center">Powered by Vuetify</div> -->
         <!-- <v-btn class="blue lighten-2 mt-5" dark large href="/pre-made-themes">Get Started</v-btn> -->
         <!-- </v-layout> -->
@@ -195,13 +200,20 @@
   // width: 100%;
 }
 .firstview {
-  // background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), ;
+  // background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  // url("~assets/images/background7.jpg");
+  position: relative;
   background-image: url("~assets/images/background7.jpg");
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
+  width: 100%;
   background-position: center;
-  opacity: 0.8;
+
+  // background-position: center top;
+  // padding: 70px 90px 120px 90px;
+
+  // opacity: 0.8;
   // height: 100%;
   // height: 100vh;
   .v-parallax {
@@ -227,5 +239,61 @@
     // width: 50%;
   }
   // }
+}
+.p-container {
+  position: relative;
+  // background-repeat: no-repeat;
+  // background-size: 1080px auto;
+  // width: 100%;
+  top: 50%;
+
+  // top: 0px;
+  // right: 0px;
+  // bottom: 0px;
+  // left: 0px;
+  transform: translate(0%, -50%);
+  .p-bg {
+    position: absolute;
+    background-image: url("~assets/images/background7.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center 140px;
+
+    z-index: 900;
+    // top: 0px;
+    // right: 0px;
+    // bottom: 0px;
+    // left: 0px;
+
+    // top: 50%;
+    // left: 50%;
+    // background-color: #000;
+    // background-size: 500px auto;
+    // background: rgb(34, 34, 34); /* for IE */
+    // background: rgba(34, 34, 34, 0.75);
+    padding: 120px 0;
+    filter: blur(10px);
+    height: 100%;
+    width: 100%;
+    // padding: 120px 0;
+    // width: 50%;
+    // padding: 100px 100px;
+    // transform: translate(-50%, -50%);
+  }
+  .p-content {
+    position: relative;
+    z-index: 1000;
+    padding: 120px 0;
+    background: rgb(34, 34, 34); /* for IE */
+    background: rgba(34, 34, 34, 0.75);
+  }
+}
+.p-container h1 {
+  // position: absolute;
+  // background-size: 500px auto;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
 }
 </style>
