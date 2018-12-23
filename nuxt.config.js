@@ -37,6 +37,9 @@ module.exports = {
     //   }
     // }
   },
+  router: {
+    base: "/dist/"
+  },
   plugins: [
     { src: "~/plugins/vue-fullpage.js", ssr: false },
     { src: "~/plugins/vue-parallax-js", ssr: false },
