@@ -1,28 +1,28 @@
 <template>
   <!-- <v-app id="v-app"> -->
   <!-- <v-parallax :src="require('assets/images/background1.jpg')" height="5000" dark> -->
-  <parallax src="require('assets/images/background5.jpg')">
-    <div class="container">
-      <!-- <full-page id="fullpage" ref="fullpage" :options="options" v-parallax="0.4"> -->
-      <full-page id="fullpage" ref="fullpage" :options="options">
-        <div class="section">
-          <h3>Section 1</h3>
-        </div>
-        <div class="section">
-          <h3>Section 2</h3>
-        </div>
-        <div class="section">
-          <h3>Section 3</h3>
-        </div>
-        <div class="section">
-          <h3>Section 4</h3>
-        </div>
-        <div class="section">
-          <h3>Section 5</h3>
-        </div>
-      </full-page>
-    </div>
-  </parallax>
+  <!-- <parallax src="require('assets/images/background5.jpg')"> -->
+  <div class="container">
+    <!-- <full-page id="fullpage" ref="fullpage" :options="options" v-parallax="0.4"> -->
+    <full-page id="fullpage" ref="fullpage" :options="options">
+      <div class="section">
+        <h3>Section 1</h3>
+      </div>
+      <div class="section">
+        <h3>Section 2</h3>
+      </div>
+      <div class="section">
+        <h3>Section 3</h3>
+      </div>
+      <div class="section">
+        <h3>Section 4</h3>
+      </div>
+      <div class="section">
+        <h3>Section 5</h3>
+      </div>
+    </full-page>
+  </div>
+  <!-- </parallax> -->
   <!-- </v-parallax> -->
   <!-- </v-app> -->
 </template>
@@ -56,8 +56,8 @@ export default {
 .fullpage-wrapper {
   width: 100%;
   /* text-align: center; */
-  background-image: url("~assets/images/background1.jpg");
-  background-size: auto 100%;
+  /* background-image: url("~assets/images/background1.jpg"); */
+  /* background-size: auto 100%; */
 }
 .section {
   /* background-image: url("~assets/images/background1.jpg"); */
