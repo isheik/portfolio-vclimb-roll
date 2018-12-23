@@ -37,5 +37,9 @@ module.exports = {
     //   }
     // }
   },
-  plugins: [{ src: "~/plugins/vue-fullpage.js", ssr: false }]
+  plugins: [
+    { src: "~/plugins/vue-fullpage.js", ssr: false },
+    { src: "~/plugins/vue-parallax-js", ssr: false }
+    // { src: "~/plugins/vue-parallaxy", ssr: false }
+  ]
 }

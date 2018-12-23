@@ -26,7 +26,7 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: "babel-eslint"
   },
   extends: [
     "eslint:recommended",
@@ -36,13 +36,12 @@ module.exports = {
     "plugin:prettier/recommended"
   ],
   // *.vue files を lint にかけるために必要
-  plugins: [
-    'vue'
-  ],
+  plugins: ["vue"],
   // ここにカスタムルールを追加します。
   rules: {
-    "semi": [2, "never"],
+    semi: [2, "never"],
     "no-console": "off",
     "vue/max-attributes-per-line": "off",
-    "prettier/prettier": ["error", { "semi": false }]
-}
+    "prettier/prettier": ["error", { semi: false }]
+  }
+};
