@@ -29,8 +29,15 @@
         <!-- <img src="assets/vuetify.png" alt="Vuetify.js" height="200"> -->
         <div class="p-container">
           <!-- <h1 class="white--text mb-2 display-1 text-xs-center">Welcome to KEI's portfolio</h1> -->
-          <div class="p-bg"></div>
-          <h1 class="p-content white--text display-1 text-xs-center">Welcome to KEI's portfolio</h1>
+          <transition name="welcome1" appear>
+            <div class="p-bg" :key="1"></div>
+          </transition>
+
+          <transition name="welcome2" appear>
+            <h1
+              class="p-content hidden white--text display-1 text-xs-center"
+            >Welcome to KEI's portfolio</h1>
+          </transition>
           <!-- <h1 class="p-content white--text display-1 text-xs-center">Welcome to KEI's portfolio</h1> -->
         </div>
         <!-- <div class="subheading mb-3 text-xs-center">Powered by Vuetify</div> -->
@@ -194,6 +201,12 @@
 //   Parallax
 // }
 // };
+if (process.browser) {
+  window.onNuxtReady(() => {
+    let elem = document.querySelector(".p-content.hidden");
+    elem.classList.remove("hidden");
+  });
+}
 </script>
 <style lang="scss">
 #bg {
@@ -271,7 +284,10 @@
     // background-size: 500px auto;
     // background: rgb(34, 34, 34); /* for IE */
     // background: rgba(34, 34, 34, 0.75);
-    padding: 120px 0;
+
+    // padding: 120px 0;
+    // transition: padding 2s linear;
+
     filter: blur(10px);
     height: 100%;
     width: 100%;
@@ -283,11 +299,30 @@
   .p-content {
     position: relative;
     z-index: 1000;
+    // padding: 0 0;
     padding: 120px 0;
+    opacity: 1;
+    // visibility: hidden;
+    // transition: padding 2s linear;
+    transition: all 2s linear;
     background: rgb(34, 34, 34); /* for IE */
     background: rgba(34, 34, 34, 0.75);
   }
+  .p-content.hidden {
+    padding: 0 0;
+    opacity: 0;
+  }
+  position: relative;
+  .welcome2-enter {
+    // padding: 120px 0;
+    transition: all 0.8s linear;
+  }
+  // .welcome2-enter-active,
+  // .welcome2-leave-active {
+  //   transition: all 0.8s linear;
+  // }
 }
+
 .p-container h1 {
   // position: absolute;
   // background-size: 500px auto;
