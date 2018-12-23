@@ -38,7 +38,7 @@ module.exports = {
     // }
   },
   router: {
-    base: "/dist/"
+    base: "/"
   },
   plugins: [
     { src: "~/plugins/vue-fullpage.js", ssr: false },
