@@ -270,7 +270,7 @@ if (process.browser) {
     background-image: url("~assets/images/background7.jpg");
     background-attachment: fixed;
     background-size: cover;
-    background-position: center 140px;
+    background-position: center 50px;
 
     z-index: 900;
     // top: 0px;
