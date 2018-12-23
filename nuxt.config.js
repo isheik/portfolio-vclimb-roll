@@ -1,8 +1,8 @@
 module.exports = {
   modules: ["@nuxtjs/vuetify"],
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: "portfolio-vclimb-roll",
     meta: [
@@ -14,17 +14,17 @@ module.exports = {
   },
   css: ["~/assets/css/default.css"],
   /*
-  ** Customize the progress bar color
-  */
+   ** Customize the progress bar color
+   */
   loading: { color: "#3B8070" },
   // plugins: ['~/plugins/vue-fullpage'],
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     /*
-    ** Run ESLint on save
-    */
+     ** Run ESLint on save
+     */
     vendor: ["vue-fullpage.js"]
     // extend(config, { isDev, isClient }) {
     //   if (isDev && isClient) {
@@ -39,7 +39,8 @@ module.exports = {
   },
   plugins: [
     { src: "~/plugins/vue-fullpage.js", ssr: false },
-    { src: "~/plugins/vue-parallax-js", ssr: false }
+    { src: "~/plugins/vue-parallax-js", ssr: false },
+    { src: "~/plugins/vue-particles", ssr: false }
     // { src: "~/plugins/vue-parallaxy", ssr: false }
   ]
 }

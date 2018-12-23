@@ -6,15 +6,33 @@
     <v-content>
       <!-- <v-parallax :src="require('assets/images/background4.jpg')" height="1000"> -->
       <section class="firstview">
+        <!-- <vue-particles
+          color="#dedede"
+          :particleOpacity="0.7"
+          :particlesNumber="80"
+          shapeType="circle"
+          :particleSize="4"
+          linesColor="#dedede"
+          :linesWidth="1"
+          :lineLinked="true"
+          :lineOpacity="0.4"
+          :linesDistance="150"
+          :moveSpeed="3"
+          :hoverEffect="true"
+          hoverMode="grab"
+          :clickEffect="true"
+          clickMode="push"
+        ></vue-particles>-->
         <!-- <img id="bg" src="~assets/images/background4.jpg" alt="very cool bg" v-parallax="0.4"> -->
         <!-- <v-layout column align-center justify-center class="white--text"> -->
         <!-- <img :src="require('assets/images/background4.jpg')" alt="very cool bg"> -->
         <!-- <img src="assets/vuetify.png" alt="Vuetify.js" height="200"> -->
-        <h1 class="white--text mb-2 display-1 text-xs-center">Parallax Template</h1>
+        <h1 class="white--text mb-2 display-1 text-xs-center">Welcome to KEI's portfolio</h1>
         <!-- <div class="subheading mb-3 text-xs-center">Powered by Vuetify</div> -->
         <!-- <v-btn class="blue lighten-2 mt-5" dark large href="/pre-made-themes">Get Started</v-btn> -->
         <!-- </v-layout> -->
       </section>
+      <section class="about"></section>
       <!-- </v-parallax> -->
       <section>
         <v-layout column wrap class="my-5" align-center>
@@ -160,29 +178,30 @@
   </v-app>
 </template>
 <script>
-import Parallax from "vue-parallaxy";
-export default {
-  data() {
-    return {
-      title: "Logo"
-    };
-  }
-  // components: {
-  //   Parallax
-  // }
-};
+// import Parallax from "vue-parallaxy";
+// export default {
+//   data() {
+//     return {
+//       title: "Logo"
+//     };
+//   }
+// components: {
+//   Parallax
+// }
+// };
 </script>
 <style lang="scss">
 #bg {
   // width: 100%;
 }
 .firstview {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("~assets/images/background4.jpg");
+  // background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), ;
+  background-image: url("~assets/images/background7.jpg");
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
   background-position: center;
+  opacity: 0.8;
   // height: 100%;
   // height: 100vh;
   .v-parallax {

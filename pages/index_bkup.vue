@@ -1,7 +1,7 @@
 <template>
   <!-- <v-app id="v-app"> -->
   <!-- <v-parallax :src="require('assets/images/background1.jpg')" height="5000" dark> -->
-  <parallax src="require('assets/images/background1.jpg')">
+  <parallax src="require('assets/images/background5.jpg')">
     <div class="container">
       <!-- <full-page id="fullpage" ref="fullpage" :options="options" v-parallax="0.4"> -->
       <full-page id="fullpage" ref="fullpage" :options="options">
