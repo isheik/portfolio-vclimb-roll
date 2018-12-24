@@ -1,5 +1,5 @@
 module.exports = {
-  modules: ["@nuxtjs/vuetify", "@nuxtjs/axios"],
+  modules: ["@nuxtjs/vuetify", "@nuxtjs/axios", "@nuxtjs/dotenv"],
   /*
    ** Headers of the page
    */
@@ -47,6 +47,7 @@ module.exports = {
     // { src: "~/plugins/vue-parallaxy", ssr: false }
   ],
   axios: {
-    // baseURL: "http://localhost:3000/"
+    baseURL: "https://frosty-galileo-2e46e3.netlify.com/"
   }
+  // baseURL: "http://localhost:3000"
 }
