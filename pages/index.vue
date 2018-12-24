@@ -3,7 +3,11 @@
     <!-- <v-toolbar class="white"> -->
     <!-- <v-toolbar-title v-text="title"></v-toolbar-title> -->
     <!-- </v-toolbar> -->
-    <v-content>
+    <v-content v-show="loading">
+      <section></section>
+    </v-content>
+
+    <v-content v-show="!loading">
       <!-- <v-parallax :src="require('assets/images/background4.jpg')" height="1000"> -->
       <section class="firstview">
         <!-- <vue-particles
@@ -35,7 +39,9 @@
 
           <transition name="welcome2" appear>
             <h1
-              class="p-content hidden white--text display-1 text-xs-center"
+              v-if="!loading"
+              class="p-content white--text display-1 text-xs-center"
+              :class="{show: fviewStartLoading}"
             >Welcome to KEI's portfolio</h1>
           </transition>
           <!-- <h1 class="p-content white--text display-1 text-xs-center">Welcome to KEI's portfolio</h1> -->
@@ -190,6 +196,7 @@
   </v-app>
 </template>
 <script>
+import image from "~/assets/images/background7.jpg";
 // import Parallax from "vue-parallaxy";
 // export default {
 //   data() {
@@ -201,12 +208,35 @@
 //   Parallax
 // }
 // };
-if (process.browser) {
-  window.onNuxtReady(() => {
-    let elem = document.querySelector(".p-content.hidden");
-    elem.classList.remove("hidden");
-  });
-}
+// console.log(image);
+export default {
+  data: function() {
+    return {
+      loading: true,
+      fviewStartLoading: false
+    };
+  },
+  mounted: async function() {
+    // const response = await this.$axios.get("~assets/images/background7.jpg");
+    const response = await this.$axios.get(image);
+    this.loading = false;
+    // var that = this;
+    if (process.client) {
+      // window.onNuxtReady(() => {
+      // let elem = document.querySelector(".p-content");
+      // console.log(elem.classList);
+      // elem.classList.add("show");
+      // console.log(elem.classList);
+      // });
+      // console.log(process.client);
+    }
+
+    setTimeout(() => {
+      this.fviewStartLoading = true;
+      console.log(this.fviewStartLoading);
+    }, 1000);
+  }
+};
 </script>
 <style lang="scss">
 #bg {
@@ -299,24 +329,33 @@ if (process.browser) {
   .p-content {
     position: relative;
     z-index: 1000;
-    // padding: 0 0;
-    padding: 120px 0;
-    opacity: 1;
+
+    // padding: 120px 0;
+    // opacity: 1;
+
+    padding: 0 0;
+    opacity: 0;
+
     // visibility: hidden;
     // transition: padding 2s linear;
     transition: all 2s linear;
     background: rgb(34, 34, 34); /* for IE */
     background: rgba(34, 34, 34, 0.75);
   }
-  .p-content.hidden {
-    padding: 0 0;
-    opacity: 0;
+  .welcome2-enter-active,
+  .welcome2-leave-active {
+    // transition: all 0.8s linear;
   }
-  position: relative;
-  .welcome2-enter {
+  .p-content.show {
+    padding: 120px 0;
+    opacity: 1;
+    // padding: 0 0;
+    // opacity: 0;
     // padding: 120px 0;
-    transition: all 0.8s linear;
+    // opacity: 1;
+    transition: all 0.4s linear;
   }
+
   // .welcome2-enter-active,
   // .welcome2-leave-active {
   //   transition: all 0.8s linear;

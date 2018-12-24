@@ -1,5 +1,5 @@
 module.exports = {
-  modules: ["@nuxtjs/vuetify"],
+  modules: ["@nuxtjs/vuetify", "@nuxtjs/axios"],
   /*
    ** Headers of the page
    */
@@ -45,5 +45,8 @@ module.exports = {
     { src: "~/plugins/vue-parallax-js", ssr: false },
     { src: "~/plugins/vue-particles", ssr: false }
     // { src: "~/plugins/vue-parallaxy", ssr: false }
-  ]
+  ],
+  axios: {
+    // baseURL: "http://localhost:3000/"
+  }
 }
