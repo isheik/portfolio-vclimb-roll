@@ -47,7 +47,10 @@ module.exports = {
     // { src: "~/plugins/vue-parallaxy", ssr: false }
   ],
   axios: {
-    baseURL: "https://frosty-galileo-2e46e3.netlify.com/"
+    baseURL:
+      process.env.NODE_DEV === "production"
+        ? process.env.DEV_API_URL
+        : process.env.PROD_API_URL
   }
   // baseURL: "http://localhost:3000"
 }
