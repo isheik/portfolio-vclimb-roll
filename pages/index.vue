@@ -64,21 +64,21 @@
       <section class="about">
         <!-- <v-layout column wrap class="my-5" align-center> -->
         <v-layout column wrap align-center>
+          <!-- <v-flex xs12 md6>
+            <v-avatar :size="avatarSize" color="grey lighten-4">
+              <img src="~assets/images/profile.jpg" alt="avatar">
+            </v-avatar>
+          </v-flex>-->
           <v-flex xs12 md6>
             <v-avatar :size="avatarSize" color="grey lighten-4">
               <img src="~assets/images/profile.jpg" alt="avatar">
             </v-avatar>
-          </v-flex>
-          <v-flex xs12 md6>
-            <v-avatar :size="avatarSize" color="grey lighten-4">
-              <img src="~assets/images/profile.jpg" alt="avatar">
-            </v-avatar>
-            <no-ssr>
-              <card :data-image="image">
-                <h1 slot="header">Canyons</h1>
-                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </card>
-            </no-ssr>
+            <!-- <no-ssr> -->
+            <card :data-image="image">
+              <h1 slot="header">Canyons</h1>
+              <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </card>
+            <!-- </no-ssr> -->
           </v-flex>
           <div class="text-xs-center">
             <span class="body">Cras facilisis mi vitae nunc</span>
@@ -221,6 +221,7 @@
 <script>
 import card from "~/components/Card";
 import image from "~/assets/images/background7.jpg";
+// import image from "https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=";
 // import Parallax from "vue-parallaxy";
 // export default {
 //   data() {

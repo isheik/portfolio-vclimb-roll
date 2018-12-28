@@ -261,9 +261,10 @@ p + p {
   position: absolute;
   top: -20px;
   left: -20px;
-  width: 100%;
-  height: 100%;
+  width: 120%;
+  height: 120%;
   padding: 20px;
+  // background-repeat: repeat;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
