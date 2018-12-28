@@ -3,8 +3,19 @@
     <!-- <v-toolbar class="white"> -->
     <!-- <v-toolbar-title v-text="title"></v-toolbar-title> -->
     <!-- </v-toolbar> -->
+    <v-toolbar v-show="!loading" class="navbar" dark :color="white" fixed scroll-off-screen>
+      <v-toolbar-title v-text="title"></v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items>
+        <v-btn flat>About</v-btn>
+        <v-btn flat>Skills</v-btn>
+        <v-btn flat>Work</v-btn>
+        <v-btn flat>Contact</v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+
     <v-content v-show="loading">
-      <section></section>
+      <section>loading....</section>
     </v-content>
 
     <v-content v-show="!loading">
@@ -239,8 +250,17 @@ export default {
 };
 </script>
 <style lang="scss">
+$tp-bg-color-ie: #222222;
+$tp-bg-color: #222222bf;
+// $tp-bg-color: rgba(34, 34, 34);
+// $tp-bg-color: rgba(34, 34, 34, 0.75);
+
 #bg {
   // width: 100%;
+}
+.navbar.v-toolbar {
+  background: $tp-bg-color-ie;
+  background: $tp-bg-color;
 }
 .firstview {
   // background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
