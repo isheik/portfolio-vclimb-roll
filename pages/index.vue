@@ -3,13 +3,12 @@
     <!-- <v-toolbar class="white"> -->
     <!-- <v-toolbar-title v-text="title"></v-toolbar-title> -->
     <!-- </v-toolbar> -->
-    <v-toolbar v-show="!loading" class="navbar" dark :color="white" fixed scroll-off-screen>
+    <v-toolbar v-show="!loading" class="navbar" dark fixed scroll-off-screen>
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn flat>About</v-btn>
-        <v-btn flat>Skills</v-btn>
-        <v-btn flat>Work</v-btn>
+        <v-btn flat>Works</v-btn>
         <v-btn flat>Contact</v-btn>
       </v-toolbar-items>
     </v-toolbar>
@@ -61,16 +60,29 @@
         <!-- <v-btn class="blue lighten-2 mt-5" dark large href="/pre-made-themes">Get Started</v-btn> -->
         <!-- </v-layout> -->
       </section>
-      <section class="about"></section>
       <!-- </v-parallax> -->
-      <section>
-        <v-layout column wrap class="my-5" align-center>
-          <v-flex xs12 sm4 class="my-3">
-            <div class="text-xs-center">
-              <h2 class="headline">The best way to start developing</h2>
-              <span class="subheading">Cras facilisis mi vitae nunc</span>
-            </div>
+      <section class="about">
+        <!-- <v-layout column wrap class="my-5" align-center> -->
+        <v-layout column wrap align-center>
+          <v-flex xs12 md6>
+            <v-avatar :size="avatarSize" color="grey lighten-4">
+              <img src="~assets/images/profile.jpg" alt="avatar">
+            </v-avatar>
           </v-flex>
+          <v-flex xs12 md6>
+            <v-avatar :size="avatarSize" color="grey lighten-4">
+              <img src="~assets/images/profile.jpg" alt="avatar">
+            </v-avatar>
+            <no-ssr>
+              <card :data-image="image">
+                <h1 slot="header">Canyons</h1>
+                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </card>
+            </no-ssr>
+          </v-flex>
+          <div class="text-xs-center">
+            <span class="body">Cras facilisis mi vitae nunc</span>
+          </div>
           <v-flex xs12>
             <v-container grid-list-xl>
               <v-layout row wrap align-center>
@@ -124,7 +136,7 @@
           </v-flex>
         </v-layout>
       </section>
-
+      <section class="skill-section"></section>
       <section>
         <!-- <v-parallax src="~assets/images/background4.jpg" height="380"> -->
         <v-layout column align-center justify-center>
@@ -207,6 +219,7 @@
   </v-app>
 </template>
 <script>
+import card from "~/components/Card";
 import image from "~/assets/images/background7.jpg";
 // import Parallax from "vue-parallaxy";
 // export default {
@@ -219,12 +232,19 @@ import image from "~/assets/images/background7.jpg";
 //   Parallax
 // }
 // };
-// console.log(image);
+console.log(image);
+
 export default {
+  components: {
+    card
+  },
   data: function() {
     return {
+      title: "test",
       loading: true,
-      fviewStartLoading: false
+      fviewStartLoading: false,
+      avatarSize: 128,
+      image: image
     };
   },
   mounted: async function() {
@@ -389,5 +409,12 @@ $tp-bg-color: #222222bf;
   // right: 0;
   // bottom: 0;
   // left: 0;
+}
+
+.skill-section {
+  background-attachment: fixed;
+  background-size: cover;
+  height: 200px;
+  background-image: url("~assets/images/background1.jpg");
 }
 </style>
