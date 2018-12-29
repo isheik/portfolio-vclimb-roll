@@ -44,7 +44,6 @@ module.exports = {
     { src: "~/plugins/vue-fullpage.js", ssr: false },
     { src: "~/plugins/vue-parallax-js", ssr: false },
     { src: "~/plugins/vue-particles", ssr: false }
-    // { src: "~/plugins/vue-parallaxy", ssr: false }
   ],
   axios: {
     baseURL:
@@ -52,5 +51,4 @@ module.exports = {
         ? process.env.DEV_API_URL
         : process.env.PROD_API_URL
   }
-  // baseURL: "http://localhost:3000"
 }
