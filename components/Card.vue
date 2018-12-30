@@ -76,9 +76,9 @@ export default {
       }, 1000);
     },
     $ready(fn) {
-      if (process.env.NODE_ENV === "production") {
-        return this.$nextTick(fn);
-      }
+      // if (process.env.NODE_ENV === "production") {
+      // return this.$nextTick(fn);
+      // }
 
       setTimeout(() => {
         this.$nextTick(fn);

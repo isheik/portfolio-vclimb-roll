@@ -54,18 +54,6 @@
               <v-avatar :size="avatarSize" color="grey lighten-4">
                 <img src="~assets/images/profile.jpg" alt="avatar">
               </v-avatar>
-              <card :data-image="image">
-                <h1 slot="header">Canyons</h1>
-                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </card>
-              <card :data-image="image">
-                <h1 slot="header">Canyons</h1>
-                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </card>
-              <card :data-image="image">
-                <h1 slot="header">Canyons</h1>
-                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </card>
             </v-layout>
           </v-flex>
           <div class="text-xs-center">
@@ -132,6 +120,26 @@
           >Web development has never been easier</div>
           <em>Kick-start your application today</em>
           <v-btn class="blue lighten-2 mt-5" dark large href="/pre-made-themes">Get Started</v-btn>
+        </v-layout>
+      </section>
+      <section class="works">
+        <v-layout column wrap align-center>
+          <v-flex xs12 md6>
+            <v-layout justify-space-around wrap align-center>
+              <card :data-image="image">
+                <h1 slot="header">Canyons</h1>
+                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </card>
+              <card :data-image="image">
+                <h1 slot="header">Canyons</h1>
+                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </card>
+              <card :data-image="image">
+                <h1 slot="header">Canyons</h1>
+                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </card>
+            </v-layout>
+          </v-flex>
         </v-layout>
       </section>
 
