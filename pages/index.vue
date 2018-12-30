@@ -56,24 +56,28 @@
       <!-- </v-container> -->
       <section class="about">
         <v-layout column wrap align-center>
-          <v-container grid-list-xl>
-            <v-layout>
+          <v-container>
+            <v-layout align-content-center>
               <!-- <v-layout column wrap align-center> -->
               <!-- <v-layout column wrap> -->
               <!-- <v-flex column xs12 md6> -->
               <!-- <v-flex column xs12 md6 align-self-end> -->
               <!-- <v-layout justify-space-around wrap> -->
-              <v-flex>
-                <v-layout>
+              <v-flex class="prof" align-end>
+                <!-- <v-layout> -->
+                <div class="prof-picture">
                   <v-avatar :size="avatarSize" color="grey lighten-4">
                     <img src="~assets/images/profile.jpg" alt="avatar">
                   </v-avatar>
-                  <!-- <div> -->
-                  <v-layout column>
-                    <span class="display-1">KEI</span>
-                    <span class="subheading">Keishi Asai</span>
-                  </v-layout>
-                </v-layout>
+                </div>
+                <!-- <div> -->
+                <!-- <v-layout column> -->
+                <div class="prof-name">
+                  <div class="display-1">KEI</div>
+                  <div class="subheading">Keishi Asai</div>
+                </div>
+                <!-- </v-layout> -->
+                <!-- </v-layout> -->
               </v-flex>
             </v-layout>
             <!-- </div> -->
@@ -331,5 +335,18 @@ $tp-bg-color: #222222bf;
   background-size: cover;
   height: 200px;
   background-image: url("~assets/images/background1.jpg");
+}
+.prof-name {
+  display: inline-block;
+  margin-left: 18px;
+  vertical-align: middle;
+  text-align: left;
+}
+.prof-picture {
+  display: inline-block;
+  text-align: left;
+}
+.prof {
+  text-align: center;
 }
 </style>
