@@ -11,10 +11,12 @@
     </v-toolbar>
 
     <v-content v-show="loading">
-      <section>loading....</section>
+      <v-container>loading....</v-container>
+      <!-- <section>loading....</section> -->
     </v-content>
 
     <v-content v-show="!loading">
+      <!-- <v-container pa-0 fluid class="firstview"> -->
       <section class="firstview">
         <!-- <vue-particles
           color="#dedede"
@@ -33,6 +35,8 @@
           :clickEffect="true"
           clickMode="push"
         ></vue-particles>-->
+        <!-- <v-layout> -->
+        <!-- <v-flex xs12 column> -->
         <div class="p-container">
           <transition name="welcome1" appear>
             <div class="p-bg" :key="1"></div>
@@ -46,16 +50,41 @@
             >Welcome to KEI's portfolio</h1>
           </transition>
         </div>
+        <!-- </v-flex> -->
+        <!-- </v-layout> -->
       </section>
+      <!-- </v-container> -->
       <section class="about">
         <v-layout column wrap align-center>
-          <v-flex xs12 md6>
-            <v-layout justify-space-around wrap align-center>
-              <v-avatar :size="avatarSize" color="grey lighten-4">
-                <img src="~assets/images/profile.jpg" alt="avatar">
-              </v-avatar>
+          <v-container grid-list-xl>
+            <v-layout>
+              <!-- <v-layout column wrap align-center> -->
+              <!-- <v-layout column wrap> -->
+              <!-- <v-flex column xs12 md6> -->
+              <!-- <v-flex column xs12 md6 align-self-end> -->
+              <!-- <v-layout justify-space-around wrap> -->
+              <v-flex>
+                <v-layout>
+                  <v-avatar :size="avatarSize" color="grey lighten-4">
+                    <img src="~assets/images/profile.jpg" alt="avatar">
+                  </v-avatar>
+                  <!-- <div> -->
+                  <v-layout column>
+                    <span class="display-1">KEI</span>
+                    <span class="subheading">Keishi Asai</span>
+                  </v-layout>
+                </v-layout>
+              </v-flex>
             </v-layout>
-          </v-flex>
+            <!-- </div> -->
+            <!-- </v-layout> -->
+            <!-- </v-flex> -->
+            <!-- <v-flex xs12 md6> -->
+            <!-- <v-layout justify-space-around wrap align-center> -->
+            <!-- </v-layout> -->
+            <!-- </v-flex> -->
+            <!-- </v-layout> -->
+          </v-container>
           <div class="text-xs-center">
             <span class="body">Cras facilisis mi vitae nunc</span>
           </div>
@@ -258,8 +287,9 @@ $tp-bg-color: #222222bf;
   background-position: center;
 }
 .p-container {
-  position: relative;
+  position: absolute;
   top: 50%;
+  width: 100%;
 
   transform: translate(0%, -50%);
   .p-bg {
