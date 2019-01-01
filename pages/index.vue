@@ -56,14 +56,14 @@
       <!-- </v-container> -->
       <section class="about">
         <v-layout column wrap align-center>
-          <v-container>
-            <v-layout align-content-center>
+          <v-container class="prof">
+            <v-layout column align-content-center>
               <!-- <v-layout column wrap align-center> -->
               <!-- <v-layout column wrap> -->
               <!-- <v-flex column xs12 md6> -->
               <!-- <v-flex column xs12 md6 align-self-end> -->
               <!-- <v-layout justify-space-around wrap> -->
-              <v-flex class="prof" align-end>
+              <v-flex class="mb-4">
                 <!-- <v-layout> -->
                 <div class="prof-picture">
                   <v-avatar :size="avatarSize" color="grey lighten-4">
@@ -79,6 +79,10 @@
                 <!-- </v-layout> -->
                 <!-- </v-layout> -->
               </v-flex>
+              <v-flex
+                class="prof-description subheading"
+                align-self-center
+              >I turn my passion and coffee into code &#x2615;</v-flex>
             </v-layout>
             <!-- </div> -->
             <!-- </v-layout> -->
@@ -336,17 +340,19 @@ $tp-bg-color: #222222bf;
   height: 200px;
   background-image: url("~assets/images/background1.jpg");
 }
-.prof-name {
-  display: inline-block;
-  margin-left: 18px;
-  vertical-align: middle;
-  text-align: left;
-}
-.prof-picture {
-  display: inline-block;
-  text-align: left;
-}
+
 .prof {
   text-align: center;
+
+  &-name {
+    display: inline-block;
+    margin-left: 18px;
+    vertical-align: middle;
+    text-align: left;
+  }
+  &-picture {
+    display: inline-block;
+    text-align: left;
+  }
 }
 </style>
