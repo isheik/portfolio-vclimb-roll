@@ -79,10 +79,11 @@
                 <!-- </v-layout> -->
                 <!-- </v-layout> -->
               </v-flex>
-              <v-flex
-                class="prof-description subheading"
-                align-self-center
-              >I turn my passion and coffee into code &#x2615;</v-flex>
+              <v-flex class="prof-description subheading" align-self-center>
+                <p>Hi, I am a full-stack web developer based in Vancouver, Canada.
+                  <br>I enjoy programming and turn my passion/coffee into code &#x2615;
+                </p>
+              </v-flex>
             </v-layout>
             <!-- </div> -->
             <!-- </v-layout> -->
