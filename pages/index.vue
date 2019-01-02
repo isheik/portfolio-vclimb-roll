@@ -251,7 +251,7 @@
 </template>
 <script>
 import card from "~/components/Card";
-import image from "~/assets/images/background7.jpg";
+import bgImage from "~/assets/images/background7.jpg";
 
 export default {
   components: {
@@ -263,11 +263,12 @@ export default {
       loading: true,
       fviewStartLoading: false,
       avatarSize: 128,
-      image: image
+      bgImage: bgImage,
+      skillLogos: [{ url: "~assets/images/profile.jpg", alt: "" }]
     };
   },
   mounted: async function() {
-    const response = await this.$axios.get(image);
+    const response = await this.$axios.get(bgImage);
     this.loading = false;
 
     setTimeout(() => {
