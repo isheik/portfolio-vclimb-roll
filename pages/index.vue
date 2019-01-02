@@ -85,18 +85,17 @@
                 </p>
               </v-flex>
             </v-layout>
-            <!-- </div> -->
-            <!-- </v-layout> -->
-            <!-- </v-flex> -->
-            <!-- <v-flex xs12 md6> -->
-            <!-- <v-layout justify-space-around wrap align-center> -->
-            <!-- </v-layout> -->
-            <!-- </v-flex> -->
-            <!-- </v-layout> -->
           </v-container>
-          <div class="text-xs-center">
-            <span class="body">Cras facilisis mi vitae nunc</span>
-          </div>
+          <v-container class="prof">
+            <v-layout>
+              <v-flex>
+                <h3>Skills</h3>
+              </v-flex>
+              <v-flex>
+                <h3>Tools</h3>
+              </v-flex>
+            </v-layout>
+          </v-container>
           <v-flex xs12>
             <v-container grid-list-xl>
               <v-layout row wrap align-center>
