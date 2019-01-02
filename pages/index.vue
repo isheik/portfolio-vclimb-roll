@@ -90,6 +90,13 @@
             <v-layout>
               <v-flex>
                 <h3>Skills</h3>
+                <img
+                  class="skillImages"
+                  v-for="skillImage in skillImages"
+                  :key="skillImage.id"
+                  :src="skillImage.url"
+                  :alt="skillImage.alt"
+                >
               </v-flex>
               <v-flex>
                 <h3>Tools</h3>
@@ -163,15 +170,15 @@
         <v-layout column wrap align-center>
           <v-flex xs12 md6>
             <v-layout justify-space-around wrap align-center>
-              <card :data-image="image">
+              <card :data-image="bgImage">
                 <h1 slot="header">Canyons</h1>
                 <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
               </card>
-              <card :data-image="image">
+              <card :data-image="bgImage">
                 <h1 slot="header">Canyons</h1>
                 <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
               </card>
-              <card :data-image="image">
+              <card :data-image="bgImage">
                 <h1 slot="header">Canyons</h1>
                 <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
               </card>
@@ -264,7 +271,30 @@ export default {
       fviewStartLoading: false,
       avatarSize: 128,
       bgImage: bgImage,
-      skillLogos: [{ url: "~assets/images/profile.jpg", alt: "" }]
+      skillImages: [
+        { id: 0, url: "/html5-logo.png", alt: "" },
+        { id: 1, url: "/css3-logo.png", alt: "" },
+        { id: 2, url: "/js-logo.png", alt: "" },
+        { id: 3, url: "/react-logo.png", alt: "" },
+        { id: 4, url: "/vue-logo.png", alt: "" },
+        { id: 5, url: "/wp-logo.png", alt: "" },
+        { id: 6, url: "/node-logo.png", alt: "" },
+        { id: 7, url: "/php-logo.png", alt: "" },
+        { id: 8, url: "/aws-logo.png", alt: "" },
+        { id: 9, url: "/firebase-logo.png", alt: "" },
+        { id: 10, url: "/mysql-logo.png", alt: "" },
+        { id: 11, url: "/mongodb-logo.png", alt: "" }
+      ],
+      toolImages: [
+        { id: 0, url: "/git-logo.png", alt: "" },
+        { id: 1, url: "/github-logo.png", alt: "" },
+        { id: 2, url: "/webpack-logo.png", alt: "" },
+        { id: 3, url: "/sass-logo.png", alt: "" },
+        { id: 4, url: "/vim-logo.png", alt: "" },
+        { id: 5, url: "/vscode-logo.png", alt: "" },
+        { id: 6, url: "/ai-logo.png", alt: "" },
+        { id: 7, url: "/ps-logo.png", alt: "" }
+      ]
     };
   },
   mounted: async function() {
@@ -355,5 +385,8 @@ $tp-bg-color: #222222bf;
     display: inline-block;
     text-align: left;
   }
+}
+.skillImages {
+  height: 64px;
 }
 </style>
