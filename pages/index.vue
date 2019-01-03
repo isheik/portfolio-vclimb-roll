@@ -138,34 +138,57 @@
           <!-- </div> -->
         </div>
       </section>
-      <section>
-        <v-layout column align-center justify-center>
-          <div
-            class="headline white--text mb-3 text-xs-center"
-          >Web development has never been easier</div>
-          <em>Kick-start your application today</em>
-          <v-btn class="blue lighten-2 mt-5" dark large href="/pre-made-themes">Get Started</v-btn>
-        </v-layout>
-      </section>
       <section class="works">
-        <v-layout column wrap align-center>
-          <v-flex xs12 md6>
-            <v-layout justify-space-around wrap align-center>
-              <card :data-image="bgImage">
-                <h1 slot="header">Canyons</h1>
-                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </card>
-              <card :data-image="bgImage">
-                <h1 slot="header">Canyons</h1>
-                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </card>
-              <card :data-image="bgImage">
-                <h1 slot="header">Canyons</h1>
-                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </card>
-            </v-layout>
-          </v-flex>
-        </v-layout>
+        <v-container>
+          <v-layout wrap align-center>
+            <v-flex xs12>
+              <h3 class="headline text-xs-center">Individual works</h3>
+            </v-flex>
+            <v-flex class="mb-5" xs12>
+              <v-layout row justify-space-around wrap align-center>
+                <card :data-image="bgImage">
+                  <h1 slot="header">Opus 13</h1>
+                  <p slot="content">A desktop twitter client built with React.js, Redux and Electron</p>
+                </card>
+                <card :data-image="bgImage">
+                  <h1 slot="header">Portfolio</h1>
+                  <p slot="content">This portfolio website built with Vue.js (Nuxt.js) and Netlify</p>
+                </card>
+                <card :data-image="bgImage">
+                  <h1 slot="header">UBC Donation Website</h1>
+                  <p
+                    slot="content"
+                  >New UBC donation page built with jQuery and Engaging Networks platform in my Co-op term</p>
+                </card>
+              </v-layout>
+            </v-flex>
+            <v-flex xs12>
+              <h3 class="headline text-xs-center">Team works</h3>
+            </v-flex>
+            <v-flex xs12>
+              <v-layout justify-space-around wrap align-center>
+                <card :data-image="bgImage">
+                  <h1 slot="header">Food Factory Zero</h1>
+                  <p
+                    slot="content"
+                  >A web-based action-puzzle game to raise awareness about food waste</p>
+                </card>
+                <card :data-image="bgImage">
+                  <h1 slot="header">Cecil Green Park House Website</h1>
+                  <p
+                    slot="content"
+                  >New website for a wedding/special event facility built in my Co-op term</p>
+                </card>
+                <card :data-image="bgImage">
+                  <h1 slot="header">Audio recording application</h1>
+                  <p
+                    slot="content"
+                  >Audio recording application built with Web Audio API, React.js, Node.js and AWS in BCIT project practicum</p>
+                </card>
+              </v-layout>
+            </v-flex>
+          </v-layout>
+        </v-container>
       </section>
 
       <section>
