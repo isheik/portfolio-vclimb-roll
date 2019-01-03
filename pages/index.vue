@@ -86,7 +86,7 @@
               </v-flex>
               <v-flex xs12>
                 <v-layout align-start wrap>
-                  <v-flex offset-xs0 offset-lg1 xs12 sm6 md6 lg4 class="prof-skills">
+                  <v-flex mb-4 offset-xs0 offset-lg1 xs12 sm6 md6 lg4 class="prof-skills">
                     <h3 class="headline">Skills</h3>
                     <img
                       class="skillImages"
