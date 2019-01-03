@@ -56,7 +56,7 @@
       <!-- </v-container> -->
       <section class="about">
         <v-layout column wrap align-center>
-          <v-container class="prof">
+          <v-container class="prof pr-2 pl-2">
             <v-layout column align-content-center>
               <!-- <v-layout column wrap align-center> -->
               <!-- <v-layout column wrap> -->
@@ -79,17 +79,41 @@
                 <!-- </v-layout> -->
                 <!-- </v-layout> -->
               </v-flex>
-              <v-flex class="prof-description subheading" align-self-center>
+              <v-flex class="prof-description subheading mb-4" align-self-center>
                 <p>Hi, I am a full-stack web developer based in Vancouver, Canada.
                   <br>I enjoy programming and turn my passion/coffee into code &#x2615;
                 </p>
               </v-flex>
+              <v-flex xs12>
+                <v-layout align-start wrap>
+                  <v-flex offset-xs0 offset-lg1 xs12 sm6 md6 lg4 class="prof-skills">
+                    <h3 class="headline">Skills</h3>
+                    <img
+                      class="skillImages"
+                      v-for="skillImage in skillImages"
+                      :key="skillImage.id"
+                      :src="skillImage.url"
+                      :alt="skillImage.alt"
+                    >
+                  </v-flex>
+                  <v-flex offset-xs0 offset-md1 offset-lg2 xs12 sm4 md4 lg3 class="prof-tools">
+                    <h3 class="headline">Tools</h3>
+                    <img
+                      class="toolImages"
+                      v-for="toolImage in toolImages"
+                      :key="toolImage.id"
+                      :src="toolImage.url"
+                      :alt="toolImage.alt"
+                    >
+                  </v-flex>
+                </v-layout>
+              </v-flex>
             </v-layout>
           </v-container>
-          <v-container class="prof">
+          <!-- <v-container class="prof" grid-list-xl>
             <v-layout>
               <v-flex>
-                <h3>Skills</h3>
+                <h3>Tools</h3>
                 <img
                   class="skillImages"
                   v-for="skillImage in skillImages"
@@ -98,62 +122,8 @@
                   :alt="skillImage.alt"
                 >
               </v-flex>
-              <v-flex>
-                <h3>Tools</h3>
-              </v-flex>
             </v-layout>
-          </v-container>
-          <v-flex xs12>
-            <v-container grid-list-xl>
-              <v-layout row wrap align-center>
-                <v-flex xs12 md4>
-                  <v-card class="elevation-0 transparent">
-                    <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">color_lens</v-icon>
-                    </v-card-text>
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-xs-center">Material Design</div>
-                    </v-card-title>
-                    <v-card-text>
-                      Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
-                      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                      Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md4>
-                  <v-card class="elevation-0 transparent">
-                    <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">flash_on</v-icon>
-                    </v-card-text>
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline">Fast development</div>
-                    </v-card-title>
-                    <v-card-text>
-                      Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
-                      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                      Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-                <v-flex xs12 md4>
-                  <v-card class="elevation-0 transparent">
-                    <v-card-text class="text-xs-center">
-                      <v-icon x-large class="blue--text text--lighten-2">build</v-icon>
-                    </v-card-text>
-                    <v-card-title primary-title class="layout justify-center">
-                      <div class="headline text-xs-center">Completely Open Sourced</div>
-                    </v-card-title>
-                    <v-card-text>
-                      Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
-                      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                      Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
-                    </v-card-text>
-                  </v-card>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-flex>
+          </v-container>-->
         </v-layout>
       </section>
       <section class="skill-section"></section>
@@ -385,8 +355,23 @@ $tp-bg-color: #222222bf;
     display: inline-block;
     text-align: left;
   }
+  &-skills {
+    width: 200px;
+    img {
+      margin: 10px 20px;
+    }
+  }
+  &-tools {
+    width: 200px;
+    img {
+      margin: 10px 20px;
+    }
+  }
 }
 .skillImages {
-  height: 64px;
+  height: 48px;
+}
+.toolImages {
+  height: 48px;
 }
 </style>
