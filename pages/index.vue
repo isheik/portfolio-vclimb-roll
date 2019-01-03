@@ -126,7 +126,18 @@
           </v-container>-->
         </v-layout>
       </section>
-      <section class="skill-section"></section>
+      <section>
+        <div class="works-heading-container">
+          <!-- <div> -->
+          <v-layout
+            class="works-heading-content display-1"
+            justify-space-around
+            wrap
+            align-center
+          >Works</v-layout>
+          <!-- </div> -->
+        </div>
+      </section>
       <section>
         <v-layout column align-center justify-center>
           <div
@@ -336,10 +347,6 @@ $tp-bg-color: #222222bf;
 }
 
 .skill-section {
-  background-attachment: fixed;
-  background-size: cover;
-  height: 200px;
-  background-image: url("~assets/images/background1.jpg");
 }
 
 .prof {
@@ -373,5 +380,19 @@ $tp-bg-color: #222222bf;
 }
 .toolImages {
   height: 48px;
+}
+.works-heading-container {
+  background-attachment: fixed;
+  background-size: cover;
+  height: 300px;
+  background-image: url("~assets/images/background1.jpg");
+}
+.works-heading-content {
+  width: 100%;
+  height: 100%;
+  color: white;
+
+  // background: $tp-bg-color-ie;
+  // background: $tp-bg-color;
 }
 </style>
