@@ -21,7 +21,8 @@
     "vue-fullpage.js": "0.0.5",
     "vue-parallax": "^1.1.1",
     "vue-parallax-js": "^0.2.3",
-    "vue-parallaxy": "^1.1.1"
+    "vue-parallaxy": "^1.1.1",
+    "vue-thin-modal": "^1.2.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
