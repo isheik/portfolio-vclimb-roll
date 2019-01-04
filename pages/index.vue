@@ -146,10 +146,16 @@
             </v-flex>
             <v-flex class="mb-5" xs12>
               <v-layout row justify-space-around wrap align-center>
-                <card data-image="/opus13-home.jpg">
+                <card data-image="/opus13-home.jpg" modal-target="example">
                   <h1 slot="header">Opus 13</h1>
                   <p slot="content">A desktop twitter client built with React.js, Redux and Electron</p>
                 </card>
+                <modal name="example">
+                  <div class="basic-modal">
+                    <h1 class="title">Modal Title</h1>
+                    <button class="button" type="button" @click="close">Close Modal</button>
+                  </div>
+                </modal>
                 <card :data-image="bgImage">
                   <h1 slot="header">Portfolio</h1>
                   <p slot="content">This portfolio website built with Vue.js (Nuxt.js) and Netlify</p>
@@ -173,6 +179,7 @@
                     slot="content"
                   >A web-based action-puzzle game to raise awareness about food waste</p>
                 </card>
+
                 <card :data-image="bgImage">
                   <h1 slot="header">Cecil Green Park House Website</h1>
                   <p
@@ -309,6 +316,11 @@ export default {
       this.fviewStartLoading = true;
       console.log(this.fviewStartLoading);
     }, 1000);
+  },
+  methods: {
+    close() {
+      this.$modal.pop();
+    }
   }
 };
 </script>

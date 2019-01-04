@@ -4,6 +4,7 @@
     @mousemove="handleMouseMove"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
+    @click="open"
     ref="card"
   >
     <!-- <div class="card" :style="cardStyle"> -->
@@ -25,7 +26,7 @@ export default {
       this.height = this.$refs.card.offsetHeight;
     });
   },
-  props: ["dataImage"],
+  props: ["dataImage", "modalTarget"],
   data: () => ({
     width: 0,
     height: 0,
@@ -83,6 +84,14 @@ export default {
       setTimeout(() => {
         this.$nextTick(fn);
       }, 1000);
+    },
+
+    close() {
+      this.$modal.pop();
+    },
+    open() {
+      this.$modal.push(this.modalTarget);
+      console.log("test");
     }
   }
   // mounted() {
