@@ -146,7 +146,7 @@
             </v-flex>
             <v-flex class="mb-5" xs12>
               <v-layout row justify-space-around wrap align-center>
-                <card data-image="/opus13-home.jpg" modal-target="example">
+                <card data-image="/opus13-home.jpg" modal-target="modal-opus13">
                   <h1 slot="header">Opus 13</h1>
                   <p slot="content">A desktop twitter client built with React.js, Redux and Electron</p>
                 </card>
