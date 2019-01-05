@@ -148,18 +148,22 @@
               <v-layout row justify-space-around wrap align-center>
                 <card data-image="/opus13-home.jpg" modal-target="modal-opus13">
                   <h1 slot="header">Opus 13</h1>
-                  <p slot="content">A desktop twitter client built with React.js, Redux and Electron</p>
+                  <p
+                    slot="content"
+                  >A desktop twitter client built with React.js, Redux, Webpack and Electron</p>
                 </card>
                 <modal name="modal-opus13">
                   <div class="basic-modal">
-                    <h1 class="title">Modal Title</h1>
+                    <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
                     <img src="/opus13.gif" alt>
                     <button class="button" type="button" @click="close">Close Modal</button>
                   </div>
                 </modal>
                 <card :data-image="bgImage">
                   <h1 slot="header">Portfolio</h1>
-                  <p slot="content">This portfolio website built with Vue.js (Nuxt.js) and Netlify</p>
+                  <p
+                    slot="content"
+                  >This portfolio website built with Vue.js (Nuxt.js), Vuetify and Netlify</p>
                 </card>
                 <card :data-image="bgImage">
                   <h1 slot="header">UBC Donation Website</h1>
@@ -430,5 +434,93 @@ $tp-bg-color: #222222bf;
 
   // background: $tp-bg-color-ie;
   // background: $tp-bg-color;
+}
+
+// modal
+.modal-open {
+  overflow: hidden;
+}
+
+.modal-open .modal-wrapper {
+  display: block;
+}
+
+.modal-wrapper {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*  Backdrop
+----------------------------------------*/
+.modal-backdrop {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-backdrop-enter-active,
+.modal-backdrop-leave-active {
+  transition: opacity 300ms ease-out;
+}
+
+.modal-backdrop-enter,
+.modal-backdrop-leave-active {
+  opacity: 0;
+}
+
+/*  Content
+----------------------------------------*/
+.modal-content-wrapper {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 1001;
+}
+
+.modal-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  margin: 30px auto;
+  padding: 30px 0;
+  width: 100%;
+  max-width: 1024px;
+  background-color: #fff;
+  transform: translateY(0);
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .modal-content {
+    padding: 30px;
+  }
+}
+
+.modal-content-enter-active,
+.modal-content-leave-active {
+  transition: 300ms cubic-bezier(0.51, 0.21, 0.38, 0.98);
+  transition-property: opacity, transform;
+}
+
+.modal-content-enter,
+.modal-content-leave-active {
+  opacity: 0;
+  transform: translateY(-50px);
 }
 </style>
