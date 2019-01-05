@@ -281,7 +281,7 @@
 </template>
 <script>
 import card from "~/components/Card";
-import closebutton from "~/components/closeButton";
+import closebutton from "~/components/CloseButton";
 import bgImage from "~/assets/images/background7.jpg";
 
 export default {
