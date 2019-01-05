@@ -129,12 +129,9 @@
       <section>
         <div class="works-heading-container">
           <!-- <div> -->
-          <v-layout
-            class="works-heading-content display-1"
-            justify-space-around
-            wrap
-            align-center
-          >Works</v-layout>
+          <v-layout class="works-heading-content" justify-space-around wrap align-center>
+            <h2 class="display-1">Works</h2>
+          </v-layout>
           <!-- </div> -->
         </div>
       </section>
@@ -147,7 +144,7 @@
             <v-flex class="mb-5" xs12>
               <v-layout row justify-space-around wrap align-center>
                 <card data-image="/opus13-home.jpg" modal-target="modal-opus13">
-                  <h1 slot="header">Opus 13</h1>
+                  <h4 slot="header">Opus 13</h4>
                   <p
                     slot="content"
                   >A desktop twitter client built with React.js, Redux, Webpack and Electron</p>
@@ -155,18 +152,27 @@
                 <modal name="modal-opus13">
                   <div class="basic-modal">
                     <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
+                    <h5>Demo / image</h5>
                     <img src="/opus13.gif" alt>
+                    <h5>Name</h5>
+                    <p>Opus 13</p>
+                    <h5>Description</h5>
+                    <p>A simple desktop twitter client built using Web Technologies. The client allows users to view, post, search tweets. Also users can mark tweets as favorited and filter the tweets mentioned them.</p>
+                    <h5>Technology/Tools used</h5>
+                    <p>React.js, Redux, Webpack, Sass, Electron, REST API (Twitter)</p>
+                    <h5>Link</h5>
+                    <a href="https://github.com/isheik/opus13">GitHub repository</a>
                     <button class="button" type="button" @click="close">Close Modal</button>
                   </div>
                 </modal>
                 <card :data-image="bgImage">
-                  <h1 slot="header">Portfolio</h1>
+                  <h4 slot="header">Portfolio</h4>
                   <p
                     slot="content"
                   >This portfolio website built with Vue.js (Nuxt.js), Vuetify and Netlify</p>
                 </card>
                 <card :data-image="bgImage">
-                  <h1 slot="header">UBC Donation Website</h1>
+                  <h4 slot="header">UBC Donation Website</h4>
                   <p
                     slot="content"
                   >New UBC donation page built with jQuery and Engaging Networks platform in my Co-op term</p>
@@ -179,20 +185,20 @@
             <v-flex xs12>
               <v-layout justify-space-around wrap align-center>
                 <card :data-image="bgImage">
-                  <h1 slot="header">Food Factory Zero</h1>
+                  <h4 slot="header">Food Factory Zero</h4>
                   <p
                     slot="content"
                   >A web-based action-puzzle game to raise awareness about food waste</p>
                 </card>
 
                 <card :data-image="bgImage">
-                  <h1 slot="header">Cecil Green Park House Website</h1>
+                  <h4 slot="header">Cecil Green Park House Website</h4>
                   <p
                     slot="content"
                   >New website for a wedding/special event facility built in my Co-op term</p>
                 </card>
                 <card :data-image="bgImage">
-                  <h1 slot="header">Audio recording application</h1>
+                  <h4 slot="header">Audio recording application</h4>
                   <p
                     slot="content"
                   >Audio recording application built with Web Audio API, React.js, Node.js and AWS in BCIT project practicum</p>
@@ -493,7 +499,7 @@ $tp-bg-color: #222222bf;
   right: 0;
   opacity: 1;
   margin: 30px auto;
-  padding: 30px 0;
+  padding: 30px 5px;
   width: 100%;
   max-width: 1024px;
   background-color: #fff;
@@ -503,6 +509,21 @@ $tp-bg-color: #222222bf;
     display: block;
     width: 100%;
     max-width: 600px;
+  }
+  h5 {
+    margin: 10px 0;
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid #7ed1e6;
+  }
+  h5:first-child {
+    margin: 0 0 10px 0;
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid #7ed1e6;
+  }
+  h5:first-letter {
+    margin-right: 0.1em;
+    font-size: 2em;
+    color: #7ed1e6;
   }
 }
 
@@ -522,5 +543,53 @@ $tp-bg-color: #222222bf;
 .modal-content-leave-active {
   opacity: 0;
   transform: translateY(-50px);
+}
+
+// list
+.list {
+  list-style: none;
+  width: 600px;
+  max-width: 90%;
+}
+
+.item {
+  display: block;
+  clear: both;
+  counter-increment: list;
+  padding-bottom: 4rem;
+  font-size: 1.1rem;
+  line-height: 1.375;
+  position: relative;
+}
+
+.item:before {
+  font: bold 2.25rem/1 var(--font-number);
+  content: counter(list);
+  width: 5rem;
+  height: 5rem;
+  float: left;
+  margin: 0 1.5rem 0.75rem 0;
+  color: var(--bg);
+  background: var(--highlight1)
+    linear-gradient(to bottom right, var(--highlight1) 25%, var(--highlight2));
+  text-shadow: 0 0 2px var(--highlight1);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  shape-outside: ellipse();
+  z-index: 1;
+}
+
+.item:after {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background: var(--highlight1);
+  z-index: -1;
+  border-top-left-radius: 3px;
 }
 </style>
