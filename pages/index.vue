@@ -163,7 +163,7 @@
                     <h5>Link</h5>
                     <a href="https://github.com/isheik/opus13">GitHub repository</a>
 
-                    <closebutton @click="close"/>
+                    <closeButton @click="close"/>
                   </div>
                 </modal>
                 <card :data-image="bgImage">
@@ -281,13 +281,13 @@
 </template>
 <script>
 import card from "~/components/Card";
-import closebutton from "~/components/CloseButton";
+import closeButton from "~/components/CloseButton";
 import bgImage from "~/assets/images/background7.jpg";
 
 export default {
   components: {
     card,
-    closebutton
+    closeButton
   },
   data: function() {
     return {
