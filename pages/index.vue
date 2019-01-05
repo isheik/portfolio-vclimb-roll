@@ -150,9 +150,10 @@
                   <h1 slot="header">Opus 13</h1>
                   <p slot="content">A desktop twitter client built with React.js, Redux and Electron</p>
                 </card>
-                <modal name="example">
+                <modal name="modal-opus13">
                   <div class="basic-modal">
                     <h1 class="title">Modal Title</h1>
+                    <img src="/opus13.gif" alt>
                     <button class="button" type="button" @click="close">Close Modal</button>
                   </div>
                 </modal>
@@ -367,7 +368,7 @@ $tp-bg-color: #222222bf;
     padding: 0 0;
     opacity: 0;
 
-    transition: all 2s linear;
+    transition: all 0.2s linear;
     background: $tp-bg-color-ie;
     background: $tp-bg-color;
   }

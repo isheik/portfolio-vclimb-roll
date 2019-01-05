@@ -91,7 +91,6 @@ export default {
     },
     open() {
       this.$modal.push(this.modalTarget);
-      console.log("test");
     }
   }
   // mounted() {
