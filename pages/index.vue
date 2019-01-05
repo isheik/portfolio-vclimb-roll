@@ -152,17 +152,18 @@
                 <modal name="modal-opus13">
                   <div class="basic-modal">
                     <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
-                    <h5>Demo / image</h5>
+                    <h5>Demo / Image</h5>
                     <img src="/opus13.gif" alt>
                     <h5>Name</h5>
                     <p>Opus 13</p>
                     <h5>Description</h5>
-                    <p>A simple desktop twitter client built using Web Technologies. The client allows users to view, post, search tweets. Also users can mark tweets as favorited and filter the tweets mentioned them.</p>
-                    <h5>Technology/Tools used</h5>
+                    <p>A simple desktop twitter client built using Web Technologies. The client allows users to view, post, search, favorite and retweet tweets. Also, filter menus are available to view only the tweets mentioned users or their favorite tweets.</p>
+                    <h5>Tech Stack</h5>
                     <p>React.js, Redux, Webpack, Sass, Electron, REST API (Twitter)</p>
                     <h5>Link</h5>
                     <a href="https://github.com/isheik/opus13">GitHub repository</a>
-                    <button class="button" type="button" @click="close">Close Modal</button>
+
+                    <closebutton @click="close"/>
                   </div>
                 </modal>
                 <card :data-image="bgImage">
@@ -280,11 +281,13 @@
 </template>
 <script>
 import card from "~/components/Card";
+import closebutton from "~/components/closeButton";
 import bgImage from "~/assets/images/background7.jpg";
 
 export default {
   components: {
-    card
+    card,
+    closebutton
   },
   data: function() {
     return {
@@ -328,11 +331,7 @@ export default {
       console.log(this.fviewStartLoading);
     }, 1000);
   },
-  methods: {
-    close() {
-      this.$modal.pop();
-    }
-  }
+  methods: {}
 };
 </script>
 <style lang="scss">
