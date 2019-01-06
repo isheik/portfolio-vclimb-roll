@@ -223,22 +223,16 @@
           <v-layout wrap align-center>
             <form name="contact" method="POST" data-netlify="true">
               <p>
-                <label>
-                  Name:
-                  <input type="text" name="name">
-                </label>
+                <label for="name">Name:</label>
+                <input type="text" name="name">
               </p>
               <p>
-                <label>
-                  Email:
-                  <input type="email" name="email">
-                </label>
+                <label for="email">Email:</label>
+                <input type="email" name="email">
               </p>
               <p>
-                <label>
-                  Message:
-                  <textarea name="message"></textarea>
-                </label>
+                <label for="message">Message:</label>
+                <textarea name="message"></textarea>
               </p>
               <p>
                 <button type="submit">Send</button>
