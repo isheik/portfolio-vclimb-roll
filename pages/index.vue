@@ -127,13 +127,15 @@
         </v-layout>
       </section>
       <section>
-        <div class="works-heading-container">
+        <v-parallax src="background4.jpg" height="300">
+          <!-- <div class="works-heading-container"> -->
           <!-- <div> -->
           <v-layout class="works-heading-content" justify-space-around wrap align-center>
             <h2 class="display-1">Works</h2>
           </v-layout>
           <!-- </div> -->
-        </div>
+          <!-- </div> -->
+        </v-parallax>
       </section>
       <section class="works">
         <v-container>
@@ -209,73 +211,42 @@
           </v-layout>
         </v-container>
       </section>
-
       <section>
-        <v-container grid-list-xl>
-          <v-layout row wrap justify-center class="my-5">
-            <v-flex xs12 sm4>
-              <v-card class="elevation-0 transparent">
-                <v-card-title primary-title class="layout justify-center">
-                  <div class="headline">Company info</div>
-                </v-card-title>
-                <v-card-text>
-                  Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
-                  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                  Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
-                </v-card-text>
-              </v-card>
-            </v-flex>
-            <v-flex xs12 sm4 offset-sm1>
-              <v-card class="elevation-0 transparent">
-                <v-card-title primary-title class="layout justify-center">
-                  <div class="headline">Contact us</div>
-                </v-card-title>
-                <v-card-text>Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.</v-card-text>
-                <v-list class="transparent">
-                  <v-list-tile>
-                    <v-list-tile-action>
-                      <v-icon class="blue--text text--lighten-2">phone</v-icon>
-                    </v-list-tile-action>
-                    <v-list-tile-content>
-                      <v-list-tile-title>777-867-5309</v-list-tile-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
-                  <v-list-tile>
-                    <v-list-tile-action>
-                      <v-icon class="blue--text text--lighten-2">place</v-icon>
-                    </v-list-tile-action>
-                    <v-list-tile-content>
-                      <v-list-tile-title>Chicago, US</v-list-tile-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
-                  <v-list-tile>
-                    <v-list-tile-action>
-                      <v-icon class="blue--text text--lighten-2">email</v-icon>
-                    </v-list-tile-action>
-                    <v-list-tile-content>
-                      <v-list-tile-title>john@vuetifyjs.com</v-list-tile-title>
-                    </v-list-tile-content>
-                  </v-list-tile>
-                </v-list>
-              </v-card>
-            </v-flex>
+        <div class="contact-heading-container">
+          <v-layout class="contact-heading-content" justify-space-around wrap align-center>
+            <h2 class="display-1">Contact</h2>
+          </v-layout>
+        </div>
+      </section>
+      <section class="contact">
+        <v-container>
+          <v-layout wrap align-center>
+            <form name="contact" method="POST" data-netlify="true">
+              <p>
+                <label>
+                  Name:
+                  <input type="text" name="name">
+                </label>
+              </p>
+              <p>
+                <label>
+                  Email:
+                  <input type="email" name="email">
+                </label>
+              </p>
+              <p>
+                <label>
+                  Message:
+                  <textarea name="message"></textarea>
+                </label>
+              </p>
+              <p>
+                <button type="submit">Send</button>
+              </p>
+            </form>
           </v-layout>
         </v-container>
       </section>
-
-      <v-footer class="blue darken-2">
-        <v-layout row wrap align-center>
-          <v-flex xs12>
-            <div class="white--text ml-3">
-              Made with
-              <v-icon class="red--text">favorite</v-icon>by
-              <a class="white--text" href="https://vuetifyjs.com" target="_blank">Vuetify</a>
-              and
-              <a class="white--text" href="https://github.com/vwxyzjn">Costa Huang</a>
-            </div>
-          </v-flex>
-        </v-layout>
-      </v-footer>
     </v-content>
   </v-app>
 </template>
@@ -590,5 +561,21 @@ $tp-bg-color: #222222bf;
   background: var(--highlight1);
   z-index: -1;
   border-top-left-radius: 3px;
+}
+
+// Contact
+.contact-heading-container {
+  background-attachment: fixed;
+  background-size: cover;
+  height: 300px;
+  background-image: url("~assets/images/background1.jpg");
+}
+.contact-heading-content {
+  width: 100%;
+  height: 100%;
+  color: white;
+
+  // background: $tp-bg-color-ie;
+  // background: $tp-bg-color;
 }
 </style>
