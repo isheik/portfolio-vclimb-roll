@@ -165,7 +165,7 @@
                     <h5>Link</h5>
                     <a href="https://github.com/isheik/opus13">GitHub repository</a>
 
-                    <closeButton @click="close"/>
+                    <closeButton/>
                   </div>
                 </modal>
                 <card :data-image="bgImage">
