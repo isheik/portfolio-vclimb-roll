@@ -221,23 +221,25 @@
       <section class="contact">
         <v-container>
           <v-layout wrap align-center>
-            <form name="contact" method="POST" data-netlify="true">
-              <p>
-                <label for="name">Name:</label>
-                <input type="text" name="name">
-              </p>
-              <p>
-                <label for="email">Email:</label>
-                <input type="email" name="email">
-              </p>
-              <p>
-                <label for="message">Message:</label>
-                <textarea name="message"></textarea>
-              </p>
-              <p>
-                <button type="submit">Send</button>
-              </p>
-            </form>
+            <no-ssr>
+              <form name="contact" method="POST" data-netlify="true">
+                <p>
+                  <label for="name">Name:</label>
+                  <input type="text" name="name">
+                </p>
+                <p>
+                  <label for="email">Email:</label>
+                  <input type="email" name="email">
+                </p>
+                <p>
+                  <label for="message">Message:</label>
+                  <textarea name="message"></textarea>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>
+            </no-ssr>
           </v-layout>
         </v-container>
       </section>
