@@ -342,7 +342,7 @@ export default {
         .$post(
           "/",
           this.encode({
-            "form-name": "content",
+            "form-name": "contant",
             ...this.form
           }),
           axiosConfig
