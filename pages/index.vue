@@ -232,25 +232,25 @@
               <form v-if="!submitted" method="POST" @submit.prevent="handleSubmit">
                 <p>
                   <label for="name">Name:</label>
-                  <input type="text" name="name">
+                  <input type="text" v-model="name" name="name">
                 </p>
                 <p>
                   <label for="email">Email:</label>
-                  <input type="email" name="email">
+                  <input type="email" v-model="email" name="email">
                 </p>
                 <p>
                   <label for="message">Message:</label>
-                  <textarea name="message"></textarea>
+                  <textarea v-model="message" name="message"></textarea>
                 </p>
                 <p>
                   <button type="submit">Send</button>
                 </p>
               </form>
               <div v-if="submitted">Success</div>
-              <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+              <form name="contact" data-netlify="true" hidden>
                 <input type="text" name="name">
                 <input type="email" name="email">
-                <textarea name="content"></textarea>
+                <textarea name="message"></textarea>
               </form>
             </div>
           </v-layout>
@@ -300,7 +300,12 @@ export default {
         { id: 6, url: "/ai-logo.png", alt: "" },
         { id: 7, url: "/ps-logo.png", alt: "" }
       ],
-      submitted: false
+      submitted: false,
+      form: {
+        name: "",
+        email: "",
+        message: ""
+      }
     };
   },
   mounted: async function() {
