@@ -222,39 +222,37 @@
         <v-container>
           <v-layout wrap align-center>
             <div class="form-container">
-              <!-- <form
+              <form
                 v-if="!submitted"
                 name="contact"
                 method="POST"
                 data-netlify="true"
                 @submit.prevent="handleSubmit"
-              >-->
-              <div>
-                <form v-if="!submitted" method="POST" @submit.prevent="handleSubmit">
-                  <p>
-                    <label for="name">Name:</label>
-                    <input type="text" v-model="form.name" name="name">
-                  </p>
-                  <p>
-                    <label for="email">Email:</label>
-                    <input type="email" v-model="form.email" name="email">
-                  </p>
-                  <p>
-                    <label for="message">Message:</label>
-                    <textarea v-model="form.message" name="message"></textarea>
-                  </p>
-                  <p>
-                    <button type="submit">Send</button>
-                  </p>
-                </form>
-              </div>
-              <div v-if="submitted">Success</div>
-              <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-                <input type="text" name="name">
-                <input type="email" name="email">
-                <textarea name="message"></textarea>
+              >
+                <!-- <form v-if="!submitted" method="POST" @submit.prevent="handleSubmit"> -->
+                <p>
+                  <label for="name">Name:</label>
+                  <input type="text" v-model="form.name" name="name">
+                </p>
+                <p>
+                  <label for="email">Email:</label>
+                  <input type="email" v-model="form.email" name="email">
+                </p>
+                <p>
+                  <label for="message">Message:</label>
+                  <textarea v-model="form.message" name="message"></textarea>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
               </form>
             </div>
+            <div v-if="submitted">Success</div>
+            <!-- <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+              <input type="text" name="name">
+              <input type="email" name="email">
+              <textarea name="message"></textarea>
+            </form>-->
           </v-layout>
         </v-container>
       </section>
