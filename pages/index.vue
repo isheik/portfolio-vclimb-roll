@@ -222,13 +222,9 @@
         <v-container>
           <v-layout wrap align-center>
             <div class="form-container">
-              <form
-                v-if="!submitted"
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                @submit.prevent="handleSubmit"
-              >
+              <!-- v-if="!submitted" -->
+              <form name="contact" method="POST" data-netlify="true" @submit.prevent="handleSubmit">
+                <input type="hidden" name="form-name" value="content">
                 <!-- <form v-if="!submitted" method="POST" @submit.prevent="handleSubmit"> -->
                 <p>
                   <label for="name">Name:</label>
