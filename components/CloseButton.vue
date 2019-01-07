@@ -20,11 +20,16 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 5px 30px;
+  margin: 5px;
   width: 50px;
   // margin-top: 200px;
 
   cursor: pointer;
+}
+@media screen and (min-width: 640px) {
+  .outer {
+    margin: 5px 30px;
+  }
 }
 
 .inner {
