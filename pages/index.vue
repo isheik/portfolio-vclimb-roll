@@ -221,24 +221,33 @@
       <section class="contact">
         <v-container>
           <v-layout wrap align-center>
-            <form name="contact" method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="contact">
-              <p>
-                <label for="name">Name:</label>
-                <input type="text" name="name">
-              </p>
-              <p>
-                <label for="email">Email:</label>
-                <input type="email" name="email">
-              </p>
-              <p>
-                <label for="message">Message:</label>
-                <textarea name="message"></textarea>
-              </p>
-              <p>
-                <button type="submit">Send</button>
-              </p>
-            </form>
+            <div class="form-container">
+              <form
+                v-if="!submitted"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                @submit.prevent="handleSubmit"
+              >
+                <input type="hidden" name="form-name" value="contact">
+                <p>
+                  <label for="name">Name:</label>
+                  <input type="text" name="name">
+                </p>
+                <p>
+                  <label for="email">Email:</label>
+                  <input type="email" name="email">
+                </p>
+                <p>
+                  <label for="message">Message:</label>
+                  <textarea name="message"></textarea>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>
+              <div v-if="submitted">Success</div>
+            </div>
           </v-layout>
         </v-container>
       </section>
@@ -285,11 +294,12 @@ export default {
         { id: 5, url: "/vscode-logo.png", alt: "" },
         { id: 6, url: "/ai-logo.png", alt: "" },
         { id: 7, url: "/ps-logo.png", alt: "" }
-      ]
+      ],
+      submitted: false
     };
   },
   mounted: async function() {
-    const response = await this.$axios.get(bgImage);
+    const response = await this.$axios.$get(bgImage);
     this.loading = false;
 
     setTimeout(() => {
@@ -297,7 +307,11 @@ export default {
       console.log(this.fviewStartLoading);
     }, 1000);
   },
-  methods: {}
+  methods: {
+    handleSubmit() {
+      this.$axios.post;
+    }
+  }
 };
 </script>
 <style lang="scss">
