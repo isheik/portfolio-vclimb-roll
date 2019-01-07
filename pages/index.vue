@@ -232,22 +232,22 @@
               <form v-if="!submitted" method="POST" @submit.prevent="handleSubmit">
                 <p>
                   <label for="name">Name:</label>
-                  <input type="text" v-model="name" name="name">
+                  <input type="text" v-model="form.name" name="name">
                 </p>
                 <p>
                   <label for="email">Email:</label>
-                  <input type="email" v-model="email" name="email">
+                  <input type="email" v-model="form.email" name="email">
                 </p>
                 <p>
                   <label for="message">Message:</label>
-                  <textarea v-model="message" name="message"></textarea>
+                  <textarea v-model="form.message" name="message"></textarea>
                 </p>
                 <p>
                   <button type="submit">Send</button>
                 </p>
               </form>
               <div v-if="submitted">Success</div>
-              <form name="contact" data-netlify="true" hidden>
+              <form name="contact" netlify netlify-honeypot="bot-field" hidden>
                 <input type="text" name="name">
                 <input type="email" name="email">
                 <textarea name="message"></textarea>
@@ -320,6 +320,13 @@ export default {
   methods: {
     encode(data) {
       console.log("encoding");
+      console.log(
+        Object.keys(data)
+          .map(
+            key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+          )
+          .join("&")
+      );
       return Object.keys(data)
         .map(
           key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
