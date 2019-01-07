@@ -316,7 +316,7 @@ export default {
         .join("&");
     },
     handleSubmit() {
-      cossole.log("calling axios");
+      console.log("calling axios");
       const axiosConfig = {
         header: { "Content-Type": "application/x-www-form-urlencoded" }
       };
