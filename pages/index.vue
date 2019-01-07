@@ -229,7 +229,6 @@
                 data-netlify="true"
                 @submit.prevent="handleSubmit"
               >
-                <input type="hidden" name="form-name" value="contact">
                 <p>
                   <label for="name">Name:</label>
                   <input type="text" name="name">
@@ -309,6 +308,7 @@ export default {
   },
   methods: {
     encode(data) {
+      console.log("encoding");
       return Object.keys(data)
         .map(
           key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
@@ -316,6 +316,7 @@ export default {
         .join("&");
     },
     handleSubmit() {
+      cossole.log("calling axios");
       const axiosConfig = {
         header: { "Content-Type": "application/x-www-form-urlencoded" }
       };
