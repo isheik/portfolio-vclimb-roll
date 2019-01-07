@@ -246,8 +246,8 @@
                   <button type="submit">Send</button>
                 </p>
               </form>
+              <div v-if="submitted">Success</div>
             </div>
-            <div v-if="submitted">Success</div>
             <!-- <form name="contact" netlify netlify-honeypot="bot-field" hidden>
               <input type="text" name="name">
               <input type="email" name="email">
