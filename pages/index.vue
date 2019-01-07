@@ -229,23 +229,25 @@
                 data-netlify="true"
                 @submit.prevent="handleSubmit"
               >-->
-              <form v-if="!submitted" method="POST" @submit.prevent="handleSubmit">
-                <p>
-                  <label for="name">Name:</label>
-                  <input type="text" v-model="form.name" name="name">
-                </p>
-                <p>
-                  <label for="email">Email:</label>
-                  <input type="email" v-model="form.email" name="email">
-                </p>
-                <p>
-                  <label for="message">Message:</label>
-                  <textarea v-model="form.message" name="message"></textarea>
-                </p>
-                <p>
-                  <button type="submit">Send</button>
-                </p>
-              </form>
+              <div>
+                <form v-if="!submitted" method="POST" @submit.prevent="handleSubmit">
+                  <p>
+                    <label for="name">Name:</label>
+                    <input type="text" v-model="form.name" name="name">
+                  </p>
+                  <p>
+                    <label for="email">Email:</label>
+                    <input type="email" v-model="form.email" name="email">
+                  </p>
+                  <p>
+                    <label for="message">Message:</label>
+                    <textarea v-model="form.message" name="message"></textarea>
+                  </p>
+                  <p>
+                    <button type="submit">Send</button>
+                  </p>
+                </form>
+              </div>
               <div v-if="submitted">Success</div>
               <form name="contact" netlify netlify-honeypot="bot-field" hidden>
                 <input type="text" name="name">
