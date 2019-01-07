@@ -185,7 +185,7 @@
             <v-flex xs12>
               <h3 class="headline text-xs-center">Team works</h3>
             </v-flex>
-            <v-flex xs12>
+            <v-flex class="mb-5" xs12>
               <v-layout justify-space-around wrap align-center>
                 <card :data-image="bgImage">
                   <h4 slot="header">Food Factory Zero</h4>
@@ -548,7 +548,7 @@ $tp-bg-color: #222222bf;
     border-bottom: 2px solid #7ed1e6;
   }
   h5:first-letter {
-    margin-right: 0.1em;
+    // margin-right: 0.1em;
     font-size: 2em;
     color: #7ed1e6;
   }
