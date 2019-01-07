@@ -308,8 +308,29 @@ export default {
     }, 1000);
   },
   methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
     handleSubmit() {
-      this.$axios.post;
+      const axiosConfig = {
+        header: { "Content-Type": "application/x-www-form-urlencoded" }
+      };
+      this.$axios
+        .$post(
+          "/",
+          this.encode({
+            "form-name": "content",
+            ...this.form
+          }),
+          axiosConfig
+        )
+        .then(() => {
+          this.submitted = true;
+        });
     }
   }
 };
