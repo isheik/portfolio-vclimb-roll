@@ -222,13 +222,14 @@
         <v-container>
           <v-layout wrap align-center>
             <div class="form-container">
-              <form
+              <!-- <form
                 v-if="!submitted"
                 name="contact"
                 method="POST"
                 data-netlify="true"
                 @submit.prevent="handleSubmit"
-              >
+              >-->
+              <form v-if="!submitted" method="POST" @submit.prevent="handleSubmit">
                 <p>
                   <label for="name">Name:</label>
                   <input type="text" name="name">
@@ -246,6 +247,11 @@
                 </p>
               </form>
               <div v-if="submitted">Success</div>
+              <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+                <input type="text" name="name">
+                <input type="email" name="email">
+                <textarea name="content"></textarea>
+              </form>
             </div>
           </v-layout>
         </v-container>
