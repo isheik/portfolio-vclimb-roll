@@ -232,7 +232,7 @@
                 <!-- <form v-if="!submitted" method="POST" @submit.prevent="handleSubmit"> -->
                 <p>
                   <label for="name">Name:</label>
-                  <input type="text" v-model="form.name" name="name">
+                  <input type="text" name="name">
                 </p>
                 <p>
                   <label for="email">Email:</label>
@@ -338,6 +338,12 @@ export default {
       const axiosConfig = {
         header: { "Content-Type": "application/x-www-form-urlencoded" }
       };
+      console.log(
+        this.encode({
+          "form-name": "contact",
+          ...this.form
+        })
+      );
       this.$axios
         .$post(
           "/",
