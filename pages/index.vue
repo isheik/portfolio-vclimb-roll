@@ -651,6 +651,7 @@ $tp-bg-color: #222222bf;
     border-bottom: 2px solid #7ed1e6;
   }
   textarea {
+    height: 200px;
   }
   .form-label {
     display: block;
