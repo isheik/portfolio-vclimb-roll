@@ -67,7 +67,7 @@
                 <!-- <v-layout> -->
                 <div class="prof-picture">
                   <v-avatar :size="avatarSize" color="grey lighten-4">
-                    <img src="~assets/images/profile.jpg" alt="avatar">
+                    <img src="~assets/images/profile.jpg" alt="avatar" />
                   </v-avatar>
                 </div>
                 <!-- <div> -->
@@ -80,8 +80,9 @@
                 <!-- </v-layout> -->
               </v-flex>
               <v-flex class="prof-description subheading mb-4" align-self-center>
-                <p>Hi, I am a full-stack web developer based in Vancouver, Canada.
-                  <br>I enjoy programming and turn my passion/coffee into code &#x2615;
+                <p>
+                  Hi, I am a full-stack web developer based in Vancouver, Canada.
+                  <br />I enjoy programming and turn my passion/coffee into code &#x2615;
                 </p>
               </v-flex>
               <v-flex xs12>
@@ -94,7 +95,7 @@
                       :key="skillImage.id"
                       :src="skillImage.url"
                       :alt="skillImage.alt"
-                    >
+                    />
                   </v-flex>
                   <v-flex offset-xs0 offset-md1 offset-lg2 xs12 sm4 md4 lg3 class="prof-tools">
                     <h3 class="headline">Tools</h3>
@@ -104,7 +105,7 @@
                       :key="toolImage.id"
                       :src="toolImage.url"
                       :alt="toolImage.alt"
-                    >
+                    />
                   </v-flex>
                 </v-layout>
               </v-flex>
@@ -155,7 +156,7 @@
                   <div class="basic-modal">
                     <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
                     <h5>Demo / Image</h5>
-                    <img src="/opus13.gif" alt>
+                    <img src="/opus13.gif" alt />
                     <h5>Name</h5>
                     <p>Opus 13</p>
                     <h5>Description</h5>
@@ -165,7 +166,7 @@
                     <h5>Link</h5>
                     <a href="https://github.com/isheik/opus13">GitHub repository</a>
 
-                    <closeButton/>
+                    <closeButton />
                   </div>
                 </modal>
                 <card :data-image="bgImage">
@@ -174,12 +175,29 @@
                     slot="content"
                   >This portfolio website built with Vue.js (Nuxt.js), Vuetify and Netlify</p>
                 </card>
-                <card :data-image="bgImage">
-                  <h4 slot="header">UBC Donation Website</h4>
+                <card data-image="/ubc_dntn_thumbs.jpg" modal-target="modal-ubc-dpage">
+                  <h4 slot="header">UBC Donation Page</h4>
                   <p
                     slot="content"
-                  >New UBC donation page built with jQuery and Engaging Networks platform in my Co-op term</p>
+                  >New UBC donation page built with jQuery and Engaging Networks platform</p>
                 </card>
+                <modal name="modal-ubc-dpage">
+                  <div class="basic-modal">
+                    <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
+                    <h5>Demo / Image</h5>
+                    <img src="/ubc_dntn.gif" alt />
+                    <h5>Name</h5>
+                    <p>UBC(The University of British Columbia) donation page</p>
+                    <h5>Description</h5>
+                    <p>New UBC donation page built with jQuery and Engaging Networks(EN) platform. Implemented and styled the page like a SPA (Single Page Application) integrating EN platform which generates the base HTML of the page and takes care of backend interactions.</p>
+                    <h5>Tech Stack</h5>
+                    <p>jQuery, Third party platform integration (Engaging Networks)</p>
+                    <h5>Link</h5>
+                    <a href="https://donate.support.ubc.ca/page/19817/donate/1">UBC donation page</a>
+
+                    <closeButton />
+                  </div>
+                </modal>
               </v-layout>
             </v-flex>
             <v-flex xs12>
@@ -233,11 +251,11 @@
             >
               <p>
                 <label class="form-label" for="name">YOUR NAME:</label>
-                <input type="text" name="name">
+                <input type="text" name="name" />
               </p>
               <p>
                 <label class="form-label" for="email">EMAIL:</label>
-                <input type="email" v-model="form.email" name="email">
+                <input type="email" v-model="form.email" name="email" />
               </p>
               <p>
                 <label class="form-label" for="message">MESSAGE:</label>
@@ -251,8 +269,8 @@
             <div v-if="submitted">Success</div>
             <!-- </div> -->
             <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-              <input type="text" name="name">
-              <input type="email" name="email">
+              <input type="text" name="name" />
+              <input type="email" name="email" />
               <textarea name="message"></textarea>
             </form>
           </v-layout>
