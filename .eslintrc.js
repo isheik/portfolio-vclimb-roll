@@ -44,4 +44,4 @@ module.exports = {
     "vue/max-attributes-per-line": "off",
     "prettier/prettier": ["error", { semi: false }]
   }
-};
+}

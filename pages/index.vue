@@ -1,8 +1,9 @@
 <template>
+
   <v-app light>
     <v-toolbar v-show="!loading" class="navbar" dark fixed scroll-off-screen>
-      <v-toolbar-title v-text="title"></v-toolbar-title>
-      <v-spacer></v-spacer>
+      <v-toolbar-title v-text="title" />
+      <v-spacer />
       <v-toolbar-items>
         <v-btn flat>About</v-btn>
         <v-btn flat>Works</v-btn>
@@ -11,9 +12,22 @@
     </v-toolbar>
 
     <v-content v-show="loading">
-      <v-container>loading....</v-container>
-      <!-- <section>loading....</section> -->
-    </v-content>
+      <div class="load-container">
+        <div class="load-spinner">
+          <pulse-loader :loading="loading" :color="color" :size="size">aaaa</pulse-loader>
+        </div>
+      </div>
+      <!-- <v-container> -->
+        <!-- <pulse-loader :loading="true"><pulse-loader>  -->
+      <!-- </v-container> -->
+      <!-- <section class="load"> -->
+        <!-- <p>hello</p> -->
+      <!-- <v-progress-circular
+      indeterminate
+      color="green"
+    ></v-progress-circular> -->
+      <!-- </section> -->
+   </v-content>
 
     <v-content v-show="!loading">
       <!-- <v-container pa-0 fluid class="firstview"> -->
@@ -39,15 +53,17 @@
         <!-- <v-flex xs12 column> -->
         <div class="p-container">
           <transition name="welcome1" appear>
-            <div class="p-bg" :key="1"></div>
+            <div :key="1" class="p-bg" />
           </transition>
 
           <transition name="welcome2" appear>
             <h1
               v-if="!loading"
+              :class="{ show: fviewStartLoading }"
               class="p-content white--text display-1 text-xs-center"
-              :class="{show: fviewStartLoading}"
-            >Welcome to KEI's portfolio</h1>
+            >
+              Welcome to KEI's portfolio
+            </h1>
           </transition>
         </div>
         <!-- </v-flex> -->
@@ -79,32 +95,54 @@
                 <!-- </v-layout> -->
                 <!-- </v-layout> -->
               </v-flex>
-              <v-flex class="prof-description subheading mb-4" align-self-center>
+              <v-flex
+                class="prof-description subheading mb-4"
+                align-self-center
+              >
                 <p>
-                  Hi, I am a full-stack web developer based in Vancouver, Canada.
-                  <br />I enjoy programming and turn my passion/coffee into code &#x2615;
+                  Hi, I am a full-stack web developer based in Vancouver,
+                  Canada. <br />I enjoy programming and turn my passion/coffee
+                  into code &#x2615;
                 </p>
               </v-flex>
               <v-flex xs12>
                 <v-layout align-start wrap>
-                  <v-flex mb-4 offset-xs0 offset-lg1 xs12 sm6 md6 lg4 class="prof-skills">
+                  <v-flex
+                    mb-4
+                    offset-xs0
+                    offset-lg1
+                    xs12
+                    sm6
+                    md6
+                    lg4
+                    class="prof-skills"
+                  >
                     <h3 class="headline">Skills</h3>
                     <img
-                      class="skillImages"
                       v-for="skillImage in skillImages"
                       :key="skillImage.id"
                       :src="skillImage.url"
                       :alt="skillImage.alt"
+                      class="skillImages"
                     />
                   </v-flex>
-                  <v-flex offset-xs0 offset-md1 offset-lg2 xs12 sm4 md4 lg3 class="prof-tools">
+                  <v-flex
+                    offset-xs0
+                    offset-md1
+                    offset-lg2
+                    xs12
+                    sm4
+                    md4
+                    lg3
+                    class="prof-tools"
+                  >
                     <h3 class="headline">Tools</h3>
                     <img
-                      class="toolImages"
                       v-for="toolImage in toolImages"
                       :key="toolImage.id"
                       :src="toolImage.url"
                       :alt="toolImage.alt"
+                      class="toolImages"
                     />
                   </v-flex>
                 </v-layout>
@@ -131,7 +169,12 @@
         <v-parallax src="background4.jpg" height="300">
           <!-- <div class="works-heading-container"> -->
           <!-- <div> -->
-          <v-layout class="works-heading-content" justify-space-around wrap align-center>
+          <v-layout
+            class="works-heading-content"
+            justify-space-around
+            wrap
+            align-center
+          >
             <h2 class="display-1">Works</h2>
           </v-layout>
           <!-- </div> -->
@@ -148,9 +191,10 @@
               <v-layout row justify-space-around wrap align-center>
                 <card data-image="/opus13-home.jpg" modal-target="modal-opus13">
                   <h4 slot="header">Opus 13</h4>
-                  <p
-                    slot="content"
-                  >A desktop twitter client built with React.js, Redux, Webpack and Electron</p>
+                  <p slot="content">
+                    A desktop twitter client built with React.js, Redux, Webpack
+                    and Electron
+                  </p>
                 </card>
                 <modal name="modal-opus13">
                   <div class="basic-modal">
@@ -160,26 +204,42 @@
                     <h5>Name</h5>
                     <p>Opus 13</p>
                     <h5>Description</h5>
-                    <p>A simple desktop twitter client built using Web Technologies. The client allows users to view, post, search, favorite and retweet tweets. Also, filter menus are available to view only the tweets mentioned users or their favorite tweets.</p>
+                    <p>
+                      A simple desktop twitter client built using Web
+                      Technologies. The client allows users to view, post,
+                      search, favorite and retweet tweets. Also, filter menus
+                      are available to view only the tweets mentioned users or
+                      their favorite tweets.
+                    </p>
                     <h5>Tech Stack</h5>
-                    <p>React.js, Redux, Webpack, Sass, Electron, REST API (Twitter)</p>
+                    <p>
+                      React.js, Redux, Webpack, Sass, Electron, REST API
+                      (Twitter)
+                    </p>
                     <h5>Link</h5>
-                    <a href="https://github.com/isheik/opus13">GitHub repository</a>
+                    <a href="https://github.com/isheik/opus13"
+                      >GitHub repository</a
+                    >
 
                     <closeButton />
                   </div>
                 </modal>
                 <card :data-image="bgImage">
                   <h4 slot="header">Portfolio</h4>
-                  <p
-                    slot="content"
-                  >This portfolio website built with Vue.js (Nuxt.js), Vuetify and Netlify</p>
+                  <p slot="content">
+                    This portfolio website built with Vue.js (Nuxt.js), Vuetify
+                    and Netlify
+                  </p>
                 </card>
-                <card data-image="/ubc_dntn_thumbs.jpg" modal-target="modal-ubc-dpage">
+                <card
+                  data-image="/ubc_dntn_thumbs.jpg"
+                  modal-target="modal-ubc-dpage"
+                >
                   <h4 slot="header">UBC Donation Page</h4>
-                  <p
-                    slot="content"
-                  >New UBC donation page built with jQuery and Engaging Networks platform</p>
+                  <p slot="content">
+                    New UBC donation page built with jQuery and Engaging
+                    Networks platform
+                  </p>
                 </card>
                 <modal name="modal-ubc-dpage">
                   <div class="basic-modal">
@@ -189,11 +249,22 @@
                     <h5>Name</h5>
                     <p>UBC(The University of British Columbia) donation page</p>
                     <h5>Description</h5>
-                    <p>New UBC donation page built with jQuery and Engaging Networks(EN) platform. Implemented and styled the page like a SPA (Single Page Application) integrating EN platform which generates the base HTML of the page and takes care of backend interactions.</p>
+                    <p>
+                      New UBC donation page built with jQuery and Engaging
+                      Networks(EN) platform. Implemented and styled the page
+                      like a SPA (Single Page Application) integrating EN
+                      platform which generates the base HTML of the page and
+                      takes care of backend interactions.
+                    </p>
                     <h5>Tech Stack</h5>
-                    <p>jQuery, Third party platform integration (Engaging Networks)</p>
+                    <p>
+                      jQuery, Third party platform integration (Engaging
+                      Networks)
+                    </p>
                     <h5>Link</h5>
-                    <a href="https://donate.support.ubc.ca/page/19817/donate/1">UBC donation page</a>
+                    <a href="https://donate.support.ubc.ca/page/19817/donate/1"
+                      >UBC donation page</a
+                    >
 
                     <closeButton />
                   </div>
@@ -207,22 +278,25 @@
               <v-layout justify-space-around wrap align-center>
                 <card :data-image="bgImage">
                   <h4 slot="header">Food Factory Zero</h4>
-                  <p
-                    slot="content"
-                  >A web-based action-puzzle game to raise awareness about food waste</p>
+                  <p slot="content">
+                    A web-based action-puzzle game to raise awareness about food
+                    waste
+                  </p>
                 </card>
 
                 <card :data-image="bgImage">
                   <h4 slot="header">Cecil Green Park House Website</h4>
-                  <p
-                    slot="content"
-                  >New website for a wedding/special event facility built in my Co-op term</p>
+                  <p slot="content">
+                    New website for a wedding/special event facility built in my
+                    Co-op term
+                  </p>
                 </card>
                 <card :data-image="bgImage">
                   <h4 slot="header">Audio recording application</h4>
-                  <p
-                    slot="content"
-                  >Audio recording application built with Web Audio API, React.js, Node.js and AWS in BCIT project practicum</p>
+                  <p slot="content">
+                    Audio recording application built with Web Audio API,
+                    React.js, Node.js and AWS in BCIT project practicum
+                  </p>
                 </card>
               </v-layout>
             </v-flex>
@@ -231,7 +305,12 @@
       </section>
       <section>
         <div class="contact-heading-container">
-          <v-layout class="contact-heading-content" justify-space-around wrap align-center>
+          <v-layout
+            class="contact-heading-content"
+            justify-space-around
+            wrap
+            align-center
+          >
             <h2 class="display-1">Contact</h2>
           </v-layout>
         </div>
@@ -244,8 +323,8 @@
             <!-- <form name="contact" method="POST" data-netlify="true" @submit.prevent="handleSubmit"> -->
             <!-- <input type="hidden" name="form-name" value="content"> -->
             <form
-              class="contact-form"
               v-if="!submitted"
+              class="contact-form"
               method="POST"
               @submit.prevent="handleSubmit"
             >
@@ -255,11 +334,11 @@
               </p>
               <p>
                 <label class="form-label" for="email">EMAIL:</label>
-                <input type="email" v-model="form.email" name="email" />
+                <input v-model="form.email" type="email" name="email" />
               </p>
               <p>
                 <label class="form-label" for="message">MESSAGE:</label>
-                <textarea v-model="form.message" name="message"></textarea>
+                <textarea v-model="form.message" name="message" />
               </p>
               <p>
                 <!-- <button type="submit">Send</button> -->
@@ -270,8 +349,7 @@
             <!-- </div> -->
             <form name="contact" netlify netlify-honeypot="bot-field" hidden>
               <input type="text" name="name" />
-              <input type="email" name="email" />
-              <textarea name="message"></textarea>
+              <input type="email" name="email" /> <textarea name="message" />
             </form>
           </v-layout>
         </v-container>
@@ -280,14 +358,19 @@
   </v-app>
 </template>
 <script>
-import card from "~/components/Card";
-import closeButton from "~/components/CloseButton";
-import bgImage from "~/assets/images/background7.jpg";
+import card from "~/components/Card"
+import closeButton from "~/components/CloseButton"
+import bgImage from "~/assets/images/background7.jpg"
+import Vue from 'vue'
+import PulseLoader from "vue-spinner/src/PulseLoader.vue"
+
+Vue.use(PulseLoader)
 
 export default {
   components: {
     card,
-    closeButton
+    closeButton,
+    PulseLoader
   },
   data: function() {
     return {
@@ -296,6 +379,8 @@ export default {
       fviewStartLoading: false,
       avatarSize: 128,
       bgImage: bgImage,
+      color:'#aaffaa',
+      size:'50px',
       skillImages: [
         { id: 0, url: "/html5-logo.png", alt: "" },
         { id: 1, url: "/css3-logo.png", alt: "" },
@@ -326,44 +411,46 @@ export default {
         email: "",
         message: ""
       }
-    };
+    }
   },
   mounted: async function() {
-    const response = await this.$axios.$get(bgImage);
-    this.loading = false;
+    const response = await this.$axios.$get(bgImage)
+    setTimeout(() => {
+      this.loading = false
+    }, 5000)
 
     setTimeout(() => {
-      this.fviewStartLoading = true;
-      console.log(this.fviewStartLoading);
-    }, 1000);
+      this.fviewStartLoading = true
+      console.log(this.fviewStartLoading)
+    }, 1000)
   },
   methods: {
     encode(data) {
-      console.log("encoding");
+      console.log("encoding")
       console.log(
         Object.keys(data)
           .map(
             key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
           )
           .join("&")
-      );
+      )
       return Object.keys(data)
         .map(
           key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
         )
-        .join("&");
+        .join("&")
     },
     handleSubmit() {
-      console.log("calling axios");
+      console.log("calling axios")
       const axiosConfig = {
         header: { "Content-Type": "application/x-www-form-urlencoded" }
-      };
+      }
       console.log(
         this.encode({
           "form-name": "contact",
           ...this.form
         })
-      );
+      )
       this.$axios
         .$post(
           "/",
@@ -374,11 +461,11 @@ export default {
           axiosConfig
         )
         .then(() => {
-          this.submitted = true;
-        });
+          this.submitted = true
+        })
     }
   }
-};
+}
 </script>
 <style lang="scss">
 $tp-bg-color-ie: #222222;
@@ -687,5 +774,29 @@ $tp-bg-color: #222222bf;
     font-size: 2em;
     color: #7ed1e6;
   }
+}
+.load-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.load-spinner {
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  /* width: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto; */
+  /* transform: translate(50%, 50%); */
+  /* translate: transform(-80%, -80%); */
 }
 </style>

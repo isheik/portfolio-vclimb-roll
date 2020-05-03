@@ -45,6 +45,7 @@ module.exports = {
     { src: "~/plugins/vue-parallax-js", ssr: false },
     { src: "~/plugins/vue-thin-modal", ssr: true },
     { src: "~/plugins/vue-particles", ssr: false }
+    // { src: "~/plugins/vue-spinner", ssr: false },
   ],
   axios: {
     baseURL:
