@@ -32,11 +32,11 @@
    </v-content>
 </transition>
 
-<transition name='smodal'>
+<!-- <transition name='smodal'> -->
     <v-content v-show="!loading">
       <!-- <v-container pa-0 fluid class="firstview"> -->
 
-        <div class="smodal-container" v-bind:class="{startModal:smIsActive, zeroOpacity:isZeroOpOn}">
+        <div v-show="!hideSm" class="smodal-container" v-bind:class="{startModal:smIsActive, zeroOpacity:isZeroOpOn}">
 </div>
         <!-- <div class="smodal-container"> -->
       <section class="firstview">
@@ -364,7 +364,7 @@
       </section>
 
     </v-content>
-</transition>
+<!-- </transition> -->
   </v-app>
 </template>
 <script>
@@ -390,6 +390,7 @@ export default {
       smIsActive: false,
       isZeroOpOn: false,
       fviewStartLoading: false,
+      hideSm: false,
       avatarSize: 128,
       bgImage: bgImage,
       color:'#aaffaa',
@@ -443,6 +444,7 @@ export default {
     this.isZeroOpOn = true;
     await this.$delay(1000);
     this.smIsActive = false;
+    this.hideSm = true;
     this.fviewStartLoading = true
     // setTimeout(() => {
     //   this.fviewStartLoading = true
@@ -496,6 +498,11 @@ export default {
 $tp-bg-color-ie: #222222;
 $tp-bg-color: #222222bf;
 
+
+body {
+  // would like to remove when modal open, but not working
+  padding-right: 0 !important;
+}
 .navbar.v-toolbar {
   background: $tp-bg-color-ie;
   background: $tp-bg-color;
@@ -806,7 +813,9 @@ $tp-bg-color: #222222bf;
   width: 100%;
   /* background-color: rgba(34, 34, 34, 0.74902); */
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.74902);
+  /* background-color: rgba(0, 0, 0, 0.74902); */
+  /* background-color: rgba(0, 0, 0, 0.74902); */
+  background-color: #333333;
 }
 .load-spinner {
   /* position: absolute; */
@@ -835,7 +844,7 @@ $tp-bg-color: #222222bf;
 }
 .smodal-container.zeroOpacity {
   opacity: 0;
-  transition: opacity 3s;
+  transition: opacity 1s;
 }
 /* .smodal-leave-to {
   opacity: 0;
@@ -848,7 +857,9 @@ $tp-bg-color: #222222bf;
 .smodal-container {
   height: 100vh;
   width: 100%;
-  background-color: black;
+  /* background-color: black; */
+  /* background-color: rgba(0, 0, 0, 1); */
+  background-color: #333333;
   opacity: 1;
   transition: opacity 1s;
   position: fixed;
