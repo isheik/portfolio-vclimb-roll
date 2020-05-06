@@ -1,7 +1,7 @@
 <template>
 
   <v-app light>
-    <v-toolbar v-show="!loading" class="navbar" dark fixed scroll-off-screen>
+    <!-- <v-toolbar v-show="!loading" class="navbar" dark fixed scroll-off-screen>
       <v-toolbar-title v-text="title" />
       <v-spacer />
       <v-toolbar-items>
@@ -9,12 +9,14 @@
         <v-btn flat>Works</v-btn>
         <v-btn flat>Contact</v-btn>
       </v-toolbar-items>
-    </v-toolbar>
+    </v-toolbar> -->
+
+<transition name='load'>
 
     <v-content v-show="loading">
-      <div class="load-container">
+      <div class="load-container" v-bind:class="{whitescreen:wsIsActive}">
         <div class="load-spinner">
-          <pulse-loader :loading="loading" :color="color" :size="size">aaaa</pulse-loader>
+          <pulse-loader :loading="loading" :color="color" :size="size"></pulse-loader>
         </div>
       </div>
       <!-- <v-container> -->
@@ -28,9 +30,15 @@
     ></v-progress-circular> -->
       <!-- </section> -->
    </v-content>
+</transition>
 
+<transition name='smodal'>
     <v-content v-show="!loading">
       <!-- <v-container pa-0 fluid class="firstview"> -->
+
+        <div class="smodal-container" v-bind:class="{startModal:smIsActive, zeroOpacity:isZeroOpOn}">
+</div>
+        <!-- <div class="smodal-container"> -->
       <section class="firstview">
         <!-- <vue-particles
           color="#dedede"
@@ -354,7 +362,9 @@
           </v-layout>
         </v-container>
       </section>
+
     </v-content>
+</transition>
   </v-app>
 </template>
 <script>
@@ -376,6 +386,9 @@ export default {
     return {
       title: "test",
       loading: true,
+      wsIsActive: false,
+      smIsActive: false,
+      isZeroOpOn: false,
       fviewStartLoading: false,
       avatarSize: 128,
       bgImage: bgImage,
@@ -415,14 +428,26 @@ export default {
   },
   mounted: async function() {
     const response = await this.$axios.$get(bgImage)
-    setTimeout(() => {
-      this.loading = false
-    }, 5000)
-
-    setTimeout(() => {
-      this.fviewStartLoading = true
-      console.log(this.fviewStartLoading)
-    }, 1000)
+    // setTimeout(() => {
+    //   this.loading = false
+    // }, 2000)
+    await this.$delay(1000);
+    // this.loading = false
+    this.wsIsActive = true;
+    await this.$delay(400);
+    this.loading = false;
+    // this.wsIsActive = true;
+    // await this.$delay(400);
+    this.smIsActive = true;
+    await this.$delay(1000);
+    this.isZeroOpOn = true;
+    await this.$delay(1000);
+    this.smIsActive = false;
+    this.fviewStartLoading = true
+    // setTimeout(() => {
+    //   this.fviewStartLoading = true
+    //   console.log(this.fviewStartLoading)
+    // }, 1000)
   },
   methods: {
     encode(data) {
@@ -779,6 +804,9 @@ $tp-bg-color: #222222bf;
   position: relative;
   height: 100vh;
   width: 100%;
+  /* background-color: rgba(34, 34, 34, 0.74902); */
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.74902);
 }
 .load-spinner {
   /* position: absolute; */
@@ -797,6 +825,41 @@ $tp-bg-color: #222222bf;
     position: absolute;
     margin: auto; */
   /* transform: translate(50%, 50%); */
-  /* translate: transform(-80%, -80%); */
+ /* translate: transform(-80%, -80%); */
+}
+.smodal-container.startModal {
+  /* background-color: #cccccc; */
+  /* transition: background-color 2s; */
+  display: block;
+  position: fixed;
+}
+.smodal-container.zeroOpacity {
+  opacity: 0;
+  transition: opacity 3s;
+}
+/* .smodal-leave-to {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.smodal-leave-active {
+  opacity: 0;
+  transition: opacity 1s;
+} */
+.smodal-container {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  opacity: 1;
+  transition: opacity 1s;
+  position: fixed;
+  display: none;
+  z-index: 2000;
+}
+.load-leave-to {
+  /* background-color: green; */
+  /* transition: background-color 5s; */
+}
+.load-leave-active {
+  /* transition: background-color 5s; */
 }
 </style>
