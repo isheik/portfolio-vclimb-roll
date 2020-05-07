@@ -16,7 +16,9 @@
     <v-content v-show="loading">
       <div class="load-container" v-bind:class="{whitescreen:wsIsActive}">
         <div class="load-spinner">
-          <pulse-loader :loading="loading" :color="color" :size="size"></pulse-loader>
+          <!-- <pulse-loader :loading="loading" :color="color" :size="size"></pulse-loader> -->
+          <!-- <scale-loader :loading="loading" :color="color" :size="size"></scale-loader> -->
+          <ring-loader :loading="loading" :color="color" :size="size"></ring-loader>
         </div>
       </div>
       <!-- <v-container> -->
@@ -373,14 +375,20 @@ import closeButton from "~/components/CloseButton"
 import bgImage from "~/assets/images/background7.jpg"
 import Vue from 'vue'
 import PulseLoader from "vue-spinner/src/PulseLoader.vue"
+import ScaleLoader from "vue-spinner/src/ScaleLoader.vue"
+import RingLoader from "vue-spinner/src/RingLoader.vue"
 
 Vue.use(PulseLoader)
+Vue.use(ScaleLoader)
+Vue.use(RingLoader)
 
 export default {
   components: {
     card,
     closeButton,
-    PulseLoader
+    PulseLoader,
+    RingLoader,
+    ScaleLoader
   },
   data: function() {
     return {
@@ -394,7 +402,7 @@ export default {
       avatarSize: 128,
       bgImage: bgImage,
       color:'#aaffaa',
-      size:'50px',
+      size:'100px',
       skillImages: [
         { id: 0, url: "/html5-logo.png", alt: "" },
         { id: 1, url: "/css3-logo.png", alt: "" },
@@ -432,10 +440,10 @@ export default {
     // setTimeout(() => {
     //   this.loading = false
     // }, 2000)
-    await this.$delay(1000);
+    await this.$delay(2500);
     // this.loading = false
     this.wsIsActive = true;
-    await this.$delay(400);
+    // await this.$delay(400);
     this.loading = false;
     // this.wsIsActive = true;
     // await this.$delay(400);
