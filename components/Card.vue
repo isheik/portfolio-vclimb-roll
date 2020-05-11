@@ -28,8 +28,8 @@ export default {
   },
   props: ["dataImage", "modalTarget"],
   data: () => ({
-    width: 0,
-    height: 0,
+    width:  240,
+    height: 320,
     mouseX: 0,
     mouseY: 0,
     mouseLeaveDelay: null
@@ -44,7 +44,6 @@ export default {
     cardStyle() {
       const rX = this.mousePX * 30;
       const rY = this.mousePY * -30;
-      console.log(this.width);
       return {
         transform: `rotateY(${rX}deg) rotateX(${rY}deg)`
       };
@@ -55,6 +54,7 @@ export default {
       return {
         transform: `translateX(${tX}px) translateY(${tY}px)`
       };
+      // return {transform:`translateX(1px) translateY(1px)`}
     },
     cardBgImage() {
       return {
@@ -81,9 +81,10 @@ export default {
       // return this.$nextTick(fn);
       // }
 
-      setTimeout(() => {
-        this.$nextTick(fn);
-      }, 1000);
+      // setTimeout(() => {
+      //   this.$nextTick(fn);
+      // }, 3000);
+      // 3, 3000);
     },
 
     close() {
