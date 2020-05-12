@@ -286,13 +286,47 @@
             </v-flex>
             <v-flex class="mb-5" xs12>
               <v-layout justify-space-around wrap align-center>
-                <card :data-image="bgImage">
+                <card 
+                  data-image="/ubc_dntn_thumbs.jpg"
+                  modal-target="modal-ffzero"
+                >
                   <h4 slot="header">Food Factory Zero</h4>
                   <p slot="content">
                     A web-based action-puzzle game to raise awareness about food
                     waste
                   </p>
                 </card>
+                <modal name="modal-ffzero">
+                  <div class="basic-modal">
+                    <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
+                    <h5>Demo / Image</h5>
+                    <img src="/ubc_dntn.gif" alt />
+                    <h5>Name</h5>
+                    <p>Food Factory Zero</p>
+                    <h5>Description</h5>
+                    <p>
+                      A web-based action puzzle game to raise awareness about food waste built by a group of 5.
+                      My role was:<br>
+                      - abc<br>
+                      - def<br>
+                      - abc<br>
+                      - def<br>
+                      - abc<br>
+                      - def<br>
+                    </p>
+                    <h5>Tech Stack</h5>
+                    <p>
+                      JavaScript, PixiJS, Firebase (Firebase Hosting, Realtime DB, Authentication), Bootstrap
+                    </p>
+                    <h5>Link</h5>
+                    <a href="https://foodfactoryzero.firebaseapp.com/"
+                      >Food Factory Zero Home</a
+                    >
+
+                    <closeButton />
+                  </div>
+                </modal>
+
 
                 <card :data-image="bgImage">
                   <h4 slot="header">Cecil Green Park House Website</h4>
