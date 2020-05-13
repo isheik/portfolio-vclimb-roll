@@ -307,7 +307,7 @@
                     <p>
                       A web-based action puzzle game to raise awareness about food waste built by a group of 5.
                       My role was:<br>
-                      - abc<br>
+                      - bcd<br>
                       - def<br>
                       - abc<br>
                       - def<br>
