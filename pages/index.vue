@@ -217,9 +217,8 @@
                     <p>
                       A simple desktop twitter client built using Web
                       Technologies. The client allows users to view, post,
-                      search, favorite and retweet tweets. Also, filter menus
-                      are available to view only the tweets mentioned users or
-                      their favorite tweets.
+                      search, favorite and retweet tweets. Also, filtered views are available from the menu
+                      to see favorite tweets or tweets mentioning the user.
                     </p>
                     <h5>Tech Stack</h5>
                     <p>
@@ -227,8 +226,8 @@
                       (Twitter)
                     </p>
                     <h5>Link</h5>
-                    <a href="https://github.com/isheik/opus13"
-                      >GitHub repository</a
+                    <a href="https://github.com/isheik/opus13" target="_blank"
+                      >Opus 13 GitHub repository</a
                     >
 
                     <closeButton />
@@ -272,7 +271,7 @@
                       Networks)
                     </p>
                     <h5>Link</h5>
-                    <a href="https://donate.support.ubc.ca/page/19817/donate/1"
+                    <a href="https://donate.support.ubc.ca/page/19817/donate/1" target="_blank"
                       >UBC donation page</a
                     >
 
@@ -305,14 +304,14 @@
                     <p>Food Factory Zero</p>
                     <h5>Description</h5>
                     <p>
-                      A web-based action puzzle game built by a group of 5. My role was implementing some parts of the game (mainly the belt converyer, collision, drag and drop mechanics and the result view), user authentication with Firebase Authentication, data save with Firebase Realtime DB. Also, I build the entire landing page for the game using Bootstrap and its theme, which allows users to login with their google account. I also prepared 
+                      A web-based action puzzle game built by a group of 5. My role was implementing some parts of the game (mainly the belt converyer, collision, drag and drop mechanics and the result view), user authentication with Firebase Authentication, data save with Firebase Realtime DB. Also, I created the entire landing page for the game using Bootstrap and its theme, which allows users to log in the game by their google accounts. Aside from that, I built the Web server using Firebase Hosting and deployed the game and the landing page there.
                     </p>
                     <h5>Tech Stack</h5>
                     <p>
-                      JavaScript, PixiJS, Firebase (Firebase Hosting, Realtime DB, Authentication), Bootstrap
+                      JavaScript, PixiJS, Firebase (Firebase Hosting, Authentication, Realtime DB), Bootstrap
                     </p>
                     <h5>Link</h5>
-                    <a href="https://foodfactoryzero.firebaseapp.com/"
+                    <a href="https://foodfactoryzero.firebaseapp.com/" target="_blank"
                       >Food Factory Zero Home</a
                     >
 
