@@ -305,14 +305,7 @@
                     <p>Food Factory Zero</p>
                     <h5>Description</h5>
                     <p>
-                      A web-based action puzzle game to raise awareness about food waste built by a group of 5.
-                      My role was:<br>
-                      - bcd<br>
-                      - def<br>
-                      - abc<br>
-                      - def<br>
-                      - abc<br>
-                      - def<br>
+                      A web-based action puzzle game built by a group of 5. My role was implementing some parts of the game (mainly the belt converyer, collision, drag and drop mechanics and the result view), user authentication with Firebase Authentication, data save with Firebase Realtime DB. Also, I build the entire landing page for the game using Bootstrap and its theme, which allows users to login with their google account. I also prepared 
                     </p>
                     <h5>Tech Stack</h5>
                     <p>
