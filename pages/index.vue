@@ -256,7 +256,7 @@
                     <h5>Demo / Image</h5>
                     <img src="/ubc_dntn.gif" alt />
                     <h5>Name</h5>
-                    <p>UBC(The University of British Columbia) donation page</p>
+                    <p>UBC (The University of British Columbia) donation page</p>
                     <h5>Description</h5>
                     <p>
                       New UBC donation page built with jQuery and Engaging
@@ -286,7 +286,7 @@
             <v-flex class="mb-5" xs12>
               <v-layout justify-space-around wrap align-center>
                 <card 
-                  data-image="/ubc_dntn_thumbs.jpg"
+                  data-image="/ffzero_thumbs.jpg"
                   modal-target="modal-ffzero"
                 >
                   <h4 slot="header">Food Factory Zero</h4>
@@ -299,7 +299,7 @@
                   <div class="basic-modal">
                     <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
                     <h5>Demo / Image</h5>
-                    <img src="/ubc_dntn.gif" alt />
+                    <img src="/ffzero.gif" alt />
                     <h5>Name</h5>
                     <p>Food Factory Zero</p>
                     <h5>Description</h5>
