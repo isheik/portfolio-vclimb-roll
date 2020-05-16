@@ -10,7 +10,6 @@
         <v-btn flat>Contact</v-btn>
       </v-toolbar-items>
     </v-toolbar> -->
-    <!-- comme -->
 
 <transition name='load'>
 
