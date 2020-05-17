@@ -268,7 +268,7 @@
                     <h5>Tech Stack</h5>
                     <p>
                       jQuery, Third party platform integration (Engaging
-                      Networks) Responsive Web Design
+                      Networks), Responsive Web Design, Cross-browser Compatibility
                     </p>
                     <h5>Link</h5>
                     <a href="https://donate.support.ubc.ca/page/19817/donate/1" target="_blank"
@@ -320,13 +320,40 @@
                 </modal>
 
 
-                <card :data-image="bgImage">
+                <card 
+                  data-image="/cgph.jpg"
+                  modal-target="modal-cgph"
+                >
                   <h4 slot="header">Cecil Green Park House Website</h4>
                   <p slot="content">
-                    New website for a wedding/special event facility built in my
-                    Co-op term
+                    Website of Cecil Green Park House, a wedding/special event facility of UBC
                   </p>
                 </card>
+                <modal name="modal-cgph">
+                  <div class="basic-modal">
+                    <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
+                    <h5>Demo / Image</h5>
+                    <img src="/cgph.gif" alt />
+                    <h5>Name</h5>
+                    <p>Cecil Green Park House Website</p>
+                    <h5>Description</h5>
+                    <p>
+                      Website of Cecil Green Park House, a wedding/special event facility of the University of British Columbia (UBC), built on WordPress. Created the website as one of two developers. Contributed to implementing many pages and some complex components. One of them is a custom datepicker built from scratch, which retrieves booking data from a third-party platform (EMS) and display booking status on the calendar. Another one is a complex parallax animation on the history page.
+                    </p>
+                    <h5>Tech Stack</h5>
+                    <p>
+                      PHP, WordPress, JavaScript, Foundation, Third party platform integration (EMS), Responsive Web Design, Cross-browser Compatibility
+                    </p>
+                    <h5>Link</h5>
+                    <a href="https://cecilgreenpark.ubc.ca/" target="_blank"
+                      >Cecil Green Park House Website</a
+                    >
+
+                    <closeButton />
+                  </div>
+                </modal>
+
+
                 <card :data-image="bgImage">
                   <h4 slot="header">Audio recording application</h4>
                   <p slot="content">
