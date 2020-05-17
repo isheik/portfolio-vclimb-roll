@@ -268,7 +268,7 @@
                     <h5>Tech Stack</h5>
                     <p>
                       jQuery, Third party platform integration (Engaging
-                      Networks)
+                      Networks) Responsive Web Design
                     </p>
                     <h5>Link</h5>
                     <a href="https://donate.support.ubc.ca/page/19817/donate/1" target="_blank"
