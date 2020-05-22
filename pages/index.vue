@@ -297,7 +297,6 @@
                 </card>
                 <modal name="modal-ffzero">
                   <div class="basic-modal">
-                    <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
                     <h5>Demo / Image</h5>
                     <img src="/ffzero.gif" alt />
                     <h5>Name</h5>
