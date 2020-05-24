@@ -274,7 +274,6 @@
                     <a href="https://donate.support.ubc.ca/page/19817/donate/1" target="_blank"
                       >UBC donation page</a
                     >
-                    <!-- com -->
 
                     <closeButton />
                   </div>
