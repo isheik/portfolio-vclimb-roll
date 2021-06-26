@@ -1,5 +1,4 @@
 <template>
-
   <v-app light>
     <!-- <v-toolbar v-show="!loading" class="navbar" dark fixed scroll-off-screen>
       <v-toolbar-title v-text="title" />
@@ -11,36 +10,38 @@
       </v-toolbar-items>
     </v-toolbar> -->
 
-<transition name='load'>
-
-    <v-content v-show="loading">
-      <div class="load-container" v-bind:class="{whitescreen:wsIsActive}">
-        <div class="load-spinner">
-          <!-- <pulse-loader :loading="loading" :color="color" :size="size"></pulse-loader> -->
-          <!-- <scale-loader :loading="loading" :color="color" :size="size"></scale-loader> -->
-          <ring-loader :loading="loading" :color="color" :size="size"></ring-loader>
+    <transition name="load">
+      <v-content v-show="loading">
+        <div :class="{ whitescreen: wsIsActive }" class="load-container">
+          <div class="load-spinner">
+            <!-- <pulse-loader :loading="loading" :color="color" :size="size"></pulse-loader> -->
+            <!-- <scale-loader :loading="loading" :color="color" :size="size"></scale-loader> -->
+            <ring-loader :loading="loading" :color="color" :size="size" />
+          </div>
         </div>
-      </div>
-      <!-- <v-container> -->
+        <!-- <v-container> -->
         <!-- <pulse-loader :loading="true"><pulse-loader>  -->
-      <!-- </v-container> -->
-      <!-- <section class="load"> -->
+        <!-- </v-container> -->
+        <!-- <section class="load"> -->
         <!-- <p>hello</p> -->
-      <!-- <v-progress-circular
+        <!-- <v-progress-circular
       indeterminate
       color="green"
     ></v-progress-circular> -->
-      <!-- </section> -->
-   </v-content>
-</transition>
+        <!-- </section> -->
+      </v-content>
+    </transition>
 
-<!-- <transition name='smodal'> -->
+    <!-- <transition name='smodal'> -->
     <v-content v-show="!loading">
       <!-- <v-container pa-0 fluid class="firstview"> -->
 
-        <div v-show="!hideSm" class="smodal-container" v-bind:class="{startModal:smIsActive, zeroOpacity:isZeroOpOn}">
-</div>
-        <!-- <div class="smodal-container"> -->
+      <div
+        v-show="!hideSm"
+        :class="{ startModal: smIsActive, zeroOpacity: isZeroOpOn }"
+        class="smodal-container"
+      />
+      <!-- <div class="smodal-container"> -->
       <section class="firstview">
         <!-- <vue-particles
           color="#dedede"
@@ -93,7 +94,7 @@
                 <!-- <v-layout> -->
                 <div class="prof-picture">
                   <v-avatar :size="avatarSize" color="grey lighten-4">
-                    <img src="~assets/images/profile.jpg" alt="avatar" />
+                    <img src="~assets/images/profile.jpg" alt="avatar" >
                   </v-avatar>
                 </div>
                 <!-- <div> -->
@@ -111,7 +112,7 @@
               >
                 <p>
                   Hi, I am a full-stack web developer based in Vancouver,
-                  Canada. <br />I enjoy programming and turn my passion/coffee
+                  Canada. <br >I enjoy programming and turn my passion/coffee
                   into code &#x2615;
                 </p>
               </v-flex>
@@ -134,7 +135,7 @@
                       :src="skillImage.url"
                       :alt="skillImage.alt"
                       class="skillImages"
-                    />
+                    >
                   </v-flex>
                   <v-flex
                     offset-xs0
@@ -153,7 +154,7 @@
                       :src="toolImage.url"
                       :alt="toolImage.alt"
                       class="toolImages"
-                    />
+                    >
                   </v-flex>
                 </v-layout>
               </v-flex>
@@ -210,15 +211,16 @@
                   <div class="basic-modal">
                     <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
                     <h5>Demo / Image</h5>
-                    <img src="/opus13.gif" alt />
+                    <img src="/opus13.gif" alt >
                     <h5>Name</h5>
                     <p>Opus 13</p>
                     <h5>Description</h5>
                     <p>
                       A simple desktop twitter client built using Web
                       Technologies. The client allows users to view, post,
-                      search, favorite and retweet tweets. Also, filtered views are available from the menu
-                      to see favorite tweets or tweets mentioning the user.
+                      search, favorite and retweet tweets. Also, filtered views
+                      are available from the menu to see favorite tweets or
+                      tweets mentioning the user.
                     </p>
                     <h5>Tech Stack</h5>
                     <p>
@@ -227,7 +229,7 @@
                     </p>
                     <h5>Link</h5>
                     <a href="https://github.com/isheik/opus13" target="_blank"
-                      >Opus 13 GitHub repository</a
+                    >Opus 13 GitHub repository</a
                     >
 
                     <closeButton />
@@ -254,9 +256,11 @@
                   <div class="basic-modal">
                     <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
                     <h5>Demo / Image</h5>
-                    <img src="/ubc_dntn.gif" alt />
+                    <img src="/ubc_dntn.gif" alt >
                     <h5>Name</h5>
-                    <p>UBC (The University of British Columbia) donation page</p>
+                    <p>
+                      UBC (The University of British Columbia) donation page
+                    </p>
                     <h5>Description</h5>
                     <p>
                       New UBC donation page built with jQuery and Engaging
@@ -268,11 +272,14 @@
                     <h5>Tech Stack</h5>
                     <p>
                       jQuery, Third party platform integration (Engaging
-                      Networks), Responsive Web Design, Cross-browser Compatibility
+                      Networks), Responsive Web Design, Cross-browser
+                      Compatibility
                     </p>
                     <h5>Link</h5>
-                    <a href="https://donate.support.ubc.ca/page/19817/donate/1" target="_blank"
-                      >UBC donation page</a
+                    <a
+                      href="https://donate.support.ubc.ca/page/19817/donate/1"
+                      target="_blank"
+                    >UBC donation page</a
                     >
                     <!-- com -->
 
@@ -286,7 +293,7 @@
             </v-flex>
             <v-flex class="mb-5" xs12>
               <v-layout justify-space-around wrap align-center>
-                <card 
+                <card
                   data-image="/ffzero_thumbs.jpg"
                   modal-target="modal-ffzero"
                 >
@@ -299,68 +306,124 @@
                 <modal name="modal-ffzero">
                   <div class="basic-modal">
                     <h5>Demo / Image</h5>
-                    <img src="/ffzero.gif" alt />
+                    <img src="/ffzero.gif" alt >
                     <h5>Name</h5>
                     <p>Food Factory Zero</p>
                     <h5>Description</h5>
                     <p>
-                      A web-based action puzzle game built by a group of 5. My role was implementing some parts of the game (mainly the belt converyer, collision, drag and drop mechanics and the result view), user authentication with Firebase Authentication, data save with Firebase Realtime DB. Also, I created the entire landing page for the game using Bootstrap and its theme, which allows users to log in the game by their google accounts. Aside from that, I built the Web server using Firebase Hosting and deployed the game and the landing page there.
+                      A web-based action puzzle game built by a group of 5. My
+                      role was implementing some parts of the game (mainly the
+                      belt converyer, collision, drag and drop mechanics and the
+                      result view), user authentication with Firebase
+                      Authentication, data save with Firebase Realtime DB. Also,
+                      I created the entire landing page for the game using
+                      Bootstrap and its theme, which allows users to log in the
+                      game by their google accounts. Aside from that, I built
+                      the Web server using Firebase Hosting and deployed the
+                      game and the landing page there.
                     </p>
                     <h5>Tech Stack</h5>
                     <p>
-                      JavaScript, PixiJS, Firebase (Firebase Hosting, Authentication, Realtime DB), Bootstrap
+                      JavaScript, PixiJS, Firebase (Firebase Hosting,
+                      Authentication, Realtime DB), Bootstrap
                     </p>
                     <h5>Link</h5>
-                    <a href="https://foodfactoryzero.firebaseapp.com/" target="_blank"
-                      >Food Factory Zero Home</a
+                    <a
+                      href="https://foodfactoryzero.firebaseapp.com/"
+                      target="_blank"
+                    >Food Factory Zero Home</a
                     >
 
                     <closeButton />
                   </div>
                 </modal>
 
-
-                <card 
-                  data-image="/cgph.jpg"
-                  modal-target="modal-cgph"
-                >
+                <card data-image="/cgph.jpg" modal-target="modal-cgph">
                   <h4 slot="header">Cecil Green Park House Website</h4>
                   <p slot="content">
-                    Website of Cecil Green Park House, a wedding/special event facility of UBC
+                    A website of Cecil Green Park House, a wedding/special event
+                    facility of UBC
                   </p>
                 </card>
                 <modal name="modal-cgph">
                   <div class="basic-modal">
                     <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
                     <h5>Demo / Image</h5>
-                    <img src="/cgph.gif" alt />
+                    <img src="/cgph.gif" alt >
                     <h5>Name</h5>
                     <p>Cecil Green Park House Website</p>
                     <h5>Description</h5>
                     <p>
-                      Website of Cecil Green Park House, a wedding/special event facility of the University of British Columbia (UBC), built on WordPress. Created the website as one of two developers. Contributed to implementing many pages and some complex components. One of them is a custom datepicker built from scratch, which retrieves booking data from a third-party platform (EMS) and display booking status on the calendar. Another one is a complex parallax animation on the history page.
+                      A website of Cecil Green Park House, a wedding/special
+                      event facility of the University of British Columbia
+                      (UBC), built on WordPress. Created the website as one of
+                      two developers. Contributed to implementing many pages and
+                      some complex components. One of them is a custom
+                      datepicker built from scratch, which retrieves booking
+                      data from a third-party platform (EMS) and display booking
+                      status on the calendar. Another one is a complex parallax
+                      animation on the history page.
                     </p>
                     <h5>Tech Stack</h5>
                     <p>
-                      PHP, WordPress, JavaScript, Foundation, Third party platform integration (EMS), Responsive Web Design, Cross-browser Compatibility
+                      PHP, WordPress, JavaScript, Foundation, Third party
+                      platform integration (EMS), Responsive Web Design,
+                      Cross-browser Compatibility
                     </p>
                     <h5>Link</h5>
                     <a href="https://cecilgreenpark.ubc.ca/" target="_blank"
-                      >Cecil Green Park House Website</a
+                    >Cecil Green Park House Website</a
                     >
 
                     <closeButton />
                   </div>
                 </modal>
 
-
-                <card :data-image="bgImage">
-                  <h4 slot="header">Audio recording application</h4>
+                <card
+                  data-image="/giveubc-thumbs.jpg"
+                  modal-target="modal-ubcwebsites"
+                >
+                  <h4 slot="header">UBC websites</h4>
                   <p slot="content">
-                    Audio recording application built with Web Audio API,
-                    React.js, Node.js and AWS in BCIT project practicum
+                    Continually maintaining existing UBC websites and adding new
+                    features for them.
                   </p>
                 </card>
+                <modal name="modal-ubcwebsites">
+                  <div class="basic-modal">
+                    <h5>Demo / Image</h5>
+                    <img src="/cgph.gif" alt >
+                    <h5>Name</h5>
+                    <p>UBC Websites</p>
+                    <h5>Description</h5>
+                    <p>
+                      such as
+                      <a href="https://give.ubc.ca/" target="_blank"
+                      >give UBC</a
+                      >
+                      ,
+                      <a href="https://cecilgreenpark.ubc.ca/" target="_blank"
+                      >Cecil Green Park House Website</a
+                      >
+                      Crowdfundraising UBC etc.
+                    </p>
+                    <h5>Tech Stack</h5>
+                    <p>
+                      PHP, WordPress, JavaScript, Foundation, Third party
+                      platform integration (EMS), Responsive Web Design,
+                      Cross-browser Compatibility
+                    </p>
+                    <h5>Link</h5>
+                    <a href="https://give.ubc.ca/" target="_blank">give UBC</a>,
+                    <a href="https://cecilgreenpark.ubc.ca/" target="_blank"
+                    >Cecil Green Park House Website</a
+                    >
+                    <a href="https://crowdfundraising.ubc.ca/" target="_blank"
+                    >Crowdfundraising UBC</a
+                    >
+                    <closeButton />
+                  </div>
+                </modal>
               </v-layout>
             </v-flex>
           </v-layout>
@@ -393,11 +456,11 @@
             >
               <p>
                 <label class="form-label" for="name">YOUR NAME:</label>
-                <input type="text" name="name" />
+                <input type="text" name="name" >
               </p>
               <p>
                 <label class="form-label" for="email">EMAIL:</label>
-                <input v-model="form.email" type="email" name="email" />
+                <input v-model="form.email" type="email" name="email" >
               </p>
               <p>
                 <label class="form-label" for="message">MESSAGE:</label>
@@ -411,22 +474,21 @@
             <div v-if="submitted">Success</div>
             <!-- </div> -->
             <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-              <input type="text" name="name" />
-              <input type="email" name="email" /> <textarea name="message" />
+              <input type="text" name="name" >
+              <input type="email" name="email" > <textarea name="message" />
             </form>
           </v-layout>
         </v-container>
       </section>
-
     </v-content>
-<!-- </transition> -->
+    <!-- </transition> -->
   </v-app>
 </template>
 <script>
 import card from "~/components/Card"
 import closeButton from "~/components/CloseButton"
 import bgImage from "~/assets/images/background7.jpg"
-import Vue from 'vue'
+import Vue from "vue"
 import PulseLoader from "vue-spinner/src/PulseLoader.vue"
 import ScaleLoader from "vue-spinner/src/ScaleLoader.vue"
 import RingLoader from "vue-spinner/src/RingLoader.vue"
@@ -454,8 +516,8 @@ export default {
       hideSm: false,
       avatarSize: 128,
       bgImage: bgImage,
-      color:'#aaffaa',
-      size:'100px',
+      color: "#aaffaa",
+      size: "100px",
       skillImages: [
         { id: 0, url: "/html5-logo.png", alt: "" },
         { id: 1, url: "/css3-logo.png", alt: "" },
@@ -493,19 +555,19 @@ export default {
     // setTimeout(() => {
     //   this.loading = false
     // }, 2000)
-    await this.$delay(2500);
+    await this.$delay(2500)
     // this.loading = false
-    this.wsIsActive = true;
+    this.wsIsActive = true
     // await this.$delay(400);
-    this.loading = false;
+    this.loading = false
     // this.wsIsActive = true;
     // await this.$delay(400);
-    this.smIsActive = true;
-    await this.$delay(1000);
-    this.isZeroOpOn = true;
-    await this.$delay(1000);
-    this.smIsActive = false;
-    this.hideSm = true;
+    this.smIsActive = true
+    await this.$delay(1000)
+    this.isZeroOpOn = true
+    await this.$delay(1000)
+    this.smIsActive = false
+    this.hideSm = true
     this.fviewStartLoading = true
     // setTimeout(() => {
     //   this.fviewStartLoading = true
@@ -558,7 +620,6 @@ export default {
 <style lang="scss">
 $tp-bg-color-ie: #222222;
 $tp-bg-color: #222222bf;
-
 
 body {
   // would like to remove when modal open, but not working
@@ -895,7 +956,7 @@ body {
     position: absolute;
     margin: auto; */
   /* transform: translate(50%, 50%); */
- /* translate: transform(-80%, -80%); */
+  /* translate: transform(-80%, -80%); */
 }
 .smodal-container.startModal {
   /* background-color: #cccccc; */
