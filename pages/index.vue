@@ -235,13 +235,35 @@
                     <closeButton />
                   </div>
                 </modal>
-                <card :data-image="bgImage">
-                  <h4 slot="header">Portfolio</h4>
+                <card
+                  data-image="/portfolio-thumbs.jpg"
+                  modal-target="modal-portfolio"
+                >
+                  <h4 slot="header">My Portfolio</h4>
                   <p slot="content">
-                    This portfolio website built with Vue.js (Nuxt.js), Vuetify
+                    My portfolio website built with Vue.js (Nuxt.js), Vuetify
                     and Netlify
                   </p>
                 </card>
+                <modal name="modal-portfolio">
+                  <div class="basic-modal">
+                    <h5>Demo / Image</h5>
+                    <img src="/portfolio.gif" alt />
+                    <h5>Name</h5>
+                    <p>My Portfolio</p>
+                    <h5>Description</h5>
+                    <p>
+                      This portfolio website built with Vue.js (Nuxt.js),
+                      Vuetify and Netlify
+                    </p>
+                    <h5>Tech Stack</h5>
+                    <p>Vue.js (Nuxt.js), Vuetify, Netlify</p>
+                    <h5>Link</h5>
+                    <p>N/A (This website)</p>
+
+                    <closeButton />
+                  </div>
+                </modal>
                 <card
                   data-image="/ubc_dntn_thumbs.jpg"
                   modal-target="modal-ubc-dpage"
@@ -263,7 +285,7 @@
                     </p>
                     <h5>Description</h5>
                     <p>
-                      New UBC donation page built with jQuery and Engaging
+                      UBC donation page built with jQuery and Engaging
                       Networks(EN) platform. Implemented and styled the page
                       like a SPA (Single Page Application) integrating EN
                       platform which generates the base HTML of the page and
