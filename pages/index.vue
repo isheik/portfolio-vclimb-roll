@@ -94,7 +94,7 @@
                 <!-- <v-layout> -->
                 <div class="prof-picture">
                   <v-avatar :size="avatarSize" color="grey lighten-4">
-                    <img src="~assets/images/profile.jpg" alt="avatar" >
+                    <img src="~assets/images/profile.jpg" alt="avatar" />
                   </v-avatar>
                 </div>
                 <!-- <div> -->
@@ -112,7 +112,7 @@
               >
                 <p>
                   Hi, I am a full-stack web developer based in Vancouver,
-                  Canada. <br >I enjoy programming and turn my passion/coffee
+                  Canada. <br />I enjoy programming and turn my passion/coffee
                   into code &#x2615;
                 </p>
               </v-flex>
@@ -135,7 +135,7 @@
                       :src="skillImage.url"
                       :alt="skillImage.alt"
                       class="skillImages"
-                    >
+                    />
                   </v-flex>
                   <v-flex
                     offset-xs0
@@ -154,7 +154,7 @@
                       :src="toolImage.url"
                       :alt="toolImage.alt"
                       class="toolImages"
-                    >
+                    />
                   </v-flex>
                 </v-layout>
               </v-flex>
@@ -211,7 +211,7 @@
                   <div class="basic-modal">
                     <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
                     <h5>Demo / Image</h5>
-                    <img src="/opus13.gif" alt >
+                    <img src="/opus13.gif" alt />
                     <h5>Name</h5>
                     <p>Opus 13</p>
                     <h5>Description</h5>
@@ -229,7 +229,7 @@
                     </p>
                     <h5>Link</h5>
                     <a href="https://github.com/isheik/opus13" target="_blank"
-                    >Opus 13 GitHub repository</a
+                      >Opus 13 GitHub repository</a
                     >
 
                     <closeButton />
@@ -256,7 +256,7 @@
                   <div class="basic-modal">
                     <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
                     <h5>Demo / Image</h5>
-                    <img src="/ubc_dntn.gif" alt >
+                    <img src="/ubc_dntn.gif" alt />
                     <h5>Name</h5>
                     <p>
                       UBC (The University of British Columbia) donation page
@@ -279,7 +279,7 @@
                     <a
                       href="https://donate.support.ubc.ca/page/19817/donate/1"
                       target="_blank"
-                    >UBC donation page</a
+                      >UBC donation page</a
                     >
                     <!-- com -->
 
@@ -306,7 +306,7 @@
                 <modal name="modal-ffzero">
                   <div class="basic-modal">
                     <h5>Demo / Image</h5>
-                    <img src="/ffzero.gif" alt >
+                    <img src="/ffzero.gif" alt />
                     <h5>Name</h5>
                     <p>Food Factory Zero</p>
                     <h5>Description</h5>
@@ -331,7 +331,7 @@
                     <a
                       href="https://foodfactoryzero.firebaseapp.com/"
                       target="_blank"
-                    >Food Factory Zero Home</a
+                      >Food Factory Zero Home</a
                     >
 
                     <closeButton />
@@ -349,7 +349,7 @@
                   <div class="basic-modal">
                     <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
                     <h5>Demo / Image</h5>
-                    <img src="/cgph.gif" alt >
+                    <img src="/cgph.gif" alt />
                     <h5>Name</h5>
                     <p>Cecil Green Park House Website</p>
                     <h5>Description</h5>
@@ -372,7 +372,7 @@
                     </p>
                     <h5>Link</h5>
                     <a href="https://cecilgreenpark.ubc.ca/" target="_blank"
-                    >Cecil Green Park House Website</a
+                      >Cecil Green Park House Website</a
                     >
 
                     <closeButton />
@@ -392,36 +392,25 @@
                 <modal name="modal-ubcwebsites">
                   <div class="basic-modal">
                     <h5>Demo / Image</h5>
-                    <img src="/cgph.gif" alt >
+                    <img src="/ubcwebsites.gif" alt />
                     <h5>Name</h5>
                     <p>UBC Websites</p>
                     <h5>Description</h5>
                     <p>
-                      such as
-                      <a href="https://give.ubc.ca/" target="_blank"
-                      >give UBC</a
-                      >
-                      ,
-                      <a href="https://cecilgreenpark.ubc.ca/" target="_blank"
-                      >Cecil Green Park House Website</a
-                      >
-                      Crowdfundraising UBC etc.
+                      Maintaining various UBC websites and adding new features
+                      to them.
                     </p>
                     <h5>Tech Stack</h5>
-                    <p>
-                      PHP, WordPress, JavaScript, Foundation, Third party
-                      platform integration (EMS), Responsive Web Design,
-                      Cross-browser Compatibility
-                    </p>
+                    <p>JavaScript, PHP, WordPress, Foundation, Gulp, Webpack</p>
                     <h5>Link</h5>
                     <a href="https://give.ubc.ca/" target="_blank">give UBC</a>,
                     <a href="https://cecilgreenpark.ubc.ca/" target="_blank"
-                    >Cecil Green Park House Website</a
-                    >
+                      >Cecil Green Park House Website</a
+                    >,
                     <a href="https://crowdfundraising.ubc.ca/" target="_blank"
-                    >Crowdfundraising UBC</a
+                      >Crowdfundraising UBC</a
                     >
-                    <closeButton />
+                    etc. <closeButton />
                   </div>
                 </modal>
               </v-layout>
@@ -456,11 +445,11 @@
             >
               <p>
                 <label class="form-label" for="name">YOUR NAME:</label>
-                <input type="text" name="name" >
+                <input type="text" name="name" />
               </p>
               <p>
                 <label class="form-label" for="email">EMAIL:</label>
-                <input v-model="form.email" type="email" name="email" >
+                <input v-model="form.email" type="email" name="email" />
               </p>
               <p>
                 <label class="form-label" for="message">MESSAGE:</label>
@@ -474,8 +463,8 @@
             <div v-if="submitted">Success</div>
             <!-- </div> -->
             <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-              <input type="text" name="name" >
-              <input type="email" name="email" > <textarea name="message" />
+              <input type="text" name="name" />
+              <input type="email" name="email" /> <textarea name="message" />
             </form>
           </v-layout>
         </v-container>
