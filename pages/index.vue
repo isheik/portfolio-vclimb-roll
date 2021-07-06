@@ -1,67 +1,22 @@
 <template>
   <v-app light>
-    <!-- <v-toolbar v-show="!loading" class="navbar" dark fixed scroll-off-screen>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-toolbar-items>
-        <v-btn flat>About</v-btn>
-        <v-btn flat>Works</v-btn>
-        <v-btn flat>Contact</v-btn>
-      </v-toolbar-items>
-    </v-toolbar> -->
-
     <transition name="load">
       <v-content v-show="loading">
         <div :class="{ whitescreen: wsIsActive }" class="load-container">
           <div class="load-spinner">
-            <!-- <pulse-loader :loading="loading" :color="color" :size="size"></pulse-loader> -->
-            <!-- <scale-loader :loading="loading" :color="color" :size="size"></scale-loader> -->
             <ring-loader :loading="loading" :color="color" :size="size" />
           </div>
         </div>
-        <!-- <v-container> -->
-        <!-- <pulse-loader :loading="true"><pulse-loader>  -->
-        <!-- </v-container> -->
-        <!-- <section class="load"> -->
-        <!-- <p>hello</p> -->
-        <!-- <v-progress-circular
-      indeterminate
-      color="green"
-    ></v-progress-circular> -->
-        <!-- </section> -->
       </v-content>
     </transition>
 
-    <!-- <transition name='smodal'> -->
     <v-content v-show="!loading">
-      <!-- <v-container pa-0 fluid class="firstview"> -->
-
       <div
         v-show="!hideSm"
         :class="{ startModal: smIsActive, zeroOpacity: isZeroOpOn }"
         class="smodal-container"
       />
-      <!-- <div class="smodal-container"> -->
       <section class="firstview">
-        <!-- <vue-particles
-          color="#dedede"
-          :particleOpacity="0.7"
-          :particlesNumber="80"
-          shapeType="circle"
-          :particleSize="4"
-          linesColor="#dedede"
-          :linesWidth="1"
-          :lineLinked="true"
-          :lineOpacity="0.4"
-          :linesDistance="150"
-          :moveSpeed="3"
-          :hoverEffect="true"
-          hoverMode="grab"
-          :clickEffect="true"
-          clickMode="push"
-        ></vue-particles>-->
-        <!-- <v-layout> -->
-        <!-- <v-flex xs12 column> -->
         <div class="p-container">
           <transition name="welcome1" appear>
             <div :key="1" class="p-bg" />
@@ -77,34 +32,21 @@
             </h1>
           </transition>
         </div>
-        <!-- </v-flex> -->
-        <!-- </v-layout> -->
       </section>
-      <!-- </v-container> -->
       <section class="about">
         <v-layout column wrap align-center>
           <v-container class="prof pr-2 pl-2">
             <v-layout column align-content-center>
-              <!-- <v-layout column wrap align-center> -->
-              <!-- <v-layout column wrap> -->
-              <!-- <v-flex column xs12 md6> -->
-              <!-- <v-flex column xs12 md6 align-self-end> -->
-              <!-- <v-layout justify-space-around wrap> -->
               <v-flex class="mb-4">
-                <!-- <v-layout> -->
                 <div class="prof-picture">
                   <v-avatar :size="avatarSize" color="grey lighten-4">
                     <img src="~assets/images/profile.jpg" alt="avatar" />
                   </v-avatar>
                 </div>
-                <!-- <div> -->
-                <!-- <v-layout column> -->
                 <div class="prof-name">
                   <div class="display-1">KEI</div>
                   <div class="subheading">Keishi Asai</div>
                 </div>
-                <!-- </v-layout> -->
-                <!-- </v-layout> -->
               </v-flex>
               <v-flex
                 class="prof-description subheading mb-4"
@@ -160,26 +102,10 @@
               </v-flex>
             </v-layout>
           </v-container>
-          <!-- <v-container class="prof" grid-list-xl>
-            <v-layout>
-              <v-flex>
-                <h3>Tools</h3>
-                <img
-                  class="skillImages"
-                  v-for="skillImage in skillImages"
-                  :key="skillImage.id"
-                  :src="skillImage.url"
-                  :alt="skillImage.alt"
-                >
-              </v-flex>
-            </v-layout>
-          </v-container>-->
         </v-layout>
       </section>
       <section>
         <v-parallax src="background4.jpg" height="300">
-          <!-- <div class="works-heading-container"> -->
-          <!-- <div> -->
           <v-layout
             class="works-heading-content"
             justify-space-around
@@ -188,8 +114,6 @@
           >
             <h2 class="display-1">Works</h2>
           </v-layout>
-          <!-- </div> -->
-          <!-- </div> -->
         </v-parallax>
       </section>
       <section class="works">
@@ -209,7 +133,6 @@
                 </card>
                 <modal name="modal-opus13">
                   <div class="basic-modal">
-                    <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
                     <h5>Demo / Image</h5>
                     <img src="/opus13.gif" alt />
                     <h5>Name</h5>
@@ -276,7 +199,6 @@
                 </card>
                 <modal name="modal-ubc-dpage">
                   <div class="basic-modal">
-                    <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
                     <h5>Demo / Image</h5>
                     <img src="/ubc_dntn.gif" alt />
                     <h5>Name</h5>
@@ -303,9 +225,6 @@
                       target="_blank"
                       >UBC Donation Page</a
                     >
-                    <!-- com -->
-                    <!-- test -->
-
                     <closeButton />
                   </div>
                 </modal>
@@ -370,7 +289,6 @@
                 </card>
                 <modal name="modal-cgph">
                   <div class="basic-modal">
-                    <!-- <h1 class="display-1 mb-4 text-xs-center">Opus 13</h1> -->
                     <h5>Demo / Image</h5>
                     <img src="/cgph.gif" alt />
                     <h5>Name</h5>
@@ -456,10 +374,6 @@
       <section class="contact">
         <v-container>
           <v-layout wrap align-center>
-            <!-- <div class="form-container"> -->
-            <!-- v-if="!submitted" -->
-            <!-- <form name="contact" method="POST" data-netlify="true" @submit.prevent="handleSubmit"> -->
-            <!-- <input type="hidden" name="form-name" value="content"> -->
             <form
               v-if="!submitted"
               class="contact-form"
@@ -479,12 +393,10 @@
                 <textarea v-model="form.message" name="message" />
               </p>
               <p>
-                <!-- <button type="submit">Send</button> -->
                 <v-btn type="submit" round color="primary" dark>Submit</v-btn>
               </p>
             </form>
             <div v-if="submitted">Success</div>
-            <!-- </div> -->
             <form name="contact" netlify netlify-honeypot="bot-field" hidden>
               <input type="text" name="name" />
               <input type="email" name="email" /> <textarea name="message" />
@@ -493,7 +405,6 @@
         </v-container>
       </section>
     </v-content>
-    <!-- </transition> -->
   </v-app>
 </template>
 <script>
@@ -528,7 +439,8 @@ export default {
       hideSm: false,
       avatarSize: 128,
       bgImage: bgImage,
-      color: "#aaffaa",
+      // color: "#aaffaa",
+      color: "#7EB1E0",
       size: "100px",
       skillImages: [
         { id: 0, url: "/html5-logo.png", alt: "" },
@@ -552,8 +464,6 @@ export default {
         { id: 4, url: "/vim-logo.png", alt: "" },
         { id: 5, url: "/vscode-logo.png", alt: "" },
         { id: 6, url: "/figma-logo.png", alt: "" }
-        // { id: 6, url: "/ai-logo.png", alt: "" },
-        // { id: 7, url: "/ps-logo.png", alt: "" }
       ],
       submitted: false,
       form: {
@@ -565,16 +475,9 @@ export default {
   },
   mounted: async function() {
     const response = await this.$axios.$get(bgImage)
-    // setTimeout(() => {
-    //   this.loading = false
-    // }, 2000)
     await this.$delay(2500)
-    // this.loading = false
     this.wsIsActive = true
-    // await this.$delay(400);
     this.loading = false
-    // this.wsIsActive = true;
-    // await this.$delay(400);
     this.smIsActive = true
     await this.$delay(1000)
     this.isZeroOpOn = true
@@ -582,10 +485,6 @@ export default {
     this.smIsActive = false
     this.hideSm = true
     this.fviewStartLoading = true
-    // setTimeout(() => {
-    //   this.fviewStartLoading = true
-    //   console.log(this.fviewStartLoading)
-    // }, 1000)
   },
   methods: {
     encode(data) {
@@ -736,9 +635,6 @@ body {
   width: 100%;
   height: 100%;
   color: white;
-
-  // background: $tp-bg-color-ie;
-  // background: $tp-bg-color;
 }
 
 // modal
@@ -820,7 +716,6 @@ body {
     border-bottom: 2px solid #7ed1e6;
   }
   h5:first-letter {
-    // margin-right: 0.1em;
     font-size: 2em;
     color: #7ed1e6;
   }
@@ -903,13 +798,8 @@ body {
   width: 100%;
   height: 100%;
   color: white;
-
-  // background: $tp-bg-color-ie;
-  // background: $tp-bg-color;
 }
 
-// .form-container {
-// }
 .contact {
   height: 640px;
 }
@@ -927,17 +817,8 @@ body {
   }
   .form-label {
     display: block;
-    // margin: 10px 0;
-    // padding-bottom: 0.2em;
-    // border-bottom: 2px solid #7ed1e6;
-  }
-  .form-label:first-child {
-    // margin: 0 0 10px 0;
-    // padding-bottom: 0.2em;
-    // border-bottom: 2px solid #7ed1e6;
   }
   .form-label:first-letter {
-    // margin-right: 0.1em;
     font-size: 2em;
     color: #7ed1e6;
   }
@@ -946,34 +827,17 @@ body {
   position: relative;
   height: 100vh;
   width: 100%;
-  /* background-color: rgba(34, 34, 34, 0.74902); */
   opacity: 1;
-  /* background-color: rgba(0, 0, 0, 0.74902); */
-  /* background-color: rgba(0, 0, 0, 0.74902); */
   background-color: #333333;
 }
 .load-spinner {
-  /* position: absolute; */
-  /* top: 50%; */
-  /* left: 50%; */
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
   transform: translateY(-50%) translateX(-50%);
-  /* width: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    margin: auto; */
-  /* transform: translate(50%, 50%); */
-  /* translate: transform(-80%, -80%); */
 }
 .smodal-container.startModal {
-  /* background-color: #cccccc; */
-  /* transition: background-color 2s; */
   display: block;
   position: fixed;
 }
@@ -981,31 +845,14 @@ body {
   opacity: 0;
   transition: opacity 1s;
 }
-/* .smodal-leave-to {
-  opacity: 0;
-  transition: opacity 1s;
-}
-.smodal-leave-active {
-  opacity: 0;
-  transition: opacity 1s;
-} */
 .smodal-container {
   height: 100vh;
   width: 100%;
-  /* background-color: black; */
-  /* background-color: rgba(0, 0, 0, 1); */
   background-color: #333333;
   opacity: 1;
   transition: opacity 1s;
   position: fixed;
   display: none;
   z-index: 2000;
-}
-.load-leave-to {
-  /* background-color: green; */
-  /* transition: background-color 5s; */
-}
-.load-leave-active {
-  /* transition: background-color 5s; */
 }
 </style>
