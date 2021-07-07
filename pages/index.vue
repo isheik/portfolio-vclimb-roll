@@ -58,6 +58,9 @@
                   into code &#x2615;
                 </p>
               </v-flex>
+              <div class="prof-logo">
+                <img src="~assets/images/vcroll-logo.png" alt="logo" />
+              </div>
               <v-flex xs12>
                 <v-layout align-start wrap>
                   <v-flex
@@ -165,7 +168,7 @@
                   <h4 slot="header">My Portfolio</h4>
                   <p slot="content">
                     My portfolio website built with Vue.js (Nuxt.js), Vuetify
-                    and Netlify
+                    and Netlify.
                   </p>
                 </card>
                 <modal name="modal-portfolio">
@@ -177,10 +180,11 @@
                     <h5>Description</h5>
                     <p>
                       This portfolio website built with Vue.js (Nuxt.js),
-                      Vuetify and Netlify
+                      Vuetify and Netlify. Also, designed and created the site
+                      logo and favicon using Figma.
                     </p>
                     <h5>Tech Stack</h5>
-                    <p>Vue.js (Nuxt.js), Vuetify, Netlify</p>
+                    <p>Vue.js (Nuxt.js), Vuetify, Netlify, Figma</p>
                     <h5>Link</h5>
                     <a
                       href="https://github.com/isheik/portfolio-vclimb-roll"
@@ -192,26 +196,27 @@
                   </div>
                 </modal>
                 <card
-                  data-image="/ubc_dntn_thumbs.jpg"
+                  data-image="/giveubc-form-thumbs.jpg"
                   modal-target="modal-ubc-dpage"
                 >
-                  <h4 slot="header">UBC Donation Page</h4>
+                  <h4 slot="header">Give UBC Donation Page</h4>
                   <p slot="content">
-                    New UBC donation page built with jQuery and Engaging
+                    Give UBC donation page built with jQuery and Engaging
                     Networks platform
                   </p>
                 </card>
                 <modal name="modal-ubc-dpage">
                   <div class="basic-modal">
                     <h5>Demo / Image</h5>
-                    <img src="/ubc_dntn.gif" alt />
+                    <img src="/giveubc-form.gif" alt />
                     <h5>Name</h5>
                     <p>
-                      UBC (The University of British Columbia) donation page
+                      Give UBC (The University of British Columbia) donation
+                      page
                     </p>
                     <h5>Description</h5>
                     <p>
-                      UBC donation page built with jQuery and Engaging
+                      Give UBC donation page built with jQuery and Engaging
                       Networks(EN) platform. Implemented and styled the page
                       like a SPA (Single Page Application) integrating EN
                       platform which generates the base HTML of the page and
@@ -225,16 +230,16 @@
                     </p>
                     <h5>Link</h5>
                     <a
-                      href="https://donate.support.ubc.ca/page/19817/donate/1"
+                      href="https://donate.give.ubc.ca/page/68046/donate/1"
                       target="_blank"
-                      >UBC Donation Page</a
+                      >Give UBC Donation Page</a
                     >
                     <closeButton />
                   </div>
                 </modal>
               </v-layout>
             </v-flex>
-            <v-flex xs12>
+            <v-flex xs12 class="mt-3">
               <h3 class="headline text-xs-center">Team works</h3>
             </v-flex>
             <v-flex class="mb-5" xs12>
@@ -543,6 +548,7 @@ export default {
 <style lang="scss">
 $tp-bg-color-ie: #222222;
 $tp-bg-color: #222222bf;
+$base-color: #53a0e7;
 
 body {
   // would like to remove when modal open, but not working
@@ -623,6 +629,12 @@ body {
       margin: 10px 20px;
     }
   }
+  /* &-logo {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate(0, 10px);
+    margin-left: 8px;
+  } */
   &-tools {
     width: 200px;
     img {
@@ -719,16 +731,19 @@ body {
   h5 {
     margin: 10px 0;
     padding-bottom: 0.2em;
-    border-bottom: 2px solid #7ed1e6;
+    /* border-bottom: 2px solid #7ed1e6; */
+    border-bottom: 2px solid $base-color;
   }
   h5:first-child {
     margin: 0 0 10px 0;
     padding-bottom: 0.2em;
-    border-bottom: 2px solid #7ed1e6;
+    /* border-bottom: 2px solid #7ed1e6; */
+    border-bottom: 2px solid $base-color;
   }
   h5:first-letter {
     font-size: 2em;
-    color: #7ed1e6;
+    /* color: #7ed1e6; */
+    color: $base-color;
   }
 }
 
@@ -821,7 +836,7 @@ body {
   input,
   textarea {
     width: 100%;
-    border-bottom: 2px solid #7ed1e6;
+    border-bottom: 2px solid $base-color;
     outline: none;
   }
   textarea {
@@ -832,7 +847,7 @@ body {
   }
   .form-label:first-letter {
     font-size: 2em;
-    color: #7ed1e6;
+    color: $base-color;
   }
 }
 .contact .container .layout {
