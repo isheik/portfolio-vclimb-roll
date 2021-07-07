@@ -16,7 +16,7 @@ module.exports = {
   /*
    ** Customize the progress bar color
    */
-  loading: { color: "#3B8070" },
+  loading: { color: "#53a0e7" },
   // plugins: ['~/plugins/vue-fullpage'],
   /*
    ** Build configuration
