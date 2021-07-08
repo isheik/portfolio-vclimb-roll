@@ -58,9 +58,6 @@
                   into code &#x2615;
                 </p>
               </v-flex>
-              <div class="prof-logo">
-                <img src="~assets/images/vcroll-logo.png" alt="logo" >
-              </div>
               <v-flex xs12>
                 <v-layout align-start wrap>
                   <v-flex
@@ -238,6 +235,11 @@
                   </div>
                 </modal>
               </v-layout>
+            </v-flex>
+            <v-flex xs12>
+              <div class="work-logo">
+                <img src="~assets/images/vcroll-logo.png" alt="logo" >
+              </div>
             </v-flex>
             <v-flex xs12 class="mt-3">
               <h3 class="headline text-xs-center">Team works</h3>
@@ -890,5 +892,8 @@ body {
   position: fixed;
   display: none;
   z-index: 2000;
+}
+.work-logo {
+  text-align: center;
 }
 </style>
