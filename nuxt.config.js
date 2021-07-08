@@ -4,7 +4,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: "portfolio-vclimb-roll",
+    title: "KEI's Portfolio",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -54,4 +54,4 @@ module.exports = {
         ? process.env.DEV_API_URL
         : process.env.PROD_API_URL
   }
-};
+}
