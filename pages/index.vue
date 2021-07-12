@@ -46,6 +46,17 @@
                 <div class="prof-name">
                   <div class="display-1">KEI</div>
                   <div class="subheading">Keishi Asai</div>
+                  <div class="sns">
+                    <a href="https://github.com/isheik" target="_blank"
+                      ><img class="sns-icons" src="/github-logo.png" alt=""
+                    /></a>
+
+                    <a
+                      href="https://linkedin.com/in/keishi-asai/"
+                      target="_blank"
+                      ><img class="sns-icons" src="/linkedin.png" alt=""
+                    /></a>
+                  </div>
                 </div>
               </v-flex>
               <v-flex
@@ -481,7 +492,7 @@ export default {
       ],
       toolImages: [
         { id: 0, url: "/git-logo.png", alt: "" },
-        { id: 1, url: "/github-logo.png", alt: "" },
+        // { id: 1, url: "/github-logo.png", alt: "" },
         { id: 2, url: "/webpack-logo.png", alt: "" },
         { id: 3, url: "/sass-logo.png", alt: "" },
         { id: 4, url: "/vim-logo.png", alt: "" },
@@ -895,5 +906,11 @@ body {
 }
 .work-logo {
   text-align: center;
+}
+.sns-icons {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  margin-top: 8px;
 }
 </style>
