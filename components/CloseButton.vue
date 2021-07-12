@@ -1,8 +1,6 @@
 <template>
   <div class="outer" @click="close">
-    <div class="inner">
-      <label>Close</label>
-    </div>
+    <div class="inner"><label>Close</label></div>
   </div>
 </template>
 
@@ -10,10 +8,10 @@
 export default {
   methods: {
     close() {
-      this.$modal.pop();
+      this.$modal.pop()
     }
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 .outer {
@@ -53,7 +51,7 @@ label {
   content: "";
   height: 2px;
   width: inherit;
-  background: #7ed1e6;
+  background: #53a0e7;
   left: 0;
   transition: all 0.3s ease-in;
 }
