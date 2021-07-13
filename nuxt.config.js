@@ -1,5 +1,10 @@
 module.exports = {
-  modules: ["@nuxtjs/vuetify", "@nuxtjs/axios", "@nuxtjs/dotenv"],
+  modules: [
+    "@nuxtjs/vuetify",
+    "@nuxtjs/axios",
+    "@nuxtjs/dotenv",
+    "@nuxtjs/robots"
+  ],
   /*
    ** Headers of the page
    */
@@ -45,7 +50,8 @@ module.exports = {
     { src: "~/plugins/vue-parallax-js", ssr: false },
     { src: "~/plugins/vue-thin-modal", ssr: true },
     { src: "~/plugins/mixin.js", ssr: true },
-    { src: "~/plugins/vue-particles", ssr: false }
+    { src: "~/plugins/vue-particles", ssr: false },
+    { src: "~/plugins/vue-gtag.js" }
     // { src: "~/plugins/vue-spinner", ssr: false },
   ],
   axios: {
@@ -53,5 +59,9 @@ module.exports = {
       process.env.NODE_DEV === "production"
         ? process.env.DEV_API_URL
         : process.env.PROD_API_URL
+  },
+  robots: {
+    UserAgent: "*",
+    Disallow: ""
   }
-}
+};
