@@ -2,5 +2,5 @@ import Vue from "vue";
 import VueGtag from "vue-gtag";
 
 Vue.use(VueGtag, {
-  config: { id: "G-DG166987ZD" }
+  config: { id: process.env.GOOGLE_ANALYTICS_ID }
 });

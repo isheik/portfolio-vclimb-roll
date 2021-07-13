@@ -51,7 +51,7 @@
                       id="github-link"
                       href="https://github.com/isheik"
                       target="_blank"
-                      @click="this.$gtm.push({ event: 'view_github' })"
+                      @click="sendGtmViewGithubEvent"
                       ><img class="sns-icons" src="/github-logo.png" alt=""
                     /></a>
 
@@ -59,7 +59,7 @@
                       id="linkedin-link"
                       href="https://linkedin.com/in/keishi-asai/"
                       target="_blank"
-                      @click="this.$gtm.push({ event: 'view_linkedin' })"
+                      @click="sendGtmViewLinkedinEvent"
                       ><img class="sns-icons" src="/linkedin.png" alt=""
                     /></a>
                   </div>
@@ -551,6 +551,12 @@ export default {
         .then(() => {
           this.submitted = true
         })
+    },
+    sendGtmViewLinkedinEvent() {
+      this.$gtm.push({ event: "view_linkedin" })
+    },
+    sendGtmViewGithubEvent() {
+      this.$gtm.push({ event: "view_github" })
     }
   }
 }

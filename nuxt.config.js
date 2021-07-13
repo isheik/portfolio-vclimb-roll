@@ -66,7 +66,7 @@ module.exports = {
     Disallow: ""
   },
   gtm: {
-    id: "GTM-K4D6W82"
+    id: process.env.GOOGLE_TAG_MANAGER_ID
   },
   publicRuntimeConfig: {
     gtm: {
