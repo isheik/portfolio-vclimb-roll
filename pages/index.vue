@@ -47,11 +47,15 @@
                   <div class="display-1">KEI</div>
                   <div class="subheading">Keishi Asai</div>
                   <div class="sns">
-                    <a href="https://github.com/isheik" target="_blank"
+                    <a
+                      id="github-link"
+                      href="https://github.com/isheik"
+                      target="_blank"
                       ><img class="sns-icons" src="/github-logo.png" alt=""
                     /></a>
 
                     <a
+                      id="linkedin-link"
                       href="https://linkedin.com/in/keishi-asai/"
                       target="_blank"
                       ><img class="sns-icons" src="/linkedin.png" alt=""
@@ -398,6 +402,7 @@
           <v-layout wrap align-center>
             <form
               v-if="!submitted"
+              id="contact-form"
               class="contact-form"
               method="POST"
               @submit.prevent="handleSubmit"

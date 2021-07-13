@@ -3,7 +3,8 @@ module.exports = {
     "@nuxtjs/vuetify",
     "@nuxtjs/axios",
     "@nuxtjs/dotenv",
-    "@nuxtjs/robots"
+    "@nuxtjs/robots",
+    "@nuxtjs/gtm"
   ],
   /*
    ** Headers of the page
@@ -63,5 +64,13 @@ module.exports = {
   robots: {
     UserAgent: "*",
     Disallow: ""
+  },
+  gtm: {
+    id: "GTM-K4D6W82"
+  },
+  publicRuntimeConfig: {
+    gtm: {
+      id: process.env.GOOGLE_TAG_MANAGER_ID
+    }
   }
 };
