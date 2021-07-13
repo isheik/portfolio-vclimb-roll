@@ -51,6 +51,7 @@
                       id="github-link"
                       href="https://github.com/isheik"
                       target="_blank"
+                      @click="this.$gtm.push({ event: 'view_github' })"
                       ><img class="sns-icons" src="/github-logo.png" alt=""
                     /></a>
 
@@ -58,6 +59,7 @@
                       id="linkedin-link"
                       href="https://linkedin.com/in/keishi-asai/"
                       target="_blank"
+                      @click="this.$gtm.push({ event: 'view_linkedin' })"
                       ><img class="sns-icons" src="/linkedin.png" alt=""
                     /></a>
                   </div>
