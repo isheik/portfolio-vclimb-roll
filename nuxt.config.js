@@ -4,7 +4,8 @@ module.exports = {
     "@nuxtjs/axios",
     "@nuxtjs/dotenv",
     "@nuxtjs/robots",
-    "@nuxtjs/gtm"
+    "@nuxtjs/gtm",
+    "@nuxtjs/sitemap"
   ],
   /*
    ** Headers of the page
@@ -63,7 +64,8 @@ module.exports = {
   },
   robots: {
     UserAgent: "*",
-    Disallow: ""
+    Disallow: "",
+    Sitemap: "https://isheik.dev/sitemap.xml"
   },
   gtm: {
     id: process.env.GOOGLE_TAG_MANAGER_ID
