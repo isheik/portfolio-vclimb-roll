@@ -522,14 +522,6 @@ export default {
   },
   methods: {
     encode(data) {
-      console.log("encoding")
-      console.log(
-        Object.keys(data)
-          .map(
-            key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-          )
-          .join("&")
-      )
       return Object.keys(data)
         .map(
           key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
@@ -537,16 +529,9 @@ export default {
         .join("&")
     },
     handleSubmit() {
-      console.log("calling axios")
       const axiosConfig = {
         header: { "Content-Type": "application/x-www-form-urlencoded" }
       }
-      console.log(
-        this.encode({
-          "form-name": "contact",
-          ...this.form
-        })
-      )
       this.$axios
         .$post(
           "/",
