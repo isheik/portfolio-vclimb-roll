@@ -32,7 +32,7 @@ module.exports = {
       {
         hid: "og:image",
         property: "og:image",
-        content: "/portfolio_ogp_image.jpg"
+        content: "https://isheik.dev/portfolio_ogp_image.jpg"
       },
       { name: "twitter:site", content: "@isheik8" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -54,7 +54,7 @@ module.exports = {
       {
         hid: "twitter:image",
         name: "twitter:image",
-        content: "/portfolio_ogp_image.jpg"
+        content: "https://isheik.dev/portfolio_ogp_image.jpg"
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
