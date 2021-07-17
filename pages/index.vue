@@ -529,12 +529,17 @@ export default {
     this.hideSm = true
     this.fviewStartLoading = true
 
-    this.prevViewHeight = window.innerHeight
-    this.prevViewWidth = window.innerWidth
+    // this.prevViewHeight = window.innerHeight
+    // this.prevViewWidth = window.innerWidth
 
-    this.firstViewAdjustBgSize()
+    // this.firstViewAdjustBgSize()
 
-    window.addEventListener("resize", this.firstViewAdjustBgSize)
+    // window.addEventListener("resize", this.firstViewAdjustBgSize)
+
+    const screenHeight = window.screen.height
+    const firstView = document.getElementsByClassName("firstview")[0]
+    console.log(screenHeight)
+    firstView.style.height = screenHeight + "px"
   },
   methods: {
     encode(data) {
