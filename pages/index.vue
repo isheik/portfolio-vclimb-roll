@@ -529,12 +529,12 @@ export default {
     this.hideSm = true
     this.fviewStartLoading = true
 
-    // this.prevViewHeight = window.innerHeight
-    // this.prevViewWidth = window.innerWidth
+    this.prevViewHeight = window.innerHeight
+    this.prevViewWidth = window.innerWidth
 
-    // this.firstViewAdjustBgSize()
+    this.firstViewAdjustBgSize()
 
-    // window.addEventListener("resize", this.firstViewAdjustBgSize)
+    window.addEventListener("resize", this.firstViewAdjustBgSize)
   },
   methods: {
     encode(data) {
@@ -602,18 +602,6 @@ $tp-bg-color-ie: #222222;
 $tp-bg-color: #222222bf;
 $base-color: #53a0e7;
 
-html,
-body:not(.modal-open),
-#__nuxt,
-#__layout,
-#__layout > div,
-#app,
-.application--wrap,
-.v-content,
-.v-content__wrap {
-  height: 100%;
-}
-
 body {
   // would like to remove when modal open, but not working
   padding-right: 0 !important;
@@ -627,20 +615,11 @@ body {
   background-image: url("~assets/images/background7.jpg");
   background-size: cover;
   background-attachment: fixed;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-position: center;
 }
-/* .firstview::after { */
-/* content: ""; */
-/* position: absolute; */
-/* background-image: url("~assets/images/background7.jpg"); */
-/* background-size: cover; */
-/* background-attachment: fixed; */
-/* height: 100%; */
-/* width: 100%; */
-/* background-position: center; */
-/* } */
+
 .p-container {
   position: absolute;
   top: 50%;
