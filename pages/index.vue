@@ -450,7 +450,7 @@
 <script>
 import card from "~/components/Card"
 import closeButton from "~/components/CloseButton"
-import bgImage from "~/assets/images/background7.jpg"
+// import bgImage from "~/assets/images/background7.jpg"
 import Vue from "vue"
 import PulseLoader from "vue-spinner/src/PulseLoader.vue"
 import ScaleLoader from "vue-spinner/src/ScaleLoader.vue"
@@ -478,7 +478,7 @@ export default {
       fviewStartLoading: false,
       hideSm: false,
       avatarSize: 128,
-      bgImage: bgImage,
+      // bgImage: bgImage,
       // color: "#aaffaa",
       // color: "#3E96E8",
       color: "#0279E7",
@@ -515,8 +515,8 @@ export default {
     }
   },
   mounted: async function() {
-    const response = await this.$axios.$get(bgImage)
-    await this.$delay(2500)
+    // const response = await this.$axios.$get(bgImage)
+    await this.$delay(1000)
     this.wsIsActive = true
     this.loading = false
     this.smIsActive = true
