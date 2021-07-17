@@ -606,18 +606,39 @@ body {
   // would like to remove when modal open, but not working
   padding-right: 0 !important;
 }
+
+.about,
+.works,
+.contact {
+  background: white;
+}
+
+#app {
+  background: transparent;
+}
+
 .navbar.v-toolbar {
   background: $tp-bg-color-ie;
   background: $tp-bg-color;
 }
 .firstview {
   position: relative;
-  background-image: url("~assets/images/background7.jpg");
-  background-size: cover;
-  background-attachment: fixed;
   height: 100vh;
   width: 100%;
-  background-position: center;
+
+  &:before {
+    content: "";
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-image: url("~assets/images/background7.jpg");
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-position: center;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+  }
 }
 
 .p-container {
