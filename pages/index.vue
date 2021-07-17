@@ -526,6 +526,10 @@ export default {
     this.smIsActive = false
     this.hideSm = true
     this.fviewStartLoading = true
+
+    this.firstViewAdjustBgSize()
+
+    window.addEventListener("resize", this.firstViewAdjustBgSize)
   },
   methods: {
     encode(data) {
@@ -561,6 +565,11 @@ export default {
     },
     sendGtmFormSubmissionEvent() {
       this.$gtm.push({ event: "form_submission", form_id: "contact-form" })
+    },
+    firstViewAdjustBgSize() {
+      const firstView = document.getElementsByClassName("firstview")[0]
+      const windowHeight = window.innerHeight
+      firstView.style.height = windowHeight + "px"
     }
   }
 }
