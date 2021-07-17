@@ -388,7 +388,8 @@
         </v-container>
       </section>
       <section>
-        <div class="contact-heading-container">
+        <v-parallax src="background8.jpg" height="300">
+          <!-- <div class="contact-heading-container"> -->
           <v-layout
             class="contact-heading-content"
             justify-space-around
@@ -397,7 +398,8 @@
           >
             <h2 class="display-1">Contact</h2>
           </v-layout>
-        </div>
+          <!-- </div> -->
+        </v-parallax>
       </section>
       <section class="contact">
         <v-container>
@@ -722,12 +724,12 @@ body {
 .toolImages {
   height: 48px;
 }
-.works-heading-container {
-  background-attachment: fixed;
-  background-size: cover;
-  height: 300px;
-  background-image: url("~assets/images/background1.jpg");
-}
+/* .works-heading-container { */
+/* background-attachment: fixed; */
+/* background-size: cover; */
+/* height: 300px; */
+/* background-image: url("~assets/images/background1.jpg"); */
+/* } */
 .works-heading-content {
   width: 100%;
   height: 100%;
@@ -888,12 +890,12 @@ body {
 }
 
 // Contact
-.contact-heading-container {
-  background-attachment: fixed;
-  background-size: cover;
-  height: 300px;
-  background-image: url("~assets/images/background1.jpg");
-}
+/* .contact-heading-container { */
+/* background-attachment: fixed; */
+/* background-size: cover; */
+/* height: 300px; */
+/* background-image: url("~assets/images/background1.jpg"); */
+/* } */
 .contact-heading-content {
   width: 100%;
   height: 100%;
