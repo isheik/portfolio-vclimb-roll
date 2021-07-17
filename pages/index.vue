@@ -529,12 +529,12 @@ export default {
     this.hideSm = true
     this.fviewStartLoading = true
 
-    this.prevViewHeight = window.innerHeight
-    this.prevViewWidth = window.innerWidth
+    // this.prevViewHeight = window.innerHeight
+    // this.prevViewWidth = window.innerWidth
 
-    this.firstViewAdjustBgSize()
+    // this.firstViewAdjustBgSize()
 
-    window.addEventListener("resize", this.firstViewAdjustBgSize)
+    // window.addEventListener("resize", this.firstViewAdjustBgSize)
   },
   methods: {
     encode(data) {
@@ -615,7 +615,8 @@ body {
   background-image: url("~assets/images/background7.jpg");
   background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
+  height: 1098px;
+  /* height: 100vh; */
   width: 100%;
   background-position: center;
 }
