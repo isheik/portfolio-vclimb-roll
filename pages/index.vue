@@ -612,9 +612,19 @@ body {
 }
 .firstview {
   position: relative;
+  /* background-image: url("~assets/images/background7.jpg"); */
+  /* background-size: cover; */
+  /* background-attachment: fixed; */
+  height: 100vh;
+  width: 100%;
+  /* background-position: center; */
+}
+.firstview::after {
+  content: "";
+  /* position: absolute; */
   background-image: url("~assets/images/background7.jpg");
   background-size: cover;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
   height: 100vh;
   width: 100%;
   background-position: center;
@@ -623,8 +633,8 @@ body {
   position: absolute;
   top: 50%;
   width: 100%;
-
   transform: translate(0%, -50%);
+  z-index: 10;
   .p-bg {
     position: absolute;
     background-image: url("~assets/images/background7.jpg");
