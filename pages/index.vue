@@ -625,7 +625,7 @@ body {
   background-image: url("~assets/images/background7.jpg");
   background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-position: center;
 }
