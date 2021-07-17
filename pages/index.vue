@@ -535,11 +535,6 @@ export default {
     // this.firstViewAdjustBgSize()
 
     // window.addEventListener("resize", this.firstViewAdjustBgSize)
-
-    const screenHeight = window.screen.height
-    const firstView = document.getElementsByClassName("firstview")[0]
-    console.log(screenHeight)
-    firstView.style.height = screenHeight + "px"
   },
   methods: {
     encode(data) {
@@ -581,29 +576,23 @@ export default {
       const windowHeight = window.innerHeight
       const windowWidth = window.innerWidth
 
-      if (windowHeight < this.prevViewHeight) {
-        // if (
-        // this.prevViewHeight != windowHeight &&
-        // this.prevViewWidth != windowWidth
-        // ) {
-        // firstView.style.height = windowHeight + 60 + "px"
-        // this.prevViewHeight = windowHeight
-        // this.prevViewWidth = windowWidth
-        // return
-        // } else if (this.prevViewHeight != windowHeight) {
-        // return
-        // } else if (this.prevViewWidth != windowWidth) {
-        // return
-        // }
-
-        firstView.style.height = windowHeight + 60 + "px"
-        this.prevViewHeight = windowHeight
-        this.prevViewWidth = windowWidth
-      } else {
+      if (
+        this.prevViewHeight != windowHeight &&
+        this.prevViewWidth != windowWidth
+      ) {
         firstView.style.height = windowHeight + "px"
         this.prevViewHeight = windowHeight
         this.prevViewWidth = windowWidth
+        return
+      } else if (this.prevViewHeight != windowHeight) {
+        return
+      } else if (this.prevViewWidth != windowWidth) {
+        return
       }
+
+      firstView.style.height = windowHeight + "px"
+      this.prevViewHeight = windowHeight
+      this.prevViewWidth = windowWidth
     }
   }
 }
