@@ -1,18 +1,17 @@
 <template>
   <div
+    ref="card"
     class="card-wrap"
     @mousemove="handleMouseMove"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
     @click="open"
-    ref="card"
   >
     <!-- <div class="card" :style="cardStyle"> -->
-    <div class="card" :style="cardStyle">
-      <div class="card-bg" :style="[cardBgTransform, cardBgImage]"></div>
+    <div :style="cardStyle" class="card">
+      <div :style="[cardBgTransform, cardBgImage]" class="card-bg" />
       <div class="card-info">
-        <slot name="header"></slot>
-        <slot name="content"></slot>
+        <slot name="header" /> <slot name="content" />
       </div>
     </div>
   </div>
@@ -20,15 +19,9 @@
 
 <script>
 export default {
-  mounted() {
-    this.$ready(() => {
-      this.width = this.$refs.card.offsetWidth;
-      this.height = this.$refs.card.offsetHeight;
-    });
-  },
   props: ["dataImage", "modalTarget"],
   data: () => ({
-    width:  240,
+    width: 240,
     height: 320,
     mouseX: 0,
     mouseY: 0,
@@ -36,51 +29,56 @@ export default {
   }),
   computed: {
     mousePX() {
-      return this.mouseX / this.width;
+      return this.mouseX / this.width
     },
     mousePY() {
-      return this.mouseY / this.height;
+      return this.mouseY / this.height
     },
     cardStyle() {
-      const rX = this.mousePX * 30;
-      const rY = this.mousePY * -30;
+      const rX = this.mousePX * 30
+      const rY = this.mousePY * -30
       return {
         transform: `rotateY(${rX}deg) rotateX(${rY}deg)`
-      };
+      }
     },
     cardBgTransform() {
-      const tX = this.mousePX * -40;
-      const tY = this.mousePY * -40;
+      const tX = this.mousePX * -40
+      const tY = this.mousePY * -40
       return {
         transform: `translateX(${tX}px) translateY(${tY}px)`
-      };
+      }
       // return {transform:`translateX(1px) translateY(1px)`}
     },
     cardBgImage() {
       return {
         backgroundImage: `url(${this.dataImage})`
-      };
+      }
     }
+  },
+  mounted() {
+    this.$ready(() => {
+      this.width = this.$refs.card.offsetWidth
+      this.height = this.$refs.card.offsetHeight
+    })
   },
   methods: {
     handleMouseMove(e) {
-      this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width / 2;
-      this.mouseY = e.pageY - this.$refs.card.offsetTop - this.height / 2;
+      this.mouseX = e.pageX - this.$refs.card.offsetLeft - this.width / 2
+      this.mouseY = e.pageY - this.$refs.card.offsetTop - this.height / 2
     },
     handleMouseEnter() {
-      clearTimeout(this.mouseLeaveDelay);
+      clearTimeout(this.mouseLeaveDelay)
     },
     handleMouseLeave() {
       this.mouseLeaveDelay = setTimeout(() => {
-        this.mouseX = 0;
-        this.mouseY = 0;
-      }, 1000);
+        this.mouseX = 0
+        this.mouseY = 0
+      }, 1000)
     },
     $ready(fn) {
       // if (process.env.NODE_ENV === "production") {
       // return this.$nextTick(fn);
       // }
-
       // setTimeout(() => {
       //   this.$nextTick(fn);
       // }, 3000);
@@ -88,10 +86,10 @@ export default {
     },
 
     close() {
-      this.$modal.pop();
+      this.$modal.pop()
     },
     open() {
-      this.$modal.push(this.modalTarget);
+      this.$modal.push(this.modalTarget)
     }
   }
   // mounted() {
@@ -177,7 +175,7 @@ export default {
   //     }, 1000);
   //   }
   // }
-};
+}
 </script>
 <style lang="scss" scoped>
 $hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
@@ -219,7 +217,7 @@ p + p {
 .card-wrap {
   margin: 10px;
   transform: perspective(800px);
-  transform-style: preserve-3d;
+  /* transform-style: preserve-3d; */
   cursor: pointer;
   // background-color: #fff;
 
