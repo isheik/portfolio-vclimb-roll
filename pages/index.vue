@@ -40,7 +40,7 @@
               <v-flex class="mb-4">
                 <div class="prof-picture">
                   <v-avatar :size="avatarSize" color="grey lighten-4">
-                    <img src="~assets/images/profile.jpg" alt="avatar" >
+                    <img src="~assets/images/profile.jpg" alt="avatar" />
                   </v-avatar>
                 </div>
                 <div class="prof-name">
@@ -52,16 +52,16 @@
                       href="https://github.com/isheik"
                       target="_blank"
                       @click="sendGtmViewGithubEvent"
-                      ><img class="sns-icons" src="/github-logo.png" alt=""
-                    /></a>
+                    ><img class="sns-icons" src="/github-logo.png" alt=""
+                    ></a>
 
                     <a
                       id="linkedin-link"
                       href="https://linkedin.com/in/keishi-asai/"
                       target="_blank"
                       @click="sendGtmViewLinkedinEvent"
-                      ><img class="sns-icons" src="/linkedin.png" alt=""
-                    /></a>
+                    ><img class="sns-icons" src="/linkedin.png" alt=""
+                    ></a>
                   </div>
                 </div>
               </v-flex>
@@ -71,7 +71,7 @@
               >
                 <p>
                   Hi, I am a full-stack web developer based in Vancouver,
-                  Canada. <br >I enjoy programming and turn my passion/coffee
+                  Canada. <br />I enjoy programming and turn my passion/coffee
                   into code &#x2615;
                 </p>
               </v-flex>
@@ -94,7 +94,7 @@
                       :src="skillImage.url"
                       :alt="skillImage.alt"
                       class="skillImages"
-                    >
+                    />
                   </v-flex>
                   <v-flex
                     offset-xs0
@@ -113,7 +113,7 @@
                       :src="toolImage.url"
                       :alt="toolImage.alt"
                       class="toolImages"
-                    >
+                    />
                   </v-flex>
                 </v-layout>
               </v-flex>
@@ -137,7 +137,7 @@
         <v-container>
           <v-layout wrap align-center>
             <v-flex xs12>
-              <h3 class="headline text-xs-center">Individual works</h3>
+              <h3 class="headline text-xs-center">Personal works</h3>
             </v-flex>
             <v-flex class="mb-5" xs12>
               <v-layout row justify-space-around wrap align-center>
@@ -151,7 +151,7 @@
                 <modal name="modal-opus13">
                   <div class="basic-modal">
                     <h5>Demo / Image</h5>
-                    <img src="/opus13.gif" alt >
+                    <img src="/opus13.gif" alt />
                     <h5>Name</h5>
                     <p>Opus 13</p>
                     <h5>Description</h5>
@@ -169,7 +169,7 @@
                     </p>
                     <h5>Link</h5>
                     <a href="https://github.com/isheik/opus13" target="_blank"
-                    >Opus 13 GitHub Repository</a
+                      >Opus 13 GitHub Repository</a
                     >
 
                     <closeButton />
@@ -188,7 +188,7 @@
                 <modal name="modal-portfolio">
                   <div class="basic-modal">
                     <h5>Demo / Image</h5>
-                    <img src="/portfolio.gif" alt >
+                    <img src="/portfolio.gif" alt />
                     <h5>Name</h5>
                     <p>My Portfolio</p>
                     <h5>Description</h5>
@@ -203,7 +203,7 @@
                     <a
                       href="https://github.com/isheik/portfolio-vclimb-roll"
                       target="_blank"
-                    >Portfolio GitHub Repository</a
+                      >Portfolio GitHub Repository</a
                     >
 
                     <closeButton />
@@ -222,7 +222,7 @@
                 <modal name="modal-ubc-dpage">
                   <div class="basic-modal">
                     <h5>Demo / Image</h5>
-                    <img src="/giveubc-form.gif" alt >
+                    <img src="/giveubc-form.gif" alt />
                     <h5>Name</h5>
                     <p>
                       Give UBC (The University of British Columbia) donation
@@ -246,7 +246,7 @@
                     <a
                       href="https://donate.give.ubc.ca/page/68046/donate/1"
                       target="_blank"
-                    >Give UBC Donation Page</a
+                      >Give UBC Donation Page</a
                     >
                     <closeButton />
                   </div>
@@ -255,7 +255,7 @@
             </v-flex>
             <v-flex xs12>
               <div class="work-logo">
-                <img src="~assets/images/vcroll-logo.png" alt="logo" >
+                <img src="~assets/images/vcroll-logo.png" alt="logo" />
               </div>
             </v-flex>
             <v-flex xs12 class="mt-3">
@@ -276,7 +276,7 @@
                 <modal name="modal-ffzero">
                   <div class="basic-modal">
                     <h5>Demo / Image</h5>
-                    <img src="/ffzero.gif" alt >
+                    <img src="/ffzero.gif" alt />
                     <h5>Name</h5>
                     <p>Food Factory Zero</p>
                     <h5>Description</h5>
@@ -301,7 +301,7 @@
                     <a
                       href="https://foodfactoryzero.firebaseapp.com/"
                       target="_blank"
-                    >Food Factory Zero Home</a
+                      >Food Factory Zero Home</a
                     >
 
                     <closeButton />
@@ -318,7 +318,7 @@
                 <modal name="modal-cgph">
                   <div class="basic-modal">
                     <h5>Demo / Image</h5>
-                    <img src="/cgph.gif" alt >
+                    <img src="/cgph.gif" alt />
                     <h5>Name</h5>
                     <p>Cecil Green Park House Website</p>
                     <h5>Description</h5>
@@ -341,7 +341,7 @@
                     </p>
                     <h5>Link</h5>
                     <a href="https://cecilgreenpark.ubc.ca/" target="_blank"
-                    >Cecil Green Park House Website</a
+                      >Cecil Green Park House Website</a
                     >
 
                     <closeButton />
@@ -361,7 +361,7 @@
                 <modal name="modal-ubcwebsites">
                   <div class="basic-modal">
                     <h5>Demo / Image</h5>
-                    <img src="/ubcwebsites.gif" alt >
+                    <img src="/ubcwebsites.gif" alt />
                     <h5>Name</h5>
                     <p>UBC Websites</p>
                     <h5>Description</h5>
@@ -374,10 +374,10 @@
                     <h5>Link</h5>
                     <a href="https://give.ubc.ca/" target="_blank">give UBC</a>,
                     <a href="https://cecilgreenpark.ubc.ca/" target="_blank"
-                    >Cecil Green Park House Website</a
+                      >Cecil Green Park House Website</a
                     >,
                     <a href="https://crowdfundraising.ubc.ca/" target="_blank"
-                    >Crowdfundraising UBC</a
+                      >Crowdfundraising UBC</a
                     >
                     etc. <closeButton />
                   </div>
@@ -413,7 +413,7 @@
             >
               <p>
                 <label class="form-label" for="name">YOUR NAME:</label>
-                <input v-model="form.name" type="text" name="name" required >
+                <input v-model="form.name" type="text" name="name" required />
               </p>
               <p>
                 <label class="form-label" for="email">EMAIL:</label>
@@ -422,7 +422,7 @@
                   type="email"
                   name="email"
                   required
-                >
+                />
               </p>
               <p>
                 <label class="form-label" for="message">MESSAGE:</label>
@@ -440,8 +440,8 @@
               </p>
             </div>
             <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-              <input type="text" name="name" >
-              <input type="email" name="email" > <textarea name="message" />
+              <input type="text" name="name" />
+              <input type="email" name="email" /> <textarea name="message" />
             </form>
           </v-layout>
         </v-container>
